@@ -1,0 +1,41 @@
+*{
+    margin: 1px;
+    padding: 1px;
+}
+
+#tarjetasDoctores{
+    background-color: rgb(59, 178, 135);
+    border: 3px solid white;
+    border-radius: 10px;
+
+
+}
+
+#contbusqueda{
+    background-color: rgb(59, 178, 135); 
+    border: 3px solid white;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+}
+
+.row{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#logo {
+    width: 30%;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgb(235, 242, 235);
+    padding: 5px;
+    margin: 10px;
+    float: left;
+    
+}
+
+.d-flex {
+    
+}
+
