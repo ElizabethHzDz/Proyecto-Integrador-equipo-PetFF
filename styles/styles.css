@@ -1,0 +1,33 @@
+body {
+    background-image: url('../assets/img/huellas_modoNormal.png');
+  
+}
+
+#galeria .imagen {
+    width: 300px;
+}
+
+.imagen img {
+    max-width: 300px;
+}
+
+#perfil .foto-perfil img {
+    width: 300px;
+    height: 300px;
+}
+
+#perfil .propietario img {
+    width: 200px;
+    height: 200px;
+}
+
+
+#mascotas .mascota img {
+    width: 200px;
+    height: 200px;
+}
+
+#detalle-mascota .imagen img {
+    width: 300px;
+    height: 300px;
+}
