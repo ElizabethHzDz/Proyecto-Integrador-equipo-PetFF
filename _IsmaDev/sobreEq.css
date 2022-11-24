@@ -60,6 +60,11 @@
     background-size: cover;
 }
 
+#colum_9{
+    background-image: url(./assets/Adalid.jpeg);
+    background-repeat: none;
+    background-size: cover;
+}
 
 .hovtxt{
     background: #00000080;
