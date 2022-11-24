@@ -1,0 +1,87 @@
+#contenedorPrincipal{
+    padding-top: 10px;
+    background-image: url(./assets/fondo_patitas.jpeg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+#logo{
+    background-image: url(./assets/PETFF.png);
+    background-repeat: none;
+    background-size: cover;
+    font-size: larger;
+}
+
+#colum_1{
+    background-image: url(./assets/eli_pro.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+#colum_2{
+    background-image: url(./assets/rebe_pro.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+#colum_3{
+    background-image: url(./assets/lau_pro.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+#colum_4{
+    background-image: url(./assets/Marco.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+#colum_5{
+    background-image: url(./assets/vane_pro.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+#colum_6{
+    background-image: url(./assets/ruben_pro.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+#colum_7{
+    background-image: url(./assets/Ismael.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+#colum_8{
+    background-image: url(./assets/lalo.jpeg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+
+.hovtxt{
+    background: #00000080;
+    opacity: 0;
+    transition-duration: 1.06s;
+    transition-timing-function: ease-in-out;
+    height: 300px;
+}
+
+.hovtxt:hover {
+    opacity: 1;
+}
+
+.hovLogo{
+    background: #00000080;
+    opacity: 0;
+    transition-duration: 1.06s;
+    transition-timing-function: ease-in-out;
+    height: 450px;
+}
+
+.hovLogo:hover{
+    opacity: 1;
+}
+
