@@ -1,0 +1,21 @@
+#cajita{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border: 1px solid slategrey;
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: bold;
+}
+
+.textoSec{
+    color: #F5954F;
+}
+
+#logoPFF{
+    padding: 5px;
+    margin: 3px;
+    width: 400px;
+}
+
+#contenedorPrincipal{
+    background-image: url(./assets/fondo_patitas.jpeg);
+}
