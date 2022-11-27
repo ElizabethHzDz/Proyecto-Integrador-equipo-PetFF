@@ -9,6 +9,46 @@ body {
 
 .imagen img {
     max-width: 300px;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+#galeria .imagen img{
+    /* position:relative; */
+    transition: transform .2s;
+}
+
+#galeria .imagen:hover img {
+    opacity: 0.7;
+    border: rgb(141, 199, 141);
+    border-style:solid;
+    border-width: 15px;
+    padding: 0;
+    transform: scale(1.10);
+}
+
+#galeria .imagen p.hint {
+    opacity: 0;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    transition: transform .2s;
+}
+
+#galeria .imagen:hover p.hint {
+    opacity: 1;
+    /* transform: scale(10); */
+    font-size: large;
+    font-weight: 800;
+    transform: translate(-50%, -50%);
+}
+
+#galeria .imagen {
+    position: relative;
 }
 
 #perfil .foto-perfil img {
@@ -16,16 +56,20 @@ body {
     height: 300px;
 }
 
-#perfil .propietario img {
-    width: 200px;
-    height: 200px;
+#perfil img.propietario {
+    position: absolute;
+    left: 263px;
+    top: 150px;
+    width: 150px;
+    height: 150px;
 }
 
 
 #mascotas .mascota img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
+
 
 #detalle-mascota .imagen img {
     width: 300px;
