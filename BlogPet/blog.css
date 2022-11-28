@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap');
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Caveat', cursive;
+}
+
+body{
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/assets/huellas_modoNormal.png);
+    background-repeat: none;
+    padding-top: 10px;
+    background-repeat: none;
+    background-size: cover;
+
+
+}
+h1{
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+}
+
+p{
+    font-size: 16px;
+    color:#000000;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+/*Notas Informativas*/
+.slide-container{
+max-width: 1120px;
+width: 100%;
+background-color: #EBF2EB;
+padding: 40px 0;
+
+}
+.slide-content{
+    margin: 0 40px;
+}
+
+.imagen-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+    
+}
+
+.notas .img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.imagen-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+    
+}
+
+.overlay{
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:#3BB287;
+    border-radius: 25px 25px 0 25px;
+}
+
+.card{
+    width: 320px; /*Para mantener el ancho fijo*/
+    border-radius: 25px;
+    background-color:#FFFFFF;
+}
+
+.card-image{ /*Dar formato a la imagen*/
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #F5954F;
+    padding: 3px;
+}
+
+.card-image .card-img{ /*Dar formato a la imagen*/
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #F5954F;
+}
+
+
+.categoria{
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+}
+
+.descripcion{
+    font-size: 16px;
+    color:#000000;
+    text-align: center;
+}
+
+.button{
+    border: none;
+    font-size: 18px;
+    color: #000000;
+    padding: 8px 16px;
+    background-color:#3BB287;
+    border-radius: 10px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button:hover{ /*Para que se vea que se selecciono*/
+    background:#ff862f; 
+}
+
+/*Para las notas/articulos informativos*/
+.Imagen.Notas{
+height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #F5954F;
+}
+
+
+/*Menu navegacion inferior*/
+.petColor {
+    color: #3BB287;
+}
+
+.petColor:hover {
+    color: #3BB287;
+}
+
+.bGap {
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    transition-duration: 500ms;
+}
+
+.icon {
+    width: 40px;
+    transition-duration: 500ms;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#estetos {
+    width: 30px;
+    transition-duration: 500ms;
+}
+
+.iGap:hover {
+    border-bottom: 3px solid #3BB287;
+}
+
+.bGap:hover {
+    border-top: 3px solid #3BB287;
+}
+
+.icon:hover {
+    width: 45px;
+}
+
+#estetos:hover {
+    width: 35px;
+}
