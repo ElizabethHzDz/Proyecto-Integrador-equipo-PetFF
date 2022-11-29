@@ -1,0 +1,134 @@
+body {
+    background-image: url("/assets/iconos/huellas_modoNormal2.png");
+    background-color: transparent;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 16px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row {
+    position: relative;
+    flex: 1 0 22rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+/*usuarioMenu*/
+
+#Name_user{
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 2vw;
+    display: flex;
+    align-items: left;
+}
+
+#descripcion{
+    font-family:'Inria Sans', sans-serif;
+    font-size: 10px;
+    align-items: center;
+} 
+
+/* #profile-image {
+    width: 100%;
+    align-items: center;
+} */
+
+#menu{
+    float:right;
+}
+
+/* boton editar perfil*/
+
+/* #profile-image {
+    float: left;
+    width: calc(33.333% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+#profile-image img {
+    border-radius: 50%;
+} */
+
+#editarPerfil{
+    background-color: rgb(59, 178, 135);
+    border-radius: 12px;
+    font-size: 16px;
+    width: 250px;
+    height: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/*galeria*/
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1rem -1rem;
+    padding-bottom: 3rem;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/* barra de navegacion de abajo */
+/* .petColor {
+    color: #3BB287;
+} */
+
+/* .petColor:hover {
+    color: #3BB287;
+} */
+
+.bGap {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    transition-duration: 500ms;
+}
+
+.icon {
+    width: 40px;
+    transition-duration: 500ms;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#estetos {
+    width: 30px;
+    transition-duration: 500ms;
+}
+
+#news {
+    width: 50px;
+    transition-duration: 500ms;
+}
+
+.bGap:hover {
+    border-top: 3px solid #3BB287;
+}
+
+.icon:hover {
+    width: 45px;
+}
+
+#estetos:hover {
+    width: 35px;
+}
+
+#navb {
+    padding: 0%;
+    height: 80px;
+}

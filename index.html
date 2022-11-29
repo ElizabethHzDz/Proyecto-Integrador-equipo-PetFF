@@ -4,14 +4,155 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetFF</title>
+    <title>PetFF Perfil Vet</title>
 
+<!--fuente-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+<!--link bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!--link css-->
     <link rel="stylesheet" href="styles/styles.css">
+    
 
 </head>
 <body>
+<!-- Usuario y menu -->
+<div class="container" id="usuarioMenu">
+    <div class="row">
+      <div class="col-3" id="icon_usuario">
+        <img src="/assets/iconos/Perfil3.png" width="30px" alt="iconoUser">
+      </div>
+      <div class="col-6" id="Name_user">
+        <p>@Vet1_PetFF</p>
+      </div>
+      <div class="col-3" id="menu">
+        <img src="/assets/iconos/Menu1.png" width="30px" alt="menu">
+      </div>
+    </div>
+</div>
+
+<!-- Foto y descripción -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 col-md-4 col-lg-4" id="profile-image">
+            <img src="/assets/vet1_2.jpg" width="350px" alt="perfil">
+        </div>
+        <div class="col-sm-9 col-md-8 col-lg-8" id="descripcion">
+          <p>Juan Martínez Sánchez</p>
+            <p>Soy médico veterinario con nueve años de experiencia en veterinaria especializada en animales domésticos. Trato, diagnostico y ayudo a la salud animal general. Dirijo el programa “Adopta a uno, salva a muchos” centrado en la adopción y esterilización masiva de animales en situación de calle.</p>
+            <p>Teléfono: 123-456-7890</p>
+            <p>Correo electrónico: juan @tucorreoelectronico.com</p>
+            <p>Cédula profesional: 123456</p>
+            <p>ubicacion</p>
+        </div>
+    </div>
+</div>
 
 
+<!-- especializacion -->
+<div class="container text-center" id="especializacion">
+    <div class="row">
+        <div class="col">
+          <p>#Especializacion #Especializacion2 #Especializacion3</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- editar perfil -->
+<div class="container" id="editarPerfil">
+    <div class="row">
+        <div class="col">
+            <button class="btn profile-edit-btn">Editar Perfil</button>
+        </div>
+    </div>
+</div>
+
+<!-- Servicios -->
+<div class="container" id="servicios">
+    <p>Servicios</p>
+    <div class="row">
+        <div class="col-3">
+            <img src="/assets/vet1_urgencias.jpg" width="60px" alt="servicios1">
+        </div>
+        <div class="col-3">
+            <img src="/assets/vet1_estetica.webp" width="60px" alt="servicios2">
+        </div>
+        <div class="col-3">
+            <img src="/assets/vet1_juguetes.webp" width="60px" alt="servicios3">
+        </div>
+        <div class="col-3">
+            
+        </div>
+    </div>
+</div>
+
+<!-- Galeria -->
+<!-- <div class="container text-center" id="galeria">
+
+</div> -->
+<div class="container text-center" id="galeria">
+    <div class="row">
+        <div class="col-4 col-sm-4">
+            <img src="/assets/vet1_3.jpg" width="250px" class="gallery-image" alt="servicios3">
+        </div>
+        <div class="col-4 col-sm-4">
+            <img src="/assets/vet1_4.jpg" width="250px" class="gallery-image" alt="servicios3">
+        </div>
+        <div class="col-4 col-sm-4">
+            <img src="/assets/vet1_5.jpg" width="250px" class="gallery-image" alt="servicios3">
+        </div>
+        <div class="col-4 col-sm-4">
+            <img src="/assets/vet1_6.jpg" width="250px" class="gallery-image" alt="servicios3">
+        </div>
+        <div class="col-4 col-sm-4">
+            <img src="/assets/vet1_7.jpg" width="250px" class="gallery-image" alt="servicios3">
+        </div>
+        <div class="col-4 col-sm-4">
+            <img src="/assets/vet1.jpg" width="250px" class="gallery-image" alt="servicios3">
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Barra de navegación inferior -->
+<nav class="navbar fixed-bottom navbar-expand bg-white" id="navb">
+
+    <div class="collapse navbar-collapse navBottom" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto">
+        <li class="nav-item active bGap">
+          <a class="nav-link petColor" href="https://github.com/" ><br>
+                <img class="icon" src="/assets/iconos/Home1.png" alt="Home">
+            <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item bGap">
+          <a class="nav-link petColor" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span"><br>
+            <img class="icon"  id="estetos" src="/assets/iconos/Estetos2.png" alt="Vets">
+          </a>
+        </li>
+
+        <li class="nav-item bGap">
+          <a class="nav-link petColor" href="https://www.google.com/"><br>
+            <img class="icon" id="news" src="/assets/iconos/News2.png" alt="Blog">
+          </a>
+        </li>
+        <li class="nav-item bGap">
+            <a class="nav-link petColor" href="https://www.linkedin.com/"><br>
+              <img class="icon" src="/assets/iconos/Blog2.png" alt="Comunity">
+            </a>
+        </li>
+        <li class="nav-item bGap">
+            <a class="nav-link petColor" href="https://mexico.generation.org/"><br>
+              <img class="icon" src="/assets/iconos/Perfil3.png" alt="Profile">
+            </a>
+        </li>
+      </ul>
+    </div>
+</nav>
 
     <script src="js/petff.js"></script>
 </body>
