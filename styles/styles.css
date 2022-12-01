@@ -1,0 +1,192 @@
+
+body{
+    font-family: 'Inria Sans', sans-serif;
+    background-image: url(/assets/fondo.jpeg);
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: unset;
+}
+
+.petColor {
+    color: #3BB287;
+}
+
+.petColor:hover {
+    color: #3BB287;
+}
+
+.muro {
+    background-color:white;
+    border: 0.5px solid gray;
+    border-radius: 1.5%;
+    border-color: #3BB287;
+}
+
+#navb {
+    padding: 0%;
+    height: 95px;
+}
+
+.navBottom {
+    border-radius: 3px;
+}
+
+#petFF {
+    margin-left: 20px;
+}
+
+.iGap {
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    transition-duration: 500ms;
+}
+
+.bGap {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    transition-duration: 500ms;
+}
+
+.logo {
+    width: 150px;
+    transition-duration: 500ms;
+}
+
+.logo:hover {
+    width: 170px;
+}
+
+.icon {
+    width: 35px;
+    transition-duration: 500ms;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#estetos {
+    width: 28px;
+    transition-duration: 500ms;
+}
+
+.iGap:hover {
+    border-bottom: 3px solid #3BB287;
+}
+
+.bGap:hover {
+    border-top: 3px solid #3BB287;
+}
+
+.icon:hover {
+    width: 45px;
+}
+
+#news {
+    width: 45px;
+    transition-duration: 500ms;
+}
+
+#estetos:hover {
+    width: 35px;
+}
+
+.space {
+    margin: 90px;
+}
+.space2 {
+    margin: 20px;
+}
+
+
+.publi {
+    text-align:center;
+}
+
+#perfil {
+    height: 120px;
+    position: relative;
+}
+
+#perfilMascota {
+    position: absolute;
+    left: 30px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#perfilHumano {
+    position: absolute;
+    top: 55px;
+    left: 80px;
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+    z-index: 2;
+}
+
+.horaPublicacion {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.names {
+    margin-left: 110px;
+}
+
+.mascota {
+    text-align: start;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+
+
+.humano {
+    text-align: start;
+    font-size: 16px;
+}
+
+.leftT {
+    text-align: start;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.buttons {
+    width: 50px;
+}
+
+.like {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    padding: 0;
+}
+
+.comment {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.ads {
+    background-color: black;
+}
+
+.fixedPubli{
+    position: fixed;
+    top: 90;
+    right: 0;
+}
+
