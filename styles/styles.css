@@ -24,7 +24,7 @@ img {
 
 .muro {
     background-color:white;
-    border: 0.5px solid gray;
+    border: 1px solid gray;
     border-radius: 1.5%;
     border-color: #3BB287;
 }
@@ -34,8 +34,23 @@ img {
     height: 95px;
 }
 
+.modal-backdrop {
+    z-index: 10;
+}
+
+.modal-dialog{
+    height:80%
+}
+.modal-content{
+    height:75%
+}
+
+.navTop {
+    border-bottom: 1px solid #3BB287;
+}
+
 .navBottom {
-    border-radius: 3px;
+    border-top: 1px solid #3BB287;
 }
 
 #petFF {
@@ -99,8 +114,9 @@ img {
 }
 
 .space {
-    margin: 90px;
+    margin: 100px;
 }
+
 .space2 {
     margin: 20px;
 }
@@ -165,7 +181,13 @@ img {
 
 .buttons {
     width: 50px;
+    transition-duration: 500ms;
 }
+
+.buttons:hover {
+    width: 45px;
+}
+
 
 .like {
     margin-top: 10px;
@@ -188,5 +210,39 @@ img {
     position: fixed;
     top: 90;
     right: 0;
+}
+
+.pubBtn {
+    background-color: #3BB287;
+    color: white;
+    transition-duration: 300ms;
+}
+
+.pubBtn:hover {
+    background-color: white;
+    color: #3BB287;
+    border: 2px solid #3BB287;
+}
+
+.image-area {
+    border: 1px solid #3BB287;
+    padding: 1rem;
+    position: relative;
+}
+
+.image-area::before {
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.image-area img {
+    z-index: 2;
+    position: relative;
 }
 
