@@ -1,3 +1,7 @@
+#contenedorPrincipal{
+    background-image: url(./assets/fondo_patitas.jpeg);
+}
+
 #cajita{
     padding-top: 20px;
     padding-bottom: 10px;
@@ -16,6 +20,7 @@
     width: 400px;
 }
 
-#contenedorPrincipal{
-    background-image: url(./assets/fondo_patitas.jpeg);
+#boton{
+    color:#000000;
+    background-color: #3BB287;
 }

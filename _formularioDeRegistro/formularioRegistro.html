@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regístrate</title>
+    <title>Regístrate en PetFF</title>
+    <link rel="icon" type="image/x-icon" href="./assets/P.png">
 
     <link rel="stylesheet" href="./styles/formularioRegistro.css">
 
@@ -17,8 +18,8 @@
 <body>
     <br>
     <br>
-    <div class="container text-center" id="contenedorPrincipal"><!--Contenedor principal-->
-        <div class="row">
+    <div class="container text-center"><!--Contenedor principal-->
+        <div class="row" id="contenedorPrincipal">
             <div class="col"></div>
             <div class="col" id="cajita">
                 <img src="./assets/PETFF.png" alt="Logo de la red social PetFF" id="logoPFF">
@@ -33,7 +34,7 @@
                         <div class="col-auto my-1">
                             <label class="mr-sm-2" for="inlineFormCustomSelect">Selecciona tu tipo de perfil</label>
                             <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Elige</option>
+                                <option selected>Tipos</option>
                                 <option value="1">Usuario/a</option>
                                 <option value="2">Personal de salud</option>
                                 <option value="3">Otros servicios</option>
@@ -42,49 +43,36 @@
                     </div>
                     <br>
                     <div class="col-xs-12 col-sm-12 col-md-12 mb-3"><!--Aquí comienzan los espacios para ingresar datos-->
-                        <label for="validationCustom01">Nombre(s)</label><!--Nombre-->
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="Ingresa tu(s) nombre(s)" value="" required>
-                        <div class="valid-feedback">
-                          ¡Todo en orden!
-                        </div>
-
-                        <label for="validationCustom02">Apellidos</label><!--Apellidos-->
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="Ingresa tus apellidos" value="" required>
-                        <div class="valid-feedback">
-                          ¡Todo en orden!
-                        </div>
-
-                        <label for="validationCustom03">Correo electrónico</label><!--Email-->
-                        <input type="text" class="form-control" id="validationCustom03" placeholder="Ingresa tu correo electrónico" value="" required>
-                        <div class="valid-feedback">
-                          ¡Todo en orden!
-                        </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><!--Contraseña-->
-                        <label for="inputPassword5">Crea una contraseña</label>
-                        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Ingresa tu contraseña">
-                        <small id="passwordHelpBlock" class="form-text text-muted">
-                            La contrsaeña debe tener entre 8 y 20 caracteres.
-                        </small>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12 mb-3"><!--Nombre de Usuario/a-->
-                        <label for="validationCustomUsername">Nombre de usuario/a</label>
-                        <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        </div>
-                            <input type="text" class="form-control" id="validationCustomUsername" placeholder="Ingrese el nombre que desea para su perfil" aria-describedby="inputGroupPrepend" required>
-                            <div class="invalid-feedback">
-                                Por favor, elija una nombre de usuario válido.
+                        <form id="form">
+                            <div class="form-group">
+                                <label for="name">Nombre(s)</label>
+                                <input type="text" class="form-control" id="name" placeholder="Introduce tu(s) nombre(s)" required>
                             </div>
-                        </div>
-                        </div>
+                            <div class="form-group">
+                                <label for="lastName">Apeliidos</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Introduce tus apellidos" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com" required>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="password">Contraseña</label>
+                                <input type="password" class="form-control" id="password" placeholder="Crea una contraseña">
+                            </div>
+                            <div class="col-auto">
+                                <label class="sr-only" for="username">Nombre de usuario/a</label>
+                                <div class="input-group mb-2">
+                                  <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                    </div>
+                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Elige el nombre para tu cuenta" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn" id="boton">Enviar</button>
+                        </form>
                     </div>
-
-                    <fieldset disabled>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </fieldset>
+                        
                 </div>
             </div>
             <div class="col"></div>
