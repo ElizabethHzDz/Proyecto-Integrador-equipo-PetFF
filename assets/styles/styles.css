@@ -1,0 +1,71 @@
+body{
+    background: #e8e8e8;
+    background-image: url("/assets/iconos/huellas_modoNormal2.png");
+    background-color: transparent;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 25px;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    background: transparent;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    justify-content: center;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover{
+    background: #ef8354;
+}
+
+
+.parrafo{
+    text-align: center;
+}
+
+.principio{
+    display: flex;
+    justify-content: center;
+}
+
+.input-contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    color: #3BB287;
+}
+
+#botoncito{
+    display: inline-block;
+    margin: 0px 35px;
+    background-color: #3BB287;
+    padding: 85px 85px;
+}
+
+#icono1{
+    padding: 0px 50px;
+    color: #ef8354;
+}
+
+#icono2{
+    color: #3BB287;
+
+}
