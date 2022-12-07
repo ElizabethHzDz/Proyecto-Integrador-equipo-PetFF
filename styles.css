@@ -1,0 +1,90 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Inria Sans', sans-serif;
+}
+
+body{
+    background-image: url(./assets/Fondo.PNG);
+}
+
+#headerlogo{
+    width: 20%;
+    margin: 8px;
+    border:#EBF2EB solid 1px;
+}
+
+#header{
+    border: 2px solid #3BB287;
+    background-color: #3BB287;
+    
+ 
+}
+
+#botonheader{
+    border: #EBF2EB solid 1px;
+    width: auto;
+    background-color: #EBF2EB;
+    border-radius: 5%;
+    font-weight: bold;
+    font-size: small;
+    
+
+}
+
+#lupaicono{
+    width: 20%;
+    margin-top: 5px;
+}
+
+#espaciofiltro{
+    border: #3BB287 solid 2px;
+}
+
+#espaciocards{
+    margin-top: 10px;
+    border: #3BB287 solid 2px;
+    height: 1500px;
+}
+
+#filtro{
+
+    color: #3BB287;
+    width: 10%;
+    
+}
+
+.petColor {
+    color: #3BB287;
+}
+
+.petColor:hover {
+    color: #3BB287;
+}
+
+.bGap {
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    transition-duration: 500ms;
+}
+.icon {
+    width: 40px;
+    transition-duration: 500ms;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+.iGap:hover {
+    border-bottom: 3px solid #3BB287;
+}
+
+.bGap:hover {
+    border-top: 3px solid #3BB287;
+}
+
+.icon:hover {
+    width: 45px;
+}
+
