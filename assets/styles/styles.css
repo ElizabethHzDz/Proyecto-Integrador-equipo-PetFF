@@ -61,11 +61,16 @@ body{
 }
 
 #icono1{
-    padding: 0px 50px;
+    padding: 5px 10px;
     color: #ef8354;
 }
 
 #icono2{
+    padding: 5px 10px;
     color: #3BB287;
+}
 
+#is{
+    color:#ffffff;
+    background-color: #3BB287;
 }
