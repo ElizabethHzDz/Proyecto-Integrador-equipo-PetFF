@@ -18,6 +18,7 @@
 
     <!-- Barra de navegación superior -->
     <nav class="navbar fixed-top navbar-expand bg-white ml-0 navTop" id="petFF">
+      <!-- Logo principal de PETFF con link a pantalla de inicio (reload) -->
         <a class="navbar-brand" href="http://127.0.0.1:5500/index.html#">
             <img class="logo" src="/assets/PETFF.png" alt="Logo PETFF">
         </a>
@@ -25,9 +26,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="nav-item iGap d-lg-none m-0 mx-sm-4">
+          <!-- Boton en barra de navegacion para abrir modal en pantallas pequeñas-->
           <button type="button" class="btn pubBtn mt-4" data-toggle="modal" data-target="#exampleModalCenter">
           Publicación
           </button>
+          <!-- Modal para formulario de publicacion en pantallas pequeñas -->
           <div class="modal fade" id="exampleModalCenter" tabindex="auto" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
@@ -40,9 +43,12 @@
                 <div class="modal-body">
                   <div class="col-12 d-lg-none d-flex justify-content-center">
                     <div class="mb-3 position-fixed col-6">
-                      <div class="image-area mt-4 d-flex justify-content-center"><img id="imageResult" src="#" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
-                      <input type="button" class="btn btn-rounded col-6 pubBtn p-1" value="Cargar Imagen" onclick="document.getElementById('upload').click();" />
-                      <input id="upload" type="file" onchange="readURL(this);" class="form-control" style="display: none;">
+                      <!-- Target de preview de imagen -->
+                      <div class="image-area mt-4 d-flex justify-content-center" id="displayImage2">
+                      </div>
+                      <!-- Boton para elegir imagen, hace click automatico en el boton de cargar imagen del formulario pantallas grandes -->
+                      <input type="button" class="btn btn-rounded col-6 pubBtn p-1" value="Cargar Imagen" onclick="document.getElementById('imageInput').click();">
+                      <!-- Espacio para ingresar texto en publicación -->
                       <div class="d-flex align-items-center w-100 ps-3">
                         <div class="w-100">
                           <div class="form-outline">
@@ -50,7 +56,8 @@
                           </div>
                         </div>
                       </div>
-                      <button class="btn btn-rounded col-10 pubBtn">Publicar</button>
+                      <!-- Boton para publicar imagen y texto, hace click automatico en al boton del otro formulario para pantallas grandes -->
+                      <button class="btn btn-rounded col-10 pubBtn" onclick="document.getElementById('pubButton').click();">Publicar</button>
                     </div>
                   </div>
                 </div>
@@ -58,7 +65,7 @@
             </div>
           </div>
         </div>
-
+        <!-- Iconos de la parte derecha de navBar, notifiaciones y chat -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item iGap">
@@ -67,14 +74,14 @@
                 <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item iGap">
-              <a class="nav-link petColor" href="https://web.whatsapp.com/">
+              <a class="nav-link petColor" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <img class="icon"  id="msg" src="/assets/iconos/Mensaje1.png" alt="Chat">
               </a>
             </li>
           </ul>
         </div>
       </nav>
-
+      
       <!-- Publicaciones, muro, publicidad -->
       <div class="space"></div>
       <div class="container text-center p-1 m-1">
@@ -83,9 +90,15 @@
           <div class="col-3 d-none d-lg-block">
             <div class="mb-3 position-fixed col-3">
               <h5>Haz una publicación:</h5>
-                <div class="image-area mt-4 d-flex justify-content-center"><img id="imageResult" src="#" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
-                <input type="button" class="btn btn-rounded col-6 pubBtn p-1" value="Cargar Imagen" onclick="document.getElementById('upload').click();" />
-                <input id="upload" type="file" onchange="readURL(this);" class="form-control" style="display: none;">
+              <!-- Div en el que se hará un preview de imagen de publicación -->
+                <div class="image-area mt-4 d-flex justify-content-center" id="displayImage">
+                </div>
+                <!-- Boton que accionará nuestro input de imágenes, hace click automatico en el formulario de input #imageInput -->
+                <input type="button" class="btn btn-rounded col-6 pubBtn p-1" value="Cargar Imagen" onclick="document.getElementById('imageInput').click();">
+                <!-- Formulario de input de imagen, escondido por formato -->
+                <input id="imageInput" type="file" accept="image/png, image/jpg" style="display: none;">
+
+                <!-- Espacio para ingresar texto en publicación -->
                 <div class="d-flex align-items-center w-100 ps-3">
                   <div class="w-100">
                     <div class="form-outline">
@@ -93,156 +106,174 @@
                     </div>
                   </div>
                 </div>
-                <button class="btn btn-rounded col-10 pubBtn">Publicar</button>
+                <!-- Boton para publicar contenido en tarjeta -->
+                <button class="btn btn-rounded col-10 pubBtn" id="pubButton">Publicar</button>
             </div>
           </div>
           <!-- Feed, publicaciones de amigos -->
           <div class="container p-0 m-0 col-12 col-lg-6 px-sm-5 px-lg-0">
+
             <!-- Publicacion 1 -->
-            <div class="muro">
-              <div class="row">
-                <div class="d-flex col-9 justify-content-left align-items-center" id="perfil">
-                  <img id="perfilMascota" src="/assets/marliese-streefland-2l0CWTpcChI-unsplash 1.png"
-                    alt="Foto de perfil mascota">
-                  <img id="perfilHumano" src="/assets/harps-joseph-tAvpDE7fXgY-unsplash 1.png" alt="Foto de perfil humano">
-                  <div class="container d-flex flex-column names">
-                    <p class="mascota">Max el Beagle</p>
-                    <p class="humano">José Sánchez</p>
+            <div class="card">
+              <div class="card-body p-0">
+                  <div class="row">
+                    <!-- Donde irá la imagen del usuario y nombres de mascota y dueño -->
+                    <div class="d-flex col-9 justify-content-left align-items-center" id="perfil">
+                      <img id="perfilMascota" src="/assets/marliese-streefland-2l0CWTpcChI-unsplash 1.png"
+                        alt="Foto de perfil mascota">
+                      <img id="perfilHumano" src="/assets/harps-joseph-tAvpDE7fXgY-unsplash 1.png" alt="Foto de perfil humano">
+                      <div class="container d-flex flex-column names">
+                        <a href="https://getbootstrap.com/" class="mascota" target="_blank">Max el Beagle</a>
+                        <p class="humano">José Sánchez</p>
+                      </div>
+                    </div>
+                    <!-- hora de publicación -->
+                    <div class="col-3 p-0 horaPublicacion">
+                      <p><br>hace 2 horas</p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-3 p-0 horaPublicacion">
-                  <p><br>hace 2 horas</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="container leftT">
-                  <p class="">
-                    Fuimos a dar un paseo en bicicleta
-                  </p>
-                </div>
-              </div>
-              <div>
-                <img src="/assets/anthony-fomin-xNOslF_987U-unsplash.jpg" alt="Imagen de Publicacion">
-              </div>
-              <div class="row">
-                <div class="col-2 like">
-                  <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
-                </div>
-                <p class="mt-4">54</p>
-                <div class="col-2 comment">
-                  <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
-                </div>
-                <p class="mt-4">9</p>
-                <div class="col-6"></div>
+                  <!-- Espacio para agregar texto de publicación -->
+                  <div class="row">
+                    <div class="container leftT">
+                      <p class="">
+                        Fuimos a dar un paseo en bicicleta
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Espacio para agregar imagen de publicación -->
+                  <div class="row p-0 m-0" id="imgPublish">
+                  </div>
+                  <!-- Fila para botones de like y comentarios -->
+                  <div class="row">
+                    <div class="col-2 like">
+                      <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                    </div>
+                    <p class="mt-4">54</p>
+                    <div class="col-2 comment">
+                      <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                    </div>
+                    <p class="mt-4">9</p>
+                    <div class="col-6"></div>
+                  </div>
               </div>
             </div>
-                  <!-- Publicacion 2 -->
-                  <div class="muro">
-                    <div class="row">
-                      <div class="d-flex col-9 justify-content-left align-items-center" id="perfil">
-                        <img id="perfilMascota" src="/assets/alexander-london-mJaD10XeD7w-unsplash 1.png">
-                        <img id="perfilHumano" src="/assets/joseph-antigua-BW9G2EF_xRM-unsplash 1.png" alt="Foto de perfil humano">
-                        <div class="container d-flex flex-column names">
-                          <p class="mascota">Akira</p>
-                          <p class="humano">Karla Mendoza</p>
-                        </div>
-                      </div>
-                      <div class="col-3 p-0 horaPublicacion">
-                        <p><br>hace 2 horas</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="container leftT">
-                        <p class="">
-                          Hoy no molestar #sendcoffe
-                        </p>
-                      </div>
-                    </div>
-                    <div>
-                      <img src="/assets/modcatshop-pdALzg0yN-8-unsplash 1.png" alt="Imagen de Publicacion">
-                    </div>
-                    <div class="row">
-                      <div class="col-2 like">
-                        <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
-                      </div>
-                      <p class="mt-4">27</p>
-                      <div class="col-2 comment">
-                        <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
-                      </div>
-                      <p class="mt-4">3</p>
-                      <div class="col-6"></div>
+
+            <!-- Publicacion 2 -->
+            <div class="card">
+              <div class="card-body p-0">
+                <div class="row">
+                  <div class="d-flex col-9 justify-content-left align-items-center" id="perfil">
+                    <img id="perfilMascota" src="/assets/alexander-london-mJaD10XeD7w-unsplash 1.png">
+                    <img id="perfilHumano" src="/assets/joseph-antigua-BW9G2EF_xRM-unsplash 1.png" alt="Foto de perfil humano">
+                    <div class="container d-flex flex-column names">
+                      <p class="mascota">Akira</p>
+                      <p class="humano">Karla Mendoza</p>
                     </div>
                   </div>
+                  <div class="col-3 p-0 horaPublicacion">
+                    <p><br>hace 2 horas</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="container leftT">
+                    <p class="">
+                      Hoy no molestar #sendcoffe
+                    </p>
+                  </div>
+                </div>
+                <div class="row p-0 m-0">
+                  <img src="/assets/modcatshop-pdALzg0yN-8-unsplash 1.png" alt="Imagen de Publicacion">
+                </div>
+                <div class="row">
+                  <div class="col-2 like">
+                    <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                  </div>
+                  <p class="mt-4">27</p>
+                  <div class="col-2 comment">
+                    <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                  </div>
+                  <p class="mt-4">3</p>
+                  <div class="col-6"></div>
+                </div>
+              </div>
+            </div>
                   <!-- Publicidad en pantallas pequeñas y medianas -->
                   <div class="space2"></div>
-                  <div class="row  col-12 d-lg-none m-0">
-                    <div class="container col-4 muro">
-                      <div class="container ads p-0"> 
-                        <img class="" src="/assets/hillsCroquetas.png" alt="Publicidad 1">
+                  <div class="card"  id="pCard">
+                    <div class="card-body p-0">
+                      <div class="row  col-12 d-lg-none m-0">
+                        <div class="container col-4">
+                          <div class="container ads p-0"> 
+                            <a href="https://www.hillspet.com.mx/" target="_blank"><img class="" src="/assets/hillsCroquetas.png" alt="Publicidad 1"></a>
+                          </div>
+                          <p>Croquetas Hill's</p>
+                        </div>
+                        <div class="container col-4">
+                          <div class="container ads p-0">
+                            <a href="https://hospitalveterinarioregiomontano.com/" target="_blank"><img class="" src="/assets/hospital.webp" alt="Publicidad 1"></a>
+                          </div>
+                          <p>Hospital Regiomontano</p>
+                        </div>
                       </div>
-                      <p class="d-flex text-start">Croquetas Hill's</p>
-                    </div>
-                    <div class="container col-4 muro">
-                      <div class="container ads p-0">
-                        <img class="" src="/assets/hospital.webp" alt="Publicidad 1">
-                      </div>
-                      <p class="d-flex text-start">Hospital Regiomontano</p>
                     </div>
                   </div>
                   <div class="space2"></div>
             <!-- Publicacion 3 -->
-            <div class="muro">
-              <div class="row">
-                <div class="d-flex col-9 justify-content-left align-items-center" id="perfil">
-                  <img id="perfilMascota" src="/assets/bonnie-kittle--MLCLFc01Uo-unsplash.jpg"
-                    alt="Foto de perfil mascota">
-                  <img id="perfilHumano" src="/assets/alex-mccarthy-RGKdWJOUFH0-unsplash.jpg" alt="Foto de perfil humano">
-                  <div class="container d-flex flex-column names">
-                    <p class="mascota">Brownie</p>
-                    <p class="humano">Alexis Rodríguez</p>
+                  <div class="card">
+                    <div class="card-body p-0">
+                      <div class="row">
+                        <div class="d-flex col-9 justify-content-left align-items-center" id="perfil">
+                          <img id="perfilMascota" src="/assets/bonnie-kittle--MLCLFc01Uo-unsplash.jpg"
+                            alt="Foto de perfil mascota">
+                          <img id="perfilHumano" src="/assets/alex-mccarthy-RGKdWJOUFH0-unsplash.jpg" alt="Foto de perfil humano">
+                          <div class="container d-flex flex-column names">
+                            <p class="mascota">Brownie</p>
+                            <p class="humano">Alexis Rodríguez</p>
+                          </div>
+                        </div>
+                        <div class="col-3 p-0 horaPublicacion">
+                          <p><br>hace 2 horas</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="container leftT">
+                          <p class="">
+                            Noviando duro
+                          </p>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="/assets/bonnie-kittle-MUcxe_wDurE-unsplash.jpg" alt="Imagen de Publicacion">
+                      </div>
+                      <div class="row">
+                        <div class="col-2 like">
+                          <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                        </div>
+                        <p class="mt-4">32</p>
+                        <div class="col-2 comment">
+                          <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                        </div>
+                        <p class="mt-4">7</p>
+                        <div class="col-6"></div>
+                      </div>
+                    </div>
+                    </div>
                   </div>
-                </div>
-                <div class="col-3 p-0 horaPublicacion">
-                  <p><br>hace 2 horas</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="container leftT">
-                  <p class="">
-                    Noviando duro
-                  </p>
-                </div>
-              </div>
-              <div>
-                <img src="/assets/bonnie-kittle-MUcxe_wDurE-unsplash.jpg" alt="Imagen de Publicacion">
-              </div>
-              <div class="row">
-                <div class="col-2 like">
-                  <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
-                </div>
-                <p class="mt-4">32</p>
-                <div class="col-2 comment">
-                  <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
-                </div>
-                <p class="mt-4">7</p>
-                <div class="col-6"></div>
-              </div>
-            </div>
-          </div>
+         
           <!-- Publicidad -->
           <div class="col-3 d-none d-lg-block fixedPubli">
             <div class="container flex-column muro">
               <div class="container ads p-0"> 
-                <img class="" src="/assets/hillsCroquetas.png" alt="Publicidad 1">
+                <a href="https://www.hillspet.com.mx/" target="_blank"><img class="" src="/assets/hillsCroquetas.png" alt="Publicidad 1"></a>
               </div>
-              <p class="d-flex text-start">Croquetas Hill's</p>
+              <p>Croquetas Hill's</p>
             </div>
           <div class="space2"></div>
             <div class="container flex-column muro">
               <div class="container ads p-0">
-                <img class="" src="/assets/hospital.webp" alt="Publicidad 1">
+                <a href="https://hospitalveterinarioregiomontano.com/" target="_blank"><img class="" src="/assets/hospital.webp" alt="Publicidad 1"></a>
               </div>
-              <p class="d-flex text-start">Hospital Regiomontano</p>
+              <p>Hospital Regiomontano</p>
             </div>
         </div>
       </div>
@@ -250,7 +281,7 @@
       </div>
 
           <!-- Barra de navegación inferior -->
-      <nav class="navbar fixed-bottom navbar-expand bg-white" id="navb">
+      <nav class="navbar fixed-bottom navbar-expand bg-white">
 
         <div class="collapse navbar-collapse navBottom" id="navbarSupportedContent">
           <ul class="navbar-nav m-auto">
@@ -284,6 +315,7 @@
         </div>
       </nav>
 
+    <!-- Scripts de Js u necesarios para Bootstrap -->
     <script src="/js/petff.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

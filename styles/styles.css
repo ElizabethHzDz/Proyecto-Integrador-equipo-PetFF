@@ -10,30 +10,40 @@ img {
     max-width: 100%;
 }
 
+/* Tamaño máxicmo de imagenes de preview */
+.imgPreview {
+    max-height: 200px;
+}
+
 .container {
     max-width: unset;
 }
 
+/* Color de texto en navbars */
 .petColor {
     color: #3BB287;
 }
 
+/* Color de texto en navbard */
 .petColor:hover {
     color: #3BB287;
 }
 
-.muro {
+/* Color de fondo y border de tarjetas de publicaciones */
+.card {
     background-color:white;
-    border: 1px solid gray;
+    border: 1px solid #3BB287;
     border-radius: 1.5%;
-    border-color: #3BB287;
 }
 
-#navb {
-    padding: 0%;
-    height: 95px;
+/* Para quitar border de tarjeta de publicidad */
+#pCard {
+    background-color:white;
+    border: none;
 }
 
+
+/* Para que el modal (nueva publicación se vea de forma y tamaño correctos */
 .modal-backdrop {
     z-index: 10;
 }
@@ -45,11 +55,16 @@ img {
     height:75%
 }
 
+/* Border de barra de navegación superior */
 .navTop {
     border-bottom: 1px solid #3BB287;
 }
 
+/* Altura de la barra de navegación inferior y border*/
 .navBottom {
+    padding: 0;
+    border-top: 1px solid #3BB287;
+    height: 95px;
     border-top: 1px solid #3BB287;
 }
 
@@ -57,6 +72,7 @@ img {
     margin-left: 20px;
 }
 
+/* Gap entre icodos de barra de navegacion superior */
 .iGap {
     margin-left: 25px;
     margin-right: 25px;
@@ -64,6 +80,7 @@ img {
     transition-duration: 500ms;
 }
 
+/* Gap entre icodos de barra de navegacion inferior */
 .bGap {
     margin-left: 20px;
     margin-right: 20px;
@@ -71,15 +88,16 @@ img {
     transition-duration: 500ms;
 }
 
+/* Tamaño de logo y reducción con hover */
 .logo {
     width: 150px;
     transition-duration: 500ms;
 }
-
 .logo:hover {
-    width: 170px;
+    width: 130px;
 }
 
+/* Tamaños y hover de iconos de barras superior e inferior */
 .icon {
     width: 35px;
     transition-duration: 500ms;
@@ -101,7 +119,7 @@ img {
 }
 
 .icon:hover {
-    width: 45px;
+    width: 30px;
 }
 
 #news {
@@ -110,20 +128,15 @@ img {
 }
 
 #estetos:hover {
-    width: 35px;
+    width: 22px;
 }
 
+/* Espacios invisible */
 .space {
     margin: 100px;
 }
-
 .space2 {
     margin: 20px;
-}
-
-
-.publi {
-    text-align:center;
 }
 
 #perfil {
@@ -165,6 +178,7 @@ img {
     margin-top: 40px;
     margin-bottom: 0px;
     font-size: 20px;
+    color: black;
 }
 
 
