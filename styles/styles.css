@@ -3,11 +3,12 @@ body {
     font-family: 'Inria Sans' !important;
 }
 
-.galeria .imagen {
-    width: 300px;
-}
+/* a partir de esta seccion es para la galeria de imagenes*/
+/* .galeria .imagen {
+    width: 100%;
+} */
 
-.imagen img {
+#detalle-mascota .imagen img {
     max-width: 300px;
     object-fit: cover;
     width: 300px;
@@ -15,19 +16,60 @@ body {
     padding: 15px;
 }
 
-.galeria .imagen img, #mascotas .mascota img {
+#mascotas .mascota img {
+    max-width: 150px;
+    object-fit: cover;
+    width: 100%;
+    /* padding: 15px; */
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.galeria .imagen img {
+    max-width: 300px;
+    object-fit: cover;
+    width: 100%;
+    /* padding: 15px; */
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.galeria .imagen img,
+#mascotas .mascota img {
     /* position:relative; */
     transition: transform .2s;
+    aspect-ratio: 1 / 1;
+}
+
+#mascotas .carousel-item {
+    justify-content: center;
+}
+
+#mascotas .carousel-item .row {
+    justify-content: center;
+}
+
+#mascotas .carousel-item.active,
+#mascotas .carousel-item-end,
+#mascotas .carousel-item-start {
+    display: flex;
+}
+
+#mascotas .carousel-inner {
+    overflow: visible;
 }
 
 .galeria .imagen:hover img {
+    /* EL HOVER ES PARA CUANDO EL MOUSE PASA POR ENCIMA*/
     opacity: 0.7;
+    /* EL OPACITY ES LA TRANSPARENCIA DE LA IMAGEN*/
     border: #3BB387;
+    /* EN ESTA SECCION SE TRABAJO EL BORDER DE CADA IMAGE PARA QUE FUNCIONE A LA PAR DEL EFECTO DE LA IMAGEN*/
     border-style: solid;
-    border-width: 15px;
     padding: 0;
     transform: scale(1.10);
 }
+
 
 #mascotas .mascota:hover img {
     opacity: 0.7;
@@ -41,12 +83,14 @@ body {
 }
 
 .galeria .imagen p.hint {
+    /* ES EL TEXTO SOBRE LA IMAGEN PERO SE ESTA TRABAJANDO TODAVIA*/
     opacity: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
+    /* EL TRANSFORM ES PARA QUE LA IMAGEN SE HAGA GRANDESITA  Y EL TRANSITION TRANSFORM ES EL RETARDO QUE TIENE PARA QUE LA IMAGEN VUELVA A SU TAMANIO NORMAL*/
     transition: transform .2s;
 }
 
@@ -58,12 +102,16 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.galeria .imagen {
+.galeria .imagen,
+#mascotas .mascota {
     position: relative;
 }
 
+/* HASTA AQUI LLEGA LA PARTE DE LA GALERIA*/
+
+
 #perfil .foto-perfil {
-    display:flex;
+    display: flex;
 }
 
 #perfil .foto-perfil img {
@@ -77,15 +125,15 @@ body {
     top: 150px; */
     width: 150px;
     height: 150px;
-    margin-left:-100px;
-    margin-top:150px;
+    margin-left: -100px;
+    margin-top: 150px;
 }
 
 
-#mascotas .mascota img {
+/* #mascotas .mascota img {
     width: 150px;
     height: 150px;
-}
+} */
 
 
 .perfil-mascota {
@@ -96,9 +144,13 @@ body {
     display: inline;
 }
 
+#detalle-mascota .imagen {
+    display: flex;
+    justify-content: center;
+}
+
 .detalle-mascota .imagen img {
-    width: 300px;
-    height: 300px;
+    aspect-ratio: 1 / 1;
 }
 
 .datos-generales .logo {
@@ -133,3 +185,26 @@ Modo Obscuro
 EBF2EB - Gris
 F5954F - Naranja
 */
+
+#iconoPerfil {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.icon {
+    width: 35px;
+    transition-duration: 500ms;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.petColor {
+    color: #3BB287;
+}
+
+.bGap {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    transition-duration: 500ms;
+}

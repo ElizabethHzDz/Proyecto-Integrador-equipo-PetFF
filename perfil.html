@@ -12,20 +12,49 @@
     <script src="./js/petff.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
 </head>
+<!--Agregar espacio en la parte superior para poner el menu hambuerguesa y el link del perfil-->
 
 <body>
 
     <div class="container">
-        <!-- aggregar un top padding y tal vez bottom -->
-        <div id="encabezado" class="row"></div>
+
+        <nav class="navbar row fixed-top position-relative m-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./assets/iconos/Perfil3.png"
+                        id="iconoPerfil">@Julian1_PetFF</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./assets/iconos/PETFF.png"
+                                id="logomenu">
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Acerca de nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
         <div id="perfil" class="row">
-            <div class="foto-perfil col-lg-4">
+            <div class="foto-perfil col-xl-4 col-lg-5">
                 <img class="rounded-circle" src="./assets/img/gato naranja 2.jpg">
                 <img class="propietario rounded-circle" src="./assets/img/travis.jpg" width="300">
 
             </div>
-            <div class="propietario col-lg-5 align-self-center">
+            <div class="propietario col-xl-5 col-lg-4 align-self-center">
                 <h4>Julian Martinez</h4>
                 <!-- subir un poco para agregar una descripcion abajo -->
                 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem obcaecati deserunt doloribus? Rem
@@ -50,43 +79,94 @@
             <div class="row align-self-center">
                 <h3>6 amigos peludos</h3>
             </div>
-            <div class="row">
-                <div class="mascota col text-center" onclick="showPerfil('mascota-1')">
+            <div id="recipeCarousel" class="carousel slide carousel-dark d-xl-none" data-bs-wrap="false">
+                <div class="row">
+                    <div class="col-2">
+                        <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <div class="col-8">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="mascota col-3 text-center" onclick="showPerfil('0')">
+                                        <img class="rounded-circle" src="./assets/img/pug.jfif">
+                                        <p>Max</p>
+                                    </div>
+                                    <div class="mascota col-3 text-center" onclick="showPerfil('1')">
+                                        <img class="rounded-circle" src="./assets/img/gato naranja.jfif">
+                                        <p>Cheeto</p>
+                                    </div>
+                                    <div class="mascota col-3 text-center" onclick="showPerfil('2')">
+                                        <img class="rounded-circle" src="./assets/img/cat 8.jfif">
+                                        <p>Katya</p>
+                                    </div>
+                                    <div class="mascota col-3 text-center" onclick="showPerfil('3')">
+                                        <img class="rounded-circle" src="./assets/img/gato rayas.jfif">
+                                        <p>Tofu</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="mascota col-3 text-center" onclick="showPerfil('4')">
+                                        <img class="rounded-circle" src="./assets/img/conejogris.webp">
+                                        <p>Bugs</p>
+                                    </div>
+                                    <div class="mascota col-3 text-center" onclick="showPerfil('5')">
+                                        <img class="rounded-circle" src="./assets/img/cuyo.jfif">
+                                        <p>Coco</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+
+                        <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-none d-xl-flex">
+                <div class="mascota col text-center" onclick="showPerfil('0')">
                     <img class="rounded-circle" src="./assets/img/pug.jfif">
                     <p>Max</p>
                 </div>
-                <div class="mascota col text-center" onclick="showPerfil('mascota-2')">
+                <div class="mascota col text-center" onclick="showPerfil('1')">
                     <img class="rounded-circle" src="./assets/img/gato naranja.jfif">
                     <p>Cheeto</p>
                 </div>
-                <div class="mascota col text-center" onclick="showPerfil('mascota-3')">
+                <div class="mascota col text-center" onclick="showPerfil('2')">
                     <img class="rounded-circle" src="./assets/img/cat 8.jfif">
                     <p>Katya</p>
                 </div>
-                <div class="mascota col text-center" onclick="showPerfil('mascota-4')">
+                <div class="mascota col text-center" onclick="showPerfil('3')">
                     <img class="rounded-circle" src="./assets/img/gato rayas.jfif">
                     <p>Tofu</p>
                 </div>
-                <div class="mascota col text-center" onclick="showPerfil('mascota-5')">
+                <div class="mascota col text-center" onclick="showPerfil('4')">
                     <img class="rounded-circle" src="./assets/img/conejogris.webp">
                     <p>Bugs</p>
                 </div>
-                <div class="mascota col text-center" onclick="showPerfil('mascota-6')">
+                <div class="mascota col text-center" onclick="showPerfil('5')">
                     <img class="rounded-circle" src="./assets/img/cuyo.jfif">
                     <p>Coco</p>
                 </div>
-
             </div>
         </div>
 
-
-
-        <div id="mascota-1" class="perfil-mascota active">
+        <div id="mascota-0" class="perfil-mascota active">
             <div id="detalle-mascota" class="row">
-                <div class="imagen col-xl-3">
+                <div class="imagen col-md-6 col-lg-4">
                     <img class="rounded-circle" src="./assets/img/pug.jfif" width="300">
                 </div>
-                <div class="resumen col-xl-9 align-self-center">
+                <div class="resumen col align-self-center">
                     <h3>Max</h3>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam, odit aperiam ullam non
                     sit
@@ -99,28 +179,26 @@
             <div class="galeria row">
 
                 <div class="row">
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/pug.jfif">
                         <p class="hint">8 me gusta <br>5 comentarios</p>
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/pug2.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/pug3.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/pug4.jfif">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/pug5.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/pug6.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/pug7.jfif">
                     </div>
 
@@ -128,12 +206,12 @@
             </div>
         </div>
 
-        <div id="mascota-2" class="perfil-mascota">
-            <div class="detalle-mascota row">
-                <div class="imagen col-xl-3">
+        <div id="mascota-1" class="perfil-mascota">
+            <div id="detalle-mascota" class="row">
+                <div class="imagen col-md-6 col-lg-4">
                     <img class="rounded-circle" src="./assets/img/gato naranja.jfif" width="300">
                 </div>
-                <div class="resumen col-xl-9 align-self-center">
+                <div class="resumen col align-self-center">
                     <h3>Cheeto</h3>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam, odit aperiam
                     ullam non
@@ -147,29 +225,27 @@
             <div class="galeria row">
 
                 <div class="row">
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar1.jfif">
                         <p class="hint">8 me gusta <br>5 comentarios</p>
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar2.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar3.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar4.jfif">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar5.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar6.jfif">
                     </div>
 
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar7.jfif">
                     </div>
                 </div>
@@ -177,12 +253,12 @@
             </div>
         </div>
 
-        <div id="mascota-3" class="perfil-mascota">
-            <div class="detalle-mascota row">
-                <div class="imagen col-xl-3">
+        <div id="mascota-2" class="perfil-mascota">
+            <div id="detalle-mascota" class="row">
+                <div class="imagen col-md-6 col-lg-4">
                     <img class="rounded-circle" src="./assets/img/cat 8.jfif" width="300">
                 </div>
-                <div class="resumen col-xl-9 align-self-center">
+                <div class="resumen col align-self-center">
                     <h3>Katya</h3>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam, odit aperiam
                     ullam non
@@ -196,55 +272,53 @@
             <div class="galeria row">
 
                 <div class="row">
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 1.jfif">
                         <p class="hint">8 me gusta <br>5 comentarios</p>
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 2.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 3.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 4.jfif">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 5.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 6.jpg">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 7.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 8.jfif">
                     </div>
-                </div>
-                <div class="imagen">
-                    <img src="./assets/img/cat 9.jfif">
-                </div>
-                <div class="imagen">
-                    <img src="./assets/img/cat 10.jfif">
-                </div>
-                <div class="imagen">
-                    <img src="./assets/img/cat 11.jfif">
-                </div>
-                <div class="imagen">
-                    <img src="./assets/img/cat 12.jfif">
+                    <div class="imagen col-md-3 col-4">
+                        <img src="./assets/img/cat 9.jfif">
+                    </div>
+                    <div class="imagen col-md-3 col-4">
+                        <img src="./assets/img/cat 10.jfif">
+                    </div>
+                    <div class="imagen col-md-3 col-4">
+                        <img src="./assets/img/cat 11.jfif">
+                    </div>
+                    <div class="imagen col-md-3 col-4">
+                        <img src="./assets/img/cat 12.jfif">
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="mascota-4" class="perfil-mascota">
-            <div class="detalle-mascota row">
-                <div class="imagen col-xl-3">
+        <div id="mascota-3" class="perfil-mascota">
+            <div id="detalle-mascota" class="row">
+                <div class="imagen col-md-6 col-lg-4">
                     <img class="rounded-circle" src="./assets/img/gato rayas.jfif" width="300">
                 </div>
-                <div class="resumen col-xl-9 align-self-center">
+                <div class="resumen col align-self-center">
                     <h3>Tofu</h3>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam, odit aperiam
                     ullam non
@@ -258,31 +332,29 @@
             <div class="galeria row">
 
                 <div class="row">
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris1.jfif">
                         <p class="hint">8 me gusta <br>5 comentarios</p>
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris2.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris3.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris4.jfif">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris5.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris6.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris7.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris8.jfif">
                     </div>
                 </div>
@@ -290,12 +362,12 @@
             </div>
         </div>
 
-        <div id="mascota-5" class="perfil-mascota">
-            <div class="detalle-mascota row">
-                <div class="imagen col-xl-3">
+        <div id="mascota-4" class="perfil-mascota">
+            <div id="detalle-mascota" class="row">
+                <div class="imagen col-md-6 col-lg-4">
                     <img class="rounded-circle" src="./assets/img/conejogris.webp" width="300">
                 </div>
-                <div class="resumen col-xl-9 align-self-center">
+                <div class="resumen col align-self-center">
                     <h3>Bugs</h3>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam, odit aperiam
                     ullam non
@@ -310,31 +382,29 @@
             <div class="galeria row">
 
                 <div class="row">
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/conejo1.jfif">
                         <p class="hint">8 me gusta <br>5 comentarios</p>
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/con2.jpg">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/con3.jpg.crdownload">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/con4.jfif">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/con5.jpg">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/con6.webp">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/con7.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/conejogris.webp">
                     </div>
                 </div>
@@ -342,12 +412,12 @@
         </div>
 
 
-        <div id="mascota-6" class="perfil-mascota">
-            <div class="detalle-mascota row">
-                <div class="imagen col-xl-3">
+        <div id="mascota-5" class="perfil-mascota">
+            <div id="detalle-mascota" class="row">
+                <div class="imagen col-md-6 col-lg-4">
                     <img class="rounded-circle" src="./assets/img/cuyo.jfif" width="300">
                 </div>
-                <div class="resumen col-xl-9 align-self-center">
+                <div class="resumen col align-self-center">
                     <h3>Coco</h3>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam, odit
                     aperiam ullam non
@@ -362,34 +432,68 @@
             <div class="galeria row">
 
                 <div class="row">
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cuyo1.jfif">
                         <p class="hint">8 me gusta <br>5 comentarios</p>
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cuyo2.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cuyo3.jfif">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cuyo4.webp">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cuyo5.webp">
                     </div>
-                    <div class="imagen">
+                    <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cuyo.jfif">
                     </div>
-
                 </div>
 
             </div>
         </div>
 
-        <div id="pie-de-pagina" class="row"></div>
+        <!-- <div id="pie-de-pagina" class="row"></div> -->
+
+        <!-- Barra de navegación inferior -->
+        <nav class="navbar fixed-bottom navbar-expand bg-white" id="navb">
+
+            <div class="collapse navbar-collapse navBottom" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item active bGap">
+                        <a class="nav-link petColor" href="https://github.com/"><br>
+                            <img class="icon" src="./assets/iconos/Home1.png" alt="Home">
+                            <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item bGap">
+                        <a class="nav-link petColor"
+                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span"><br>
+                            <img class="icon" id="estetos" src="./assets/iconos/Estetos2.png" alt="Vets">
+                        </a>
+                    </li>
+
+                    <li class="nav-item bGap">
+                        <a class="nav-link petColor" href="https://www.google.com/"><br>
+                            <img class="icon" id="news" src="./assets/iconos/News2.png" alt="Blog">
+                        </a>
+                    </li>
+                    <li class="nav-item bGap">
+                        <a class="nav-link petColor" href="https://www.linkedin.com/"><br>
+                            <img class="icon" src="./assets/iconos/Blog2.png" alt="Comunity">
+                        </a>
+                    </li>
+                    <li class="nav-item bGap">
+                        <a class="nav-link petColor" href="https://mexico.generation.org/"><br>
+                            <img class="icon" src="./assets/iconos/Perfil3.png" alt="Profile">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         <br>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
