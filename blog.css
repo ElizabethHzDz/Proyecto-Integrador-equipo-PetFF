@@ -38,137 +38,43 @@ a{
 #encabezado{
     background-color:#EBF2EB;
 }
-
-/*Notas Informativas*/
-
-.imagen-content,
-.card-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 14px;
-    
-}
-
-.notas .img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.imagen-content{
-    position: relative;
-    row-gap: 5px;
-    padding: 25px 0;
-    
-}
-
-.overlay{
-    position: relative;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color:#3BB287;
-    border-radius: 25px 25px 0 25px;
-}
-
-.card{
-    width: 320px; /*Para mantener el ancho fijo*/
-    border-radius: 25px;
-    background-color:#FFFFFF;
-    margin: 10px; 
-    border-color: #3BB287 ;
-}
-
-.card-image{ /*Dar formato a la imagen de notas*/
-    position: relative;
-    /*height: 150px;
-    width: 150px;*/
-    border-radius: 50%;
-    background-color:#3BB287;
-    padding: 3px;
-    max-width: 100%;
-    object-fit: cover;
-}
-
-.card-image .img {
-    transition: transform .2s;
-}
-
-/*Id de imagenes de notas*/
-#imgGatos{
-    height: 250px;
-    width: 100%;
-}
-#imgCone{
-    height: 250px;
-    width: 100%;
-}
-#imgCol4{
-    height: 250px;
-    width: 100%;
-}
-#imgcol3{
-    height: 250px;
-    width: 100%;
-}
-#imgcol5{
-    height: 250px;
-    width: 100%;
-}
-#imgCol6{
-    height: 250px;
-    width: 100%;
-}
-
-/*
-Para que se mantengan el mismo tamaño de la imagen 
-.galeria .imagen img,
-#mascotas .mascota img {
-    // position:relative; //
-    transition: transform .2s;
-    aspect-ratio: 1 / 1;
-
-*/
-
-.card-img{
-    max-width: 100%;
-    border-radius: 50%;
-
-}
-
-.categoria{
-    font-size: 20px;
-    font-weight: 500;
-    color: #000000;
-    text-align: center;
-}
-
 .descripcion{
     font-size: 16px;
     color:#000000;
     text-align: center;
 }
 
+/*Notas Informativas*/
+
+.card{ /*Tarjetas de notas*/
+    width: 250px; /*Para mantener el ancho fijo*/
+    border-radius: 25px;
+    background-color:#FFFFFF;
+    margin: 10px; 
+    border-color: #3BB287 ;
+}
+
+/*Imagenes de notas*/
+.imagen-content img{
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.card-img{ /*Para modificar Imagenes de categorias*/
+    max-width: 100%;
+    border-radius: 50%; 
+}
+
 .button{
     border: none;
     font-size: 18px;
-    color: #000000;
     padding: 8px 16px;
     background-color:#3BB287;
     border-radius: 10px;
     margin: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
 }
-/*.button:hover{ /*Para que se vea que se selecciono
-    background:#ff862f; 
-    color: #000000;
-    text-decoration: none;
-    
-}*/
 
 
 /*Banner*/
@@ -176,19 +82,9 @@ Para que se mantengan el mismo tamaño de la imagen
     margin-top: 20px;
 }
 
-#b1{
-height: 300px;
-width: 150px;
-}
-
-#b2{
+#carouselExampleSlidesOnly img{
     height: 300px;
-    width:150px;
-
-}
-#b3{
-    height: 300px;
-    width:150px;
+    width: 150px;
 }
 
 
