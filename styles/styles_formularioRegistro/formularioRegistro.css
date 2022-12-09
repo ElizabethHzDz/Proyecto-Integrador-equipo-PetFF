@@ -1,5 +1,5 @@
-#contenedorPrincipal{
-    background-image: url(./assets/fondo_patitas.jpeg);
+body{
+    background-image: url(../../assets/modoNormal.png);
 }
 
 #cajita{
@@ -21,6 +21,10 @@
 }
 
 #boton{
-    color:#000000;
+    color:#EBF2EB;
     background-color: #3BB287;
+}
+
+.btn{
+    background-color: #3BB287 !important;
 }

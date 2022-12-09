@@ -1,69 +1,68 @@
+
 #contenedorPrincipal{
     padding-top: 10px;
-    background-image: url(./assets/fondo_patitas.jpeg);
-    background-repeat: none;
-    background-size: cover;
     font-family: 'Inria Sans', sans-serif;
 }
 
 #logo{
-    background-image: url(./assets/PETFF.png);
+    background-image: url(../../assets/assets_sobreElEquipo/PETFF.png);
     background-repeat: none;
     background-size: cover;
     font-size: larger;
     font-family: 'Inria Sans', sans-serif;
+    border: solid 1px #F5954F;
 }
 
 #colum_1{
-    background-image: url(./assets/eli-pro2.jpg);
+    background-image: url(../../assets/assets_sobreElEquipo/eli-pro2.jpg);
     background-repeat: none;
     background-size: cover;
 }
 
 #colum_2{
-    background-image: url(./assets/rebe-pro2.jpg);
+    background-image: url(../../assets/assets_sobreElEquipo/rebe-pro2.jpg);
     background-repeat: none;
     background-size: cover;
 }
 
 #colum_3{
-    background-image: url(./assets/lau-pro2.jpg);
+    background-image: url(../../assets/assets_sobreElEquipo/lau-pro2.jpg);
     background-repeat: none;
     background-size: cover;
 }
 
 #colum_4{
-    background-image: url(./assets/Marco.jpg);
+    background-image: url(../../assets/assets_sobreElEquipo/Marco.jpg);
     background-repeat: none;
     background-size: cover;
 }
 
 #colum_5{
-    background-image: url(./assets/WhatsApp\ Image\ 2022-11-25\ at\ 21.32.16.jpeg);
+    background-image: url(../../assets/assets_sobreElEquipo/WhatsApp\ Image\ 2022-11-25\ at\ 21.32.16.jpeg);
     background-repeat: none;
     background-size: cover;
 }
 
 #colum_6{
-    background-image: url(./assets/ruben-pro2.jpg);
+    background-image: url(../../assets/assets_sobreElEquipo/ruben-pro2.jpg);
     background-repeat: none;
     background-size: cover;
 }
 
 #colum_7{
-    background-image: url(./assets/isma-pro2.jpg);
+    background-image: url(../../assets/assets_sobreElEquipo/isma-pro2.jpg);
     background-repeat: none;
     background-size: cover;
 }
 
 #colum_8{
-    background-image: url(./assets/lalo-pro1.jpeg);
+    background-image: url(../../assets/assets_sobreElEquipo/lalo-pro1.jpeg);
     background-repeat: none;
     background-size: cover;
 }
 
 #colum_9{
-    background-image: url(./assets/Adalid.jpeg);
+    background-image: url(../../assets/assets_sobreElEquipo/Adalid.jpeg);
     background-repeat: none;
     background-size: cover;
 }
@@ -73,8 +72,7 @@
     opacity: 0;
     transition-duration: 1.06s;
     transition-timing-function: ease-in-out;
-    height: 300px;
-    width: 300px;
+    aspect-ratio: 1/1;
 }
 
 .hovtxt:hover {
@@ -94,8 +92,7 @@
 }
 
 .logos{
-    /*width: 70px;*/
-    width: 25%;
+    width: 23%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -104,6 +101,31 @@
 }
 
 body{
+    background-image: url(../../assets/modoNormal.png);
     font-family: 'Inria Sans', sans-serif;
     font-weight: bold;
 }
+
+#boton{
+    color: #EBF2EB;
+    background-color: #3BB287;
+}
+
+#tituloEquipo{
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin-top: 35px;
+    border: solid 1px #3BB287;
+    background-color: #000000;
+    color: white;
+}
+
+#footer{
+    font-family: 'Inria Sans', sans-serif;
+}
+
+/* #logoEquipo{
+    max-width: 450px;
+    width: 100%;
+    aspect-ratio: 1/1;
+} */
