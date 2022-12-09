@@ -1,0 +1,201 @@
+body {
+    background-image: url("/assets/iconos/modoNormal.png");
+    background-color: transparent;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 16px;
+}
+
+.row {
+    position: relative;
+    flex: 1 0 22rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+/*usuarioMenu*/
+.navbar-toggler-icon{
+    border: 10px solid #3BB287;
+    border: #3BB287;
+}
+
+#iconoPerfil{
+    width: 30px;
+    margin-right: 10px;
+}
+
+#logomenu{
+    width: 150px;
+    color: #3BB287;
+}
+
+
+/*contacto e imagen de perfil*/
+#Img_perfil{
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 50%;
+    align-items: center;
+}
+
+#img_seguidores{
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding: 0rem;
+}
+.listaDescripcion{
+    list-style: none;
+    font-size: 16px;
+    margin-top: 1rem;
+    padding: 2rem 0;
+}
+
+.logo .datos-generales {
+    width: 235px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding-bottom: 20px;
+}
+
+/*especializacion y descripcion*/
+
+.listaDescripcionEspe{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 0rem;
+    padding: 0rem 0;
+}
+
+/*boton editar perfil*/
+
+.btn{
+    border-radius: 12px;
+    background-color: #3BB287;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.19);
+}
+
+/*servicios y boton de mas*/
+.servicios{
+    max-width: 100px;
+    max-height: 100px;
+    width: 100%;
+    justify-content: flex-start ; 
+    border-radius: 50%;
+    border: 1px solid #3BB287;
+    transition: transform .2s;
+}
+
+.servicios:hover {
+    opacity: 0.7; /* EL OPACITY ES LA TRANSPARENCIA DE LA IMAGEN*/
+    border: #3BB387; /* EN ESTA SECCION SE TRABAJO EL BORDER DE CADA IMAGE PARA QUE FUNCIONE A LA PAR DEL EFECTO DE LA IMAGEN*/
+    border-style: solid;
+    border-width: 2px;
+    padding: 0;
+    transform: scale(1.10);
+}
+
+
+
+.btnMas {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-color: #3BB287;
+    font-size: 30px;
+}
+
+/*galeria*/
+
+.gallery-image {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+    /* padding-top: 15px; */
+    margin-bottom: 15px;
+    margin-top: 15px;
+    transition: transform .2s;
+    aspect-ratio: 1 / 1 ;
+}
+
+.gallery-image:hover {
+    opacity: 0.7; /* EL OPACITY ES LA TRANSPARENCIA DE LA IMAGEN*/
+    border: #3BB387; /* EN ESTA SECCION SE TRABAJO EL BORDER DE CADA IMAGE PARA QUE FUNCIONE A LA PAR DEL EFECTO DE LA IMAGEN*/
+    border-style: solid;
+    padding: 0;
+    transform: scale(1.10);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Espacio vacio*/
+.space {
+    margin: 150px;
+}
+
+
+/* barra de navegacion de abajo */
+
+.petColor {
+    color: #3BB287;
+}
+
+.petColor:hover {
+    color: #3BB287;
+}
+
+.bGap {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    transition-duration: 500ms;
+}
+
+.icon {
+    width: 35px;
+    transition-duration: 500ms;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.navBottom{
+    border-top: 1px solid #3BB287;
+}
+
+#estetos {
+    width: 28px;
+    transition-duration: 500ms;
+}
+
+.bGap:hover {
+    border-top: 3px solid #3BB287;
+}
+
+.icon:hover {
+    width: 30px;
+}
+
+#news {
+    width: 45px;
+    transition-duration: 500ms;
+}
+
+#news:hover{
+    width: 40px;
+}
+
+#estetos:hover {
+    width: 23px;
+}

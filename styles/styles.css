@@ -1,14 +1,14 @@
 body {
-    background-image: url("/assets/iconos/huellas_modoNormal2.png");
+    background-image: url("/assets/iconos/modoNormal\(3BB287_15\).png");
     background-color: transparent;
     font-family: 'Inria Sans', sans-serif;
-    font-size: 16px;
+    font-size: 25px;
 }
 
-.container{
+/* .container{
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 .row {
     position: relative;
@@ -19,78 +19,78 @@ body {
 
 /*usuarioMenu*/
 
-#Name_user{
-    font-family: 'Inria Sans', sans-serif;
-    font-size: 2vw;
-    display: flex;
-    align-items: left;
+#iconoPerfil{
+    width: 30px;
+    margin-right: 10px;
 }
 
-#descripcion{
-    font-family:'Inria Sans', sans-serif;
-    font-size: 10px;
-    align-items: center;
-} 
-
-/* #profile-image {
-    width: 100%;
-    align-items: center;
-} */
-
-#menu{
-    float:right;
+#logomenu{
+    width: 150px;
+    color: #3BB287;
 }
 
-/* boton editar perfil*/
+/*contacto e imagen de perfil*/
 
-/* #profile-image {
-    float: left;
-    width: calc(33.333% - 1rem);
-    display: flex;
+#Img_perfil{
+    border-radius: 50%;
+    width: 300px;
     justify-content: center;
     align-items: center;
-    margin-right: 3rem;
 }
 
-#profile-image img {
-    border-radius: 50%;
-} */
+.listaDescripcion{
+    list-style: none;
+    font-size: 20px;
+    margin-top: 1rem;
+    padding: 2rem 0;
+}
+/*boton editar perfil*/
 
-#editarPerfil{
-    background-color: rgb(59, 178, 135);
+.btn{
     border-radius: 12px;
-    font-size: 16px;
-    width: 250px;
-    height: 50px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #3BB287;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.19);
+}
+
+/*servicios y boton de mas*/
+.servicios{
+    text-align: left;
+}
+
+
+.btnMas {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-color: #3BB287;
+    font-size: 30px;
 }
 
 /*galeria*/
 
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -1rem -1rem;
-    padding-bottom: 3rem;
-}
-
 .gallery-image {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
+    padding-top: 10px;
 }
 
 
-
+/*Espacio vacio*/
+.space {
+    margin: 90px;
+}
 
 /* barra de navegacion de abajo */
-/* .petColor {
-    color: #3BB287;
-} */
 
-/* .petColor:hover {
+.petColor {
     color: #3BB287;
-} */
+}
+
+.petColor:hover {
+    color: #3BB287;
+}
 
 .bGap {
     margin-left: 20px;
@@ -100,19 +100,14 @@ body {
 }
 
 .icon {
-    width: 40px;
+    width: 35px;
     transition-duration: 500ms;
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
 #estetos {
-    width: 30px;
-    transition-duration: 500ms;
-}
-
-#news {
-    width: 50px;
+    width: 28px;
     transition-duration: 500ms;
 }
 
@@ -124,11 +119,11 @@ body {
     width: 45px;
 }
 
-#estetos:hover {
-    width: 35px;
+#news {
+    width: 45px;
+    transition-duration: 500ms;
 }
 
-#navb {
-    padding: 0%;
-    height: 80px;
+#estetos:hover {
+    width: 35px;
 }
