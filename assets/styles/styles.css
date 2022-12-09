@@ -1,9 +1,23 @@
 body{
     background: #e8e8e8;
-    background-image: url("/assets/iconos/huellas_modoNormal2.png");
+    background-image: url("/assets/Huellitas3.jpeg");
     background-color: transparent;
     font-family: 'Inria Sans', sans-serif;
     font-size: 25px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.centro{
+    align-items: center;
+}
+
+.contenedor{
+    width: 100%;
+    padding: 15px;
+    background: #e8e8e8;
 }
 
 .menu{
@@ -53,6 +67,18 @@ body{
     color: #3BB287;
 }
 
+.link{
+    color: #ef8354;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: #3BB287;
+}
+
+#titulo{
+    color: #3BB287;
+}
 #botoncito{
     display: inline-block;
     margin: 0px 35px;
@@ -61,16 +87,29 @@ body{
 }
 
 #icono1{
-    padding: 5px 10px;
+    padding: 15px 15px;
     color: #ef8354;
 }
 
 #icono2{
-    padding: 5px 10px;
+    padding: 15px 15px;
     color: #3BB287;
 }
 
 #is{
     color:#ffffff;
     background-color: #3BB287;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#is:hover{
+    color: #ffffff;
+    background-color: #ef8354;
+}
+
+#previous{
+    height: 150px;
+    width: 150px;
+    border-radius: 60%;
 }
