@@ -1,6 +1,10 @@
 body {
-    background-image: url('../assets/img/huellas_modoNormal.png');
+    background-image: url('../assets/img/modoNormal.png');
     font-family: 'Inria Sans' !important;
+}
+
+.container {
+    width: fit-content !important;
 }
 
 /* a partir de esta seccion es para la galeria de imagenes*/
@@ -47,6 +51,13 @@ body {
 
 #mascotas .carousel-item .row {
     justify-content: center;
+    white-space: pre-wrap;
+    margin-top: -55px;
+    margin-bottom: -50px;
+}
+
+#mascotas .carousel-item .row p {
+    margin-top: -30px;
 }
 
 #mascotas .carousel-item.active,
@@ -59,7 +70,7 @@ body {
     overflow: visible;
 }
 
-.galeria .imagen:hover img {
+.container:not(.edit) .galeria .imagen:hover img {
     /* EL HOVER ES PARA CUANDO EL MOUSE PASA POR ENCIMA*/
     opacity: 0.7;
     /* EL OPACITY ES LA TRANSPARENCIA DE LA IMAGEN*/
@@ -94,7 +105,7 @@ body {
     transition: transform .2s;
 }
 
-.galeria .imagen:hover p.hint {
+.container:not(.edit) .galeria .imagen:hover p.hint {
     opacity: 1;
     /* transform: scale(10); */
     font-size: large;
@@ -109,9 +120,10 @@ body {
 
 /* HASTA AQUI LLEGA LA PARTE DE LA GALERIA*/
 
-
+/* uncomment */
 #perfil .foto-perfil {
     display: flex;
+    position: relative;
 }
 
 #perfil .foto-perfil img {
@@ -167,8 +179,80 @@ body {
     /* font-weight: 700; */
     text-align: center;
     padding-bottom: 20px;
+    padding-top: 10px;
 
 }
+
+.modal .modal-body {
+    text-align: center;
+}
+
+.carousel-item .caption {
+    padding: 15px;
+}
+
+.modal-footer .logo {
+    max-width: 100px;
+}
+
+.modal .carousel-item img {
+    /* height: 450px; */
+    width: 700px;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.modal .carousel-item .hint {
+    display: none;
+}
+
+.galeria .caption {
+    display: none;
+}
+
+i.edit {
+    padding-left: 12px;
+}
+
+div.dropdown {
+    position: inherit;
+    display: inline;
+}
+
+div.dropdown.edit-image {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    font-size: xx-large;
+}
+
+div.dropdown.imagen-principal {
+    position: absolute;
+    left: 271px;
+    top: 8px;
+    font-size: xx-large;
+}
+
+.container:not(.edit) i.bi-three-dots {
+    display: none;
+}
+
+button.navbar-toggler {
+    border-color: #3BB287;
+}
+
+button.navbar-toggler:hover {
+    background-color: #3BB287;
+}
+
+button.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* .modal .modal-content button.btn-close {
+    align-self: flex-end;
+} */
 
 
 /* 
@@ -191,14 +275,48 @@ F5954F - Naranja
     margin-right: 10px;
 }
 
-.icon {
-    width: 35px;
-    transition-duration: 500ms;
-    margin-top: 10px;
-    margin-bottom: 5px;
+#logomenu {
+    width: 150px;
+    color: #3BB287;
 }
 
+.img-size {
+    /* 	padding: 0;
+        margin: 0; */
+    height: 450px;
+    width: 700px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.modal-content {
+    width: 700px;
+    border: none;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23009be1' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    width: 30px;
+    height: 48px;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23009be1' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    width: 30px;
+    height: 48px;
+}
+
+/* barra de navegacion de abajo */
+
 .petColor {
+    color: #3BB287 !important;
+}
+
+.petColor:hover {
     color: #3BB287;
 }
 
@@ -207,4 +325,49 @@ F5954F - Naranja
     margin-right: 20px;
     text-align: center;
     transition-duration: 500ms;
+}
+
+.icon {
+    width: 35px;
+    transition-duration: 500ms;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.navBottom {
+    border-top: 1px solid #3BB287;
+}
+
+#estetos {
+    width: 28px;
+    transition-duration: 500ms;
+}
+
+.bGap:hover {
+    border-top: 3px solid #3BB287;
+}
+
+.icon:hover {
+    width: 30px;
+}
+
+#news {
+    width: 45px;
+    transition-duration: 500ms;
+}
+
+#news:hover {
+    width: 40px;
+}
+
+#estetos:hover {
+    width: 23px;
+}
+
+
+/*pintar boton hamburguesa*/
+
+#btn_close {
+    color: #3BB287;
+
 }

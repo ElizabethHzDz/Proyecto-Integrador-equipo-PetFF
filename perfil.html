@@ -11,6 +11,8 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="./js/petff.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="./assets/iconos/P.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 <!--Agregar espacio en la parte superior para poner el menu hambuerguesa y el link del perfil-->
 
@@ -37,11 +39,18 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Acerca de nosotros</a>
+                                <a class="nav-link" aria-current="page" href="#">Acerca de nosotros</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Cerrar sesión</a>
                             </li>
+
+                            <!--se agrega nuevo-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="togglePerfil(this)">Editar perfil</a>
+                            </li>
+
+
                         </ul>
                     </div>
                 </div>
@@ -51,26 +60,54 @@
         <div id="perfil" class="row">
             <div class="foto-perfil col-xl-4 col-lg-5">
                 <img class="rounded-circle" src="./assets/img/gato naranja 2.jpg">
-                <img class="propietario rounded-circle" src="./assets/img/travis.jpg" width="300">
+                <div class="dropdown imagen-principal">
+                    <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
 
+                    <ul class="dropdown-menu dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Cambiar foto de perfil</a></li>
+                        <li><a class="dropdown-item" href="#">Cambiar foto de mi humano</a></li>
+                        <li><a class="dropdown-item" href="#">Eliminar foto de perfil</a></li>
+                        <li><a class="dropdown-item" href="#">Eliminar foto de mi humano</a></li>
+                    </ul>
+                </div>
+                <img class="propietario rounded-circle" src="./assets/img/travis.jpg" width="300">
             </div>
             <div class="propietario col-xl-5 col-lg-4 align-self-center">
-                <h4>Julian Martinez</h4>
+                <h4>Julian Martinez
+                    <div class="dropdown">
+                        <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                        <ul class="dropdown-menu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                            <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                        </ul>
+                    </div>
+                </h4>
+
                 <!-- subir un poco para agregar una descripcion abajo -->
                 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem obcaecati deserunt doloribus? Rem
                     provident, animi molestiae quidem non consequuntur dolorum excepturi laudantium quae asperiores
-                    minima dolorem rerum quis iure nihil!</div>
-            </div>
+                    minima dolorem rerum quis iure nihil!
+                    <div class="dropdown">
+                        <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
 
+                        <ul class="dropdown-menu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                            <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="datos-generales col-lg-3 align-self-center">
-                <div class="row">
+                <div class="row d-none d-lg-block">
                     <img class="logo" src="./assets/PETFF.png">
                 </div>
                 <div class="row">
-                    <div class="siguiendo col-sm-4">310 fotos</div>
-                    <div class="siguiendo col-sm-4">6.1M seguidores</div>
-                    <div class="seguidores col-sm-4">845 siguiendo</div>
-                    <div class="ciudad  col-sm-12">Guadalajara Jalisco</div>
+                    <div class="siguiendo col-4">310 fotos</div>
+                    <div class="siguiendo col-4">6.1M seguidores</div>
+                    <div class="seguidores col-4">845 siguiendo</div>
                 </div>
             </div>
         </div>
@@ -167,39 +204,139 @@
                     <img class="rounded-circle" src="./assets/img/pug.jfif" width="300">
                 </div>
                 <div class="resumen col align-self-center">
-                    <h3>Max</h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam, odit aperiam ullam non
+                    <h3>Max
+                        <div class="dropdown">
+                            <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                            </ul>
+                        </div>
+                    </h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam, odit aperiam ullam
+                    non
                     sit
                     ipsum assumenda quaerat nisi ex tempore, officiis sed adipisci deleniti dolores aspernatur,
                     voluptatum
                     delectus officia?
+                    <div class="dropdown">
+                        <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                        <ul class="dropdown-menu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                            <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
             <div class="galeria row">
 
                 <div class="row">
-                    <div class="imagen col-md-3 col-4">
+                    <div class="imagen col-md-3 col-4" onclick="">
                         <img src="./assets/img/pug.jfif">
-                        <p class="hint">8 me gusta <br>5 comentarios</p>
+                        <p class="hint"></p>
+                        <div class="caption">
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/pug2.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/pug3.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/pug4.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/pug5.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/pug6.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/pug7.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
 
                 </div>
@@ -212,13 +349,32 @@
                     <img class="rounded-circle" src="./assets/img/gato naranja.jfif" width="300">
                 </div>
                 <div class="resumen col align-self-center">
-                    <h3>Cheeto</h3>
+                    <h3>Cheeto
+                        <div class="dropdown">
+                            <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                            </ul>
+                        </div>
+                    </h3>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam, odit aperiam
                     ullam non
                     sit
                     ipsum assumenda quaerat nisi ex tempore, officiis sed adipisci deleniti dolores aspernatur,
                     voluptatum
                     delectus officia?
+                    <div class="dropdown">
+                        <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                        <ul class="dropdown-menu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                            <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -227,26 +383,102 @@
                 <div class="row">
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar1.jfif">
-                        <p class="hint">8 me gusta <br>5 comentarios</p>
+                        <p class="hint"></p>
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar2.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar3.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar4.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar5.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar6.jfif">
-                    </div>
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
 
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/nar7.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -259,13 +491,32 @@
                     <img class="rounded-circle" src="./assets/img/cat 8.jfif" width="300">
                 </div>
                 <div class="resumen col align-self-center">
-                    <h3>Katya</h3>
+                    <h3>Katya
+                        <div class="dropdown">
+                            <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                            </ul>
+                        </div>
+                    </h3>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam, odit aperiam
                     ullam non
                     sit
                     ipsum assumenda quaerat nisi ex tempore, officiis sed adipisci deleniti dolores aspernatur,
                     voluptatum
                     delectus officia?
+                    <div class="dropdown">
+                        <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                        <ul class="dropdown-menu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                            <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -274,40 +525,172 @@
                 <div class="row">
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 1.jfif">
-                        <p class="hint">8 me gusta <br>5 comentarios</p>
+                        <p class="hint"></p>
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 2.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 3.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 4.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 5.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 6.jpg">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 7.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 8.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 9.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 10.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 11.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cat 12.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -319,13 +702,32 @@
                     <img class="rounded-circle" src="./assets/img/gato rayas.jfif" width="300">
                 </div>
                 <div class="resumen col align-self-center">
-                    <h3>Tofu</h3>
+                    <h3>Tofu
+                        <div class="dropdown">
+                            <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                            </ul>
+                        </div>
+                    </h3>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam, odit aperiam
                     ullam non
                     sit
                     ipsum assumenda quaerat nisi ex tempore, officiis sed adipisci deleniti dolores aspernatur,
                     voluptatum
                     delectus officia?
+                    <div class="dropdown">
+                        <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                        <ul class="dropdown-menu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                            <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -334,28 +736,116 @@
                 <div class="row">
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris1.jfif">
-                        <p class="hint">8 me gusta <br>5 comentarios</p>
+                        <p class="hint"></p>
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris2.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris3.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris4.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris5.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris6.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris7.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/gris8.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -368,7 +858,17 @@
                     <img class="rounded-circle" src="./assets/img/conejogris.webp" width="300">
                 </div>
                 <div class="resumen col align-self-center">
-                    <h3>Bugs</h3>
+                    <h3>Bugs
+                        <div class="dropdown">
+                            <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                            </ul>
+                        </div>
+                    </h3>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam, odit aperiam
                     ullam non
                     sit
@@ -376,6 +876,15 @@
                     aspernatur,
                     voluptatum
                     delectus officia?
+                    <div class="dropdown">
+                        <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                        <ul class="dropdown-menu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                            <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -384,28 +893,116 @@
                 <div class="row">
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/conejo1.jfif">
-                        <p class="hint">8 me gusta <br>5 comentarios</p>
+                        <p class="hint"></p>
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/con2.jpg">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/con3.jpg.crdownload">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/con4.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/con5.jpg">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/con6.webp">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/con7.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/conejogris.webp">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -418,7 +1015,17 @@
                     <img class="rounded-circle" src="./assets/img/cuyo.jfif" width="300">
                 </div>
                 <div class="resumen col align-self-center">
-                    <h3>Coco</h3>
+                    <h3>Coco
+                        <div class="dropdown">
+                            <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                            </ul>
+                        </div>
+                    </h3>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam, odit
                     aperiam ullam non
                     sit
@@ -426,6 +1033,15 @@
                     aspernatur,
                     voluptatum
                     delectus officia?
+                    <div class="dropdown">
+                        <i class="edit bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                        <ul class="dropdown-menu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                            <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -434,59 +1050,157 @@
                 <div class="row">
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cuyo1.jfif">
-                        <p class="hint">8 me gusta <br>5 comentarios</p>
+                        <p class="hint"></p>
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cuyo2.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cuyo3.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cuyo4.webp">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cuyo5.webp">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen col-md-3 col-4">
                         <img src="./assets/img/cuyo.jfif">
+                        <div class="dropdown edit-image">
+                            <i class="bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                            <ul class="dropdown-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                                <li><a class="dropdown-item" href="#">Editar</a></li>
+                                <li><a class="dropdown-item" href="#">Ocultar</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto de perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Elegir como foto principal</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <!-- <div id="pie-de-pagina" class="row"></div> -->
+        <!-- modal -->
+        <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="basicModal"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- carousel -->
+                        <div id='carouselExampleIndicators' class='carousel slide carousel-dark' data-bs-ride='false'>
+                            <div class='carousel-inner'>
+                                <div class='carousel-item'>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <img class="logo" src="./assets/PETFF.png">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Barra de navegación inferior -->
-        <nav class="navbar fixed-bottom navbar-expand bg-white" id="navb">
+        <nav class="navbar sticky-bottom navbar-expand bg-white" id="navb">
 
             <div class="collapse navbar-collapse navBottom" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item active bGap">
-                        <a class="nav-link petColor" href="https://github.com/"><br>
+                        <a class="nav-link petColor" href="https://github.com/">Inicio<br>
                             <img class="icon" src="./assets/iconos/Home1.png" alt="Home">
                             <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item bGap">
                         <a class="nav-link petColor"
-                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span"><br>
+                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span">Vets<br>
                             <img class="icon" id="estetos" src="./assets/iconos/Estetos2.png" alt="Vets">
                         </a>
                     </li>
 
                     <li class="nav-item bGap">
-                        <a class="nav-link petColor" href="https://www.google.com/"><br>
+                        <a class="nav-link petColor" href="https://www.google.com/">Noticias<br>
                             <img class="icon" id="news" src="./assets/iconos/News2.png" alt="Blog">
                         </a>
                     </li>
                     <li class="nav-item bGap">
-                        <a class="nav-link petColor" href="https://www.linkedin.com/"><br>
+                        <a class="nav-link petColor" href="https://www.linkedin.com/">Blog<br>
                             <img class="icon" src="./assets/iconos/Blog2.png" alt="Comunity">
                         </a>
                     </li>
                     <li class="nav-item bGap">
-                        <a class="nav-link petColor" href="https://mexico.generation.org/"><br>
+                        <a class="nav-link petColor" href="https://mexico.generation.org/">Perfil<br>
                             <img class="icon" src="./assets/iconos/Perfil3.png" alt="Profile">
                         </a>
                     </li>
@@ -496,6 +1210,7 @@
 
         <br>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
