@@ -1,7 +1,7 @@
 
 body{
     font-family: 'Inria Sans', sans-serif;
-    background-image: url(/assets/fondo.jpeg);
+    background-image: url(/assetsInicio/modoNormal.png);
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
 }
@@ -38,8 +38,13 @@ img {
 
 /* Para quitar border de tarjeta de publicidad */
 #pCard {
-    background-color:white;
+    background-color:transparent;
     border: none;
+}
+
+.borderPubli {
+    border: 1px solid #3BB287;
+    background-color: white;
 }
 
 
@@ -105,9 +110,26 @@ img {
     margin-bottom: 5px;
 }
 
+.icon:hover {
+    width: 30px;
+}
+
 #estetos {
     width: 28px;
     transition-duration: 500ms;
+}
+
+#estetos:hover {
+    width: 23px;
+}
+
+#news {
+    width: 45px;
+    transition-duration: 500ms;
+}
+
+#news:hover {
+    width: 40px;
 }
 
 .iGap:hover {
@@ -118,18 +140,6 @@ img {
     border-top: 3px solid #3BB287;
 }
 
-.icon:hover {
-    width: 30px;
-}
-
-#news {
-    width: 45px;
-    transition-duration: 500ms;
-}
-
-#estetos:hover {
-    width: 22px;
-}
 
 /* Espacios invisible */
 .space {
@@ -194,31 +204,28 @@ img {
 }
 
 .buttons {
-    width: 50px;
+    width: 35px;
     transition-duration: 500ms;
 }
 
 .buttons:hover {
-    width: 45px;
+    width: 30px;
 }
 
 
 .like {
     margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
     padding: 0;
 }
 
 .comment {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 0;
 }
 
-.ads {
-    background-color: black;
-}
 
 .fixedPubli{
     position: fixed;
