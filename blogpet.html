@@ -9,6 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="/blog.css">
+  <link rel="icon" type="image/x-icon" href="./assets/iconos/P.png">
 </head>
 
 <!--
@@ -27,8 +28,8 @@ Vincularlo a las tarjetas. Listo!
 Modificar los bordes a verdecito. Listo!
 HAcer mas pequeño los iconos de categorias. Listo!
 Ajustar los tamaños de los fotos. Listo!
-Modificar las tarjetas 
-Lenguaje 
+Modificar las tarjetas. Listo!
+Lenguaje, listo? 
 
 
 
@@ -47,8 +48,8 @@ Lenguaje
 
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Buscar notas" aria-label="Search">
-            <a href="https://www.google.com/" target="_blank"><button class="btn btn-outline-success" type="submit"><img
-                  src="https://raw.githubusercontent.com/ElizabethHzDz/Proyecto-Integrador-equipo-PetFF/Eli/assets/iconos/Buscar%201.png"
+            <a href="https://www.google.com/" target="_blank"><button id="Buscar" class="btn btn-outline-success" type="submit"><img
+                  src="/assets/assets_blog/Buscar 1.png"
                   alt="lupa" width="25"> </a>
           </form>
         </div>
@@ -58,11 +59,10 @@ Lenguaje
 
   <!--Descripcion de blogPet-->
   <div class="descripcion-blog">
-    <h1>BLOGPET</h1>
-    <p>En esta sección encontraras información, noticias, consejos, entre otras cosas sobre los cuidados de tu mejor
+    <h1 id="titulo">BLOGPET </h1>
+    <p>En esta sección encontrarás información, noticias y consejos sobre los cuidados de tu mejor
       amigo.</p>
   </div>
-
 
   <!--Categorias-->
 
@@ -78,7 +78,7 @@ Lenguaje
       <div class="col-4 col-lg-2"> <!--Acuaticos-->
         <a href="#Acuaticos">
           <img src="/assets/assets_blog/acuaticos.jpg" alt="acuaticos" class="card-img">
-          <p> Acuaticos </p>
+          <p> Acuáticos </p>
         </a>
       </div> <!--cierra col1-->
       <div class="col-4 col-lg-2"> <!--Aves-->
@@ -96,7 +96,7 @@ Lenguaje
       <div class="col-4 col-lg-2"> <!--Mamiferos-->
         <a href="#Mamiferos">
           <img src="/assets/assets_blog/mamiferos.jpg" alt="mamiferos" class="card-img">
-          <p> Mamiferos </p>
+          <p> Pequeños mamíferos </p>
         </a>
       </div> <!--cierra col1-->
       <div class="col-4 col-lg-2"> <!--Reptiles-->
@@ -128,6 +128,7 @@ Lenguaje
     </div>
 
   </div>
+  <br>
 
   <!-- Notas-->
   <div class="articulos">
@@ -145,12 +146,12 @@ Lenguaje
                 limpiarlo, esto te interesa. Al principio te parecerá una acción muy laboriosa pero luego te
                 acostumbrarás.</p>
               <button class="button"> <a href="https://www.muyinteresante.es/mascotas/fotos/acuario-como-se-limpia"
-                  target="_blank">LEER MAS</a></button>
+                  target="_blank">Leer más...</a></button>
             </div>
           </div>
         </div> <!--CierraCol1-->
         <div class="col-12 col-sm-6 col-lg-4 justify-content-center"> <!--Pequeños Mamiferos-->
-          <h1 id="Mamiferos">Pequeños mamiferos</h1>
+          <h1 id="Mamiferos">Pequeños mamíferos</h1>
           <div class="card">
             <div class="imagen-content">
                 <img src="/assets/assets_blog/N2.jpg" alt="pequeños mamiferos">
@@ -159,7 +160,7 @@ Lenguaje
               <h1> Castrar a un conejo - Precio, cuándo hacerlo y beneficios </h1>
               <p>Los beneficios que aporta a castración o esterilización no solo tienen que ver con la resolución de problemas de comportamiento, sino también con la prevención de multitud de enfermedades</p>
               <button class="button"> <a href="https://www.nationalgeographic.com.es/naturaleza/asi-afecta-tu-estres-a-tu-perro_14374"
-                  target="_blank">LEER MAS</a></button>
+                  target="_blank">Leer más...</a></button>
             </div>
           </div>
         </div> <!--CierraCol2-->
@@ -173,7 +174,7 @@ Lenguaje
               <h1> Tipos de pájaros domésticos </h1>
               <p>Hay algunos pájaros especialmente indicados para tener como mascotas. Si estás pensando en adquirir uno para cuidar en tu hogar, presta atención a los siguientes tipos de pájaros domésticos.</p>
               <button class="button"> <a href="https://madagascarmascotas.com/blog/tipos-de-pajaros-domesticos/"
-                  target="_blank">LEER MAS</a></button>
+                  target="_blank">Leer más...</a></button>
             </div>
           </div>
         </div> <!--CierraCol3-->
@@ -187,7 +188,7 @@ Lenguaje
               <h1> ¿Qué puedo hacer en caso de alergia a los gatos? </h1>
               <p>La respuesta evidente es: ¡mantenerte lejos de ellos! Pero si eres un amante de los gatos, te gustará saber que hay formas de conseguir que las cosas sean mucho más fáciles.</p>
               <button class="button"> <a href="https://www.whiskas.es/adultos/salud/que-puedo-hacer-en-caso-de-alergia-a-los-gatos"
-                  target="_blank">LEER MAS</a></button>
+                  target="_blank">Leer más...</a></button>
             </div>
           </div>
         </div> <!--CierraCol4-->
@@ -201,7 +202,7 @@ Lenguaje
               <h1> Así afecta tu estrés a tu perro. </h1>
               <p>Un estudio enfocado en la personalidad de varios perros y sus amos, así como de sus niveles de cortisol, ha concluido que el estrés a largo plazo en los dueños de perros tiene un efecto directo sobre sus mascotas.</p>
               <button class="button"> <a href="//www.nationalgeographic.com.es/naturaleza/asi-afecta-tu-estres-a-tu-perro_14374"
-                  target="_blank">LEER MAS</a></button>
+                  target="_blank">Leer más...</a></button>
             </div>
           </div>
         </div> <!--CierraCol5-->
@@ -215,12 +216,12 @@ Lenguaje
               <h1> Especies de ranas que puedes tener como mascota </h1>
               <p>Las ranas con las coloraciones más vistosas suelen ser especies venenosas. Por lo tanto, antes de adquirir a cualquier ejemplar procura obtener toda la información sobre sus características y cuidados.</p>
               <button class="button"> <a href="https://misanimales.com/especies-ranas-puedes-tener-como-mascota/"
-                  target="_blank">LEER MAS</a></button>
+                  target="_blank">Leer más...</a></button>
             </div>
           </div>
         </div> <!--CierraCol6-->
 
-      </div> <!--CierraRow2-->
+      </div> <!--CierraRow1-->
 
     </div> <!--Cierra articulos-->
 
@@ -238,28 +239,28 @@ Lenguaje
       <ul class="navbar-nav m-auto">
         <li class="nav-item active bGap">
           <a class="nav-link petColor" href="https://github.com/">Inicio<br>
-            <img class="icon" src="/assets/icons/Home.png" alt="Home">
+            <img class="icon" src="/assets/iconos/Home.png" alt="Home">
             <span class="sr-only"></span></a> <!--Que significa (current) aqui?-->
         </li>
         <li class="nav-item bGap">
           <a class="nav-link petColor" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span">Vets<br>
-            <img class="icon" id="estetos" src="/assets/iconos/" alt="Vets">
+            <img class="icon" id="estetos" src="/assets/iconos/Estetos.png" alt="Vets">
           </a>
         </li>
 
         <li class="nav-item bGap">
           <a class="nav-link petColor" href="https://www.google.com/">Blog<br>
-            <img class="icon" src="/assets/icons/News.png" alt="Blog">
+            <img class="icon" src="/assets/iconos/News.png" alt="Blog">
           </a>
         </li>
         <li class="nav-item bGap">
           <a class="nav-link petColor" href="https://www.linkedin.com/">Comunidad<br>
-            <img class="icon" src="/assets/icons/Blog.png" alt="Comunity">
+            <img class="icon" src="/assets/iconos/Blog.png" alt="Comunity">
           </a>
         </li>
         <li class="nav-item bGap">
           <a class="nav-link petColor" href="https://mexico.generation.org/">Perfil<br>
-            <img class="icon" src="/assets/icons/Perfil.png" alt="Profile">
+            <img class="icon" src="/assets/iconos/Perfil.png" alt="Profile">
           </a>
         </li>
       </ul>

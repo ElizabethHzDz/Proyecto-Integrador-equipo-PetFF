@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlogPet</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="./assets/iconos/P.png">
+  <link rel="stylesheet" href="/blog_Vet.css">
+</head>
+
+
+<body>
+  <script src="/Blog.js"></script>
+  <!--Buscador -->
+  <div class="encabezado" id="encabezado">
+    <div class="buscador">
+      <nav class="navbar p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"> <!--------Vincular al index-------->
+            <img src="/assets/PETFF.png" alt="Logo" width="100" class="d-inline-block align-text-top"> <!-- logo-->
+          </a>
+
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar notas" aria-label="Search">
+            <a href="https://www.google.com/" target="_blank"><button id="Buscar" class="btn btn-outline-success"
+                type="submit"><img src="/assets/assets_blog/Buscar 1.png" alt="lupa" width="25"> </a>
+          </form>
+        </div>
+      </nav>
+    </div> <!--Cierra buscador-->
+  </div>
+
+  <!-- -------- Modal para escribir notas-->
+  <div class="escribirnotas">
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+      data-bs-whatever="@mdo">Escribir Nota</button> <!--Boton que abre modal-->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Escribe tu nota</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="seleccionar">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Seleccionar categoria</option>
+                  <option value="1">Perros</option>
+                  <option value="2">Gatos</option>
+                  <option value="3">Aves</option>
+                  <option value="4">Pequeños mamiferos</option>
+                  <option value="5">Acuaticos</option>
+                  <option value="6">Reptiles</option>
+                </select>
+              </div>
+              <!--Para ingresar titulo-->
+              <div class="mb-3 w-100">
+                <label for="recipient-name" class="col-form-label">Titulo</label>
+                <input type="text" class="form-control" id="titulo">
+              </div>
+              <!--insertar imagen de portada-->
+              <div class="portada">
+                <input type="button" class="btn btn-rounded col-12 pubBtn p-1" value="Cargar imagen de portada"
+                  onclick="document.getElementById('imagenPortada').click();">
+                <input id="imagenPortada" type="file" accept="image/png, image/jpg" style="display: none;">
+                <!--Pequeño resumen-->
+                <div class="resumen-nota">
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Descripcion</label>
+                    <input type="text" class="form-control" id="Referencias"
+                      placeholder="Agrega una pequeña descripcion">
+                  </div>
+                </div>
+                <!--Escribir cuerpo-->
+                <div class="mb-3 w-100 ps-3 m-2">
+                </div>
+                <label for="recipient-name" class="col-form-label">Cuerpo</label>
+                <div class="form-outline">
+                  <textarea class="form-control" id="cuerpo" rows="3" placeholder="Escribe tu nota"></textarea>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Referencias</label>
+                <input type="text" class="form-control" id="Referencias" placeholder="Agrega referencias">
+              </div>
+          </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="botonAgregarNotas">Publicar nota</button>
+          <!--Con este boton se publicaran de forma automatica con JS-->
+        </div> <!--Se cierran botones Cerrar y publicar-->
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+  <!-- Espacio donde se pondran mis tarjetas -->
+  <div id="contenedorNotas">
+  </div>
+
+  <!--Descripcion de blogPet-->
+  <div class="descripcion-blog" id="titulo">
+    <h1>BLOGPET </h1>
+    <p>En esta sección encontrarás información, noticias y consejos sobre los cuidados de tu mejor
+      amigo.</p>
+  </div>
+
+  <!--Categorias-->
+
+  <div class="container text-center">
+    <h1>Categorías</h1>
+    <div class="row">
+      <div class="col-4 col-lg-2"> <!--Perros-->
+        <a href="#Categoria1">
+          <img src="/assets/assets_blog/perros.jpg" alt="Perros" class="card-img">
+          <p> Perros </p>
+        </a>
+      </div> <!--cierra col1-->
+      <div class="col-4 col-lg-2"> <!--Acuaticos-->
+        <a href="#Categoria1">
+          <img src="/assets/assets_blog/acuaticos.jpg" alt="acuaticos" class="card-img">
+          <p> Acuáticos </p>
+        </a>
+      </div> <!--cierra col1-->
+      <div class="col-4 col-lg-2"> <!--Aves-->
+        <a href="#Categoria1">
+          <img src="/assets/assets_blog/aves.jpg" alt="aves" class="card-img">
+          <p> Aves </p>
+        </a>
+      </div> <!--cierra col1-->
+      <div class="col-4 col-lg-2"> <!--Gatos-->
+        <a href="#Categoria1">
+          <img src="/assets/assets_blog/gatos.jpg" alt="gatos" class="card-img">
+          <p> Gatos </p>
+        </a>
+      </div> <!--cierra col1-->
+      <div class="col-4 col-lg-2"> <!--Mamiferos-->
+        <a href="#Categoria1">
+          <img src="/assets/assets_blog/mamiferos.jpg" alt="mamiferos" class="card-img">
+          <p> Pequeños mamíferos </p>
+        </a>
+      </div> <!--cierra col1-->
+      <div class="col-4 col-lg-2"> <!--Reptiles-->
+        <a href="#Categoria1">
+          <img src="/assets/assets_blog/reptiles.jpg" alt="reptiles" class="card-img">
+          <p> Reptiles </p>
+        </a>
+      </div> <!--cierra col1-->
+    </div> <!--Cierra row1-->
+
+  </div> <!--Cierra container categorias-->
+
+
+
+  <!--Publicidad-->
+  <div class="publicidad">
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="https://www.pawerful.com/" target="_blank"> <img src="/assets/assets_blog/B1.png"
+              class="d-block w-100" alt="paweful"> </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.heb.com.mx/mes-de-la-mascota" target="_blank"> <img src="/assets/assets_blog/B3.png"
+              class="d-block w-100" alt="heb"> </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Notas-->
+  <div class="articulos">
+    <div class="Categoria" id="Categoria1"> <!--Mamiferos-->
+      <h1>Categoria1 </h1>
+      <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+        <div class="row">
+
+          <div class="col-1">
+            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a> <!--Son las flechas-->
+          </div>
+          <div class="col-10">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="card col-12 col-md-6 col-lg-4" style="width: 18rem;">
+                    <img src="/assets/assets_blog/N2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h5>
+                      <h6>Por: <a href="/perfilVet.html" target="_blank"> @Julian Martinez</a></h6>
+                      <p class="card-text">La castración o esterilización es una práctica cada vez más extendida en los
+                        animales de compañía, los beneficios que aporta </p>
+
+                      <!-- Leer nota modal -->
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                        data-bs-whatever="@mdo">nota...</button> <!--Boton que abre modal-->
+                      <!--Contenido de Modal para leer nota-->
+
+                      <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="titul">
+                                <h1>Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h1>
+                              </div>
+                              <div class="portada">
+                                <img src="/assets/assets_blog/N2.jpg" width="80%">
+                              </div>
+                              <div class="datos">
+                                <p>Por: @Vet</p>
+                                <p> PUblicado: 12/12/2022</p>
+                              </div>
+                              <div class="leercuerpo">
+                                <p>¿Cuándo castrar a un conejo?
+                                  La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible. Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+                                  
+                                  No se recomienda la castración de animales que no hayan alcanzado la madurez sexual, puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los órganos reproductivos. Además, la castración temprana no supone ninguna ventaja adicional para la salud de estos animales.
+                                  
+                                  ¿Cuándo castrar o esterilizar a un conejo macho?
+                                  En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir de este momento, se podrá practicar la orquiectomía.
+                                  
+                                  Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4 semanas después de la castración, debido a que siguen teniendo espermatozoides viables en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones indeseadas.
+                                  
+                                  ¿Cuándo castrar o esterilizar a una coneja?
+                                  Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A partir de este momento, las hembras se podrán esterilizar por medio de una ovariohisterectomía o una ovariectomía.
+                                  
+                                  ¿Cuánto cuesta castrar a un conejo?
+                                  Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con tu clínica de exóticos de confianza. Los precios pueden variar en función de la técnica empleada y de los requerimientos individuales de tu conejo/a.
+                                  
+                                  Algunas clínicas realizan campañas anuales de esterilización, en las que es posible esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                              </div>
+                              <div class="referencias">
+                                <p>REFerencias: https://www.expertoanimal.com/castrar-a-un-conejo-precio-cuando-hacerlo-y-beneficios-26152.html </p>
+                              </div>
+                              <div class="comentariosmegusta">
+                                <div class="row">
+                                  <div class="col-1 like">
+                                    <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                                  </div>
+                                  <p class="col-2 text-left mt-3">27</p>
+                                  <div class="col-1 comment">
+                                    <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                                  </div>
+                                  <p class="col-2 text-left mt-3">3</p>
+                                  <div class="col-6"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="cerrarnota">Cerra</button>
+                          </div> <!--Se cierran botones Cerrar-->
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="card col-12 col-md-6 col-lg-4" style="width: 18rem;">
+                    <img src="/assets/assets_blog/N2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h5>
+                      <h6>Por: <a href="/perfilVet.html" target="_blank"> @Julian Martinez</a></h6>
+                      <p class="card-text">La castración o esterilización es una práctica cada vez más extendida en los
+                        animales de compañía, los beneficios que aporta </p>
+                      <a href="https://www.nationalgeographic.com.es/naturaleza/asi-afecta-tu-estres-a-tu-perro_14374"
+                        class="btn btn-primary" id="BotonLeer">Leer más...</a>
+                    </div>
+                  </div>
+                  <div class="card col-12 col-md-6 col-lg-4" style="width: 18rem;">
+                    <img src="/assets/assets_blog/N2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h5>
+                      <h6>Por: <a href="/perfilVet.html" target="_blank"> @Julian Martinez</a></h6>
+                      <p class="card-text">La castración o esterilización es una práctica cada vez más extendida en los
+                        animales de compañía, los beneficios que aporta </p>
+                      <a href="https://www.nationalgeographic.com.es/naturaleza/asi-afecta-tu-estres-a-tu-perro_14374"
+                        class="btn btn-primary" id="BotonLeer">Leer más...</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="card col-12 col-md-6 col-lg-4" style="width: 18rem;">
+                    <img src="/assets/assets_blog/N2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h5>
+                      <h6>Por: <a href="/perfilVet.html" target="_blank"> @Julian Martinez</a></h6>
+                      <p class="card-text">La castración o esterilización es una práctica cada vez más extendida en los
+                        animales de compañía, los beneficios que aporta </p>
+                      <a href="https://www.nationalgeographic.com.es/naturaleza/asi-afecta-tu-estres-a-tu-perro_14374"
+                        class="btn btn-primary" id="BotonLeer">Leer más...</a>
+                    </div>
+                  </div>
+                  <div class="card col-12 col-md-6 col-lg-4" style="width: 18rem;">
+                    <img src="/assets/assets_blog/N2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h5>
+                      <h6>Por: <a href="/perfilVet.html" target="_blank"> @Julian Martinez</a></h6>
+                      <p class="card-text">La castración o esterilización es una práctica cada vez más extendida en los
+                        animales de compañía, los beneficios que aporta </p>
+                      <a href="https://www.nationalgeographic.com.es/naturaleza/asi-afecta-tu-estres-a-tu-perro_14374"
+                        class="btn btn-primary" id="BotonLeer">Leer más...</a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-1">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-1">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div> <!--Cierra Mamifero-->
+
+
+
+  </div> <!--Cierra articulos-->
+
+  </div>
+
+
+  <!--Espacio vacio-->
+  <div class="space"></div>
+
+
+  <!-- Barra de navegación inferior -->
+  <nav class="navbar fixed-bottom navbar-expand bg-white" id="navb">
+
+    <div class="collapse navbar-collapse navBottom" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto">
+        <li class="nav-item active bGap">
+          <a class="nav-link petColor" href="https://github.com/">Inicio<br>
+            <img class="icon" src="/assets/iconos/Home1.png" alt="Home">
+            <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item bGap">
+          <a class="nav-link petColor" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span">Vets<br>
+            <img class="icon" id="estetos" src="/assets/iconos/Estetos2.png" alt="Vets">
+          </a>
+        </li>
+
+        <li class="nav-item bGap">
+          <a class="nav-link petColor" href="https://www.google.com/">Noticias<br>
+            <img class="icon" id="news" src="/assets/iconos/News2.png" alt="Blog">
+          </a>
+        </li>
+        <li class="nav-item bGap">
+          <a class="nav-link petColor" href="https://www.linkedin.com/">Blog<br>
+            <img class="icon" src="/assets/iconos/Blog2.png" alt="Comunity">
+          </a>
+        </li>
+        <li class="nav-item bGap">
+          <a class="nav-link petColor" href="https://mexico.generation.org/">Perfil<br>
+            <img class="icon" src="/assets/iconos/Perfil3.png" alt="Profile">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
