@@ -138,21 +138,6 @@ padding-bottom: 30px;
 
 /* barra de navegacion de abajo */
 
-.petColor {
-    color: #3BB287;
-}
-
-.petColor:hover {
-    color: #3BB287;
-}
-
-.bGap {
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: center;
-    transition-duration: 500ms;
-}
-
 .icon {
     width: 35px;
     transition-duration: 500ms;
@@ -160,8 +145,8 @@ padding-bottom: 30px;
     margin-bottom: 5px;
 }
 
-.navBottom{
-    border-top: 1px solid #3BB287;
+.icon:hover {
+    width: 30px;
 }
 
 #estetos {
@@ -169,12 +154,8 @@ padding-bottom: 30px;
     transition-duration: 500ms;
 }
 
-.bGap:hover {
-    border-top: 3px solid #3BB287;
-}
-
-.icon:hover {
-    width: 30px;
+#estetos:hover {
+    width: 23px;
 }
 
 #news {
@@ -182,10 +163,14 @@ padding-bottom: 30px;
     transition-duration: 500ms;
 }
 
-#news:hover{
+#news:hover {
     width: 40px;
 }
 
-#estetos:hover {
-    width: 23px;
+.iGap:hover {
+    border-bottom: 3px solid #3BB287;
+}
+
+.bGap:hover {
+    border-top: 3px solid #3BB287;
 }

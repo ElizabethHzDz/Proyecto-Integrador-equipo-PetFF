@@ -52,11 +52,105 @@ padding-bottom: 30px;
     text-align: center;
 }
 
+#detalle-mascota .imagen img {
+    max-width: 300px;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
 
-.card-img{ /*Para modificar Imagenes de categorias*/
-    max-width: 100%;
+#categorias .categoria img { /*Imagenes de categoria unificado*/
+    max-width: 150px;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
     border-radius: 50%; 
     border: solid 2px #3BB287;
+}
+
+/*Publicidad Ruben*/
+/* Color de fondo y border de tarjetas de publicaciones */
+.card {
+    background-color:white;
+    border: 1px solid #3BB287;
+    border-radius: 1.5%;
+}
+
+/* Para quitar border de tarjeta de publicidad */
+#pCard {
+    background-color:transparent;
+    border: none;
+}
+
+.borderPubli {
+    border: 1px solid #3BB287;
+    background-color: white;
+}
+
+.catnotas .imagen img {  /*Imagenes dentro de la categoria, incluye img de tarjeta e img de publicidad*/
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+
+#categorias .categoria:hover img {
+    opacity: 0.7;
+    border: #3BB387;
+    border-style: solid;
+    transform: scale(1.10);
+}
+
+#categorias .categoria:hover p {
+    font-weight: 800;
+}
+
+
+
+.notas-categoria  {
+    display: none;
+}
+
+.notas-categoria.active {
+    display: inline;
+}
+
+#detalle-mascota .imagen {
+    display: flex;
+    justify-content: center;
+}
+
+.detalle-mascota .imagen img {
+    aspect-ratio: 1 / 1;
+}
+
+
+#categorias h5 { /*Categorias*/
+    color: #3BB387;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+
+}
+
+.catnotas h3 { /*Nombredecategoria*/
+    color:#000000;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    background-color: #3BB387;
+}
+
+.img-size {
+    /* 	padding: 0;
+        margin: 0; */
+    height: 450px;
+    width: 700px;
+    background-size: cover;
+    overflow: hidden;
 }
 
 
@@ -85,6 +179,14 @@ padding-bottom: 30px;
     width: 100%;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
+}
+
+.card-text {
+   text-align: justify;
+}
+
+.cuerpo-text{
+    text-align: justify;
 }
 
 #BotonLeer{
