@@ -39,7 +39,7 @@ const crearNota = () => {
   // poner los destinos
   document.getElementById("contenedorNotas").innerHTML += `
 
-  <div class="imagen col-12 col-md-4 col-lg-3">
+  <div class="imagen col-12 col-md-6 col-lg-4">
   <div class="card" style="width: 18rem;">
     <img src="/assets/assets_blog/N2.jpg" class="card-img-top" alt="...">
     <div class="card-body">

@@ -44,6 +44,8 @@ a{
 #titulo {
 padding-top: 40px;
 padding-bottom: 30px;
+background-color:#ffffff5c;
+
 }
 
 .descripcion{
@@ -198,14 +200,14 @@ padding-bottom: 30px;
     margin: 14px; 
 }
 
-/*carrusel*/
+/*carrusel*
 #carouselExampleSlidesOnly img{
     height: 300px;
     width: 150px;
 }
 
 
-/*Carrusel de notas*/
+/*Carrusel de notas
 #card .carousel-item {
     justify-content: center;
 }
@@ -223,12 +225,34 @@ padding-bottom: 30px;
 #card .carousel-inner {
     overflow: visible;
 }
-
+*/
 
 
 /*Para las notas/articulos informativos*/
 #notas{
   margin: 50px; 
+}
+
+.buttons {
+    width: 35px;
+    transition-duration: 500ms;
+}
+
+.buttons:hover {
+    width: 30px;
+}
+
+.like {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    padding: 0;
+}
+
+.comment {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 0;
 }
 
 

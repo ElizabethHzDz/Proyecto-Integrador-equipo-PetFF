@@ -12,7 +12,7 @@
   <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="./assets/iconos/P.png">
   <link rel="stylesheet" href="/styles/blog_Vet.css">
-  <script src="/js/Blog_Vet.js" async defer></script>
+  <script src="/js/Blog_User.js" async defer></script>
 </head>
 
 
@@ -48,77 +48,6 @@
     <h1>BLOGPET </h1>
     <p>En esta sección encontrarás información, noticias y consejos sobre los cuidados de tu mejor
       amigo.</p>
-  </div>
-
-
-  <!-- -------- Modal para escribir notas-->
-  <div class="escribirnotas">
-
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-      data-bs-whatever="@mdo" id="BotonLeer">Escribir Nota</button> <!--Boton que abre modal-->
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl"> <!--Modal grande-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Escribe una nota informativa. </h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="seleccionar">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Seleccionar categoria</option>
-                  <option value="1" id="catperros">Perros</option>
-                  <option value="2" id="catgatos">Gatos</option>
-                  <option value="3" id="cataves">Aves</option>
-                  <option value="4" id="catmamiferos">Pequeños mamiferos</option>
-                  <option value="5" id="catacuaticos">Acuaticos</option>
-                  <option value="6" id="catreptiles">Reptiles</option>
-                </select>
-              </div>
-              <!--Para ingresar titulo-->
-              <div class="mb-3 w-100">
-                <label for="recipient-name" class="col-form-label">Titulo</label>
-                <input type="text" class="form-control" id="titulo">
-              </div>
-              <!--insertar imagen de portada-->
-              <div class="portada">
-                <input type="button" class="btn btn-rounded col-12 pubBtn p-1" value="Cargar imagen de portada"
-                  onclick="document.getElementById('imagenPortada').click();">
-                <input id="imagenPortada" type="file" accept="image/png, image/jpg" style="display: none;">
-                <!--Pequeño resumen-->
-              </div>
-              <div class="resumen-nota">
-                <div class="mb-3">
-                  <label for="recipient-name" class="col-form-label">Descripcion</label>
-                  <input type="text" class="form-control" id="descripcion" placeholder="Agrega una pequeña descripcion">
-                </div>
-              </div>
-              <!--Escribir cuerpo-->
-              <div class="mb-3 w-100 ps-3 m-2">
-              </div>
-              <label for="recipient-name" class="col-form-label">Cuerpo</label>
-              <div class="form-outline">
-                <textarea class="form-control" id="cuerpo" rows="3" placeholder="Escribe tu nota"></textarea>
-              </div>
-              <div class="referencias">
-                <div class="mb-3">
-                  <label for="recipient-name" class="col-form-label">Referencias</label>
-                  <input type="text" class="form-control" id="Referencias" placeholder="Agrega referencias">
-                </div>
-              </div>
-          </div>
-        </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" onclick="crearNota();" class="btn btn-primary" id="botonAgregarNotas">Publicar
-          nota</button> <!--Esta vinculado al js con onclick=crearnota-->
-        <!--Con este boton se publicaran de forma automatica con JS-->
-      </div> <!--Se cierran botones Cerrar y publicar-->
-    </div>
   </div>
 
 
@@ -2267,7 +2196,7 @@
         </li>
 
         <li class="nav-item bGap">
-          <a class="nav-link petColor" href="https://www.google.com/">Blog<br>
+          <a class="nav-link petColor" href="/blogpet_Vet.html">Blog<br>
             <img class="icon" id="news" src="/assets/iconos/News2.png" alt="Blog">
           </a>
         </li>
