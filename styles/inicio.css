@@ -53,12 +53,14 @@ img {
     z-index: 10;
 }
 
+
 .modal-dialog{
     height:80%
 }
 .modal-content{
-    height:75%
+    height:78%
 }
+
 
 /* Border de barra de navegación superior */
 .navTop {
@@ -267,3 +269,19 @@ img {
     position: relative;
 }
 
+.loadedImg {
+    max-height: 200px;
+}
+
+.botonesIn{
+    border-radius: 30px;
+    background-color: #f5954f; 
+    height: 40px;
+    width: 80px; 
+    margin: auto; 
+    border: none;
+}
+
+#chat {
+    height:550px;
+}

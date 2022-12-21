@@ -7,6 +7,7 @@ var buttonAdd = document.getElementById("pubButton");
 //Tambien conectamos el lugar donde se va a insertar la tarjeta
 var containerAdd = document.getElementById("contCards");
 
+
 imgInput.addEventListener("change", function(){
     var checkImg = document.getElementsByClassName("loadedImg");
     if(checkImg.length > 0 ){
@@ -39,21 +40,24 @@ imgInput.addEventListener("change", function(){
         document.getElementById("displayImage").appendChild(image);
         document.getElementById("displayImage2").appendChild(image2);
     })
-    reader.readAsDataURL(this.files[0]);
+      reader.readAsDataURL(this.files[0]);
+      reader.onload = function(){
+      console.log(reader.result);}
 }
 })
 
+
 const imgPublish = document.querySelector("#pubButton");
 
-imgPublish.addEventListener("click", function(){
-    let imgPub = document.createElement('img');
-    imgPub.src = document.getElementById("imgForUse").src;
-    document.getElementById("imgPublish").appendChild(imgPub);
-    var checkImg = document.getElementsByClassName("loadedImg");
-    if(checkImg.length > 0 ){
-        document.querySelectorAll(".loadedImg").forEach(checkImg => checkImg.remove());
-    }
-})
+// imgPublish.addEventListener("click", function(){
+//     let imgPub = document.createElement('img');
+//     imgPub.src = document.getElementById("imgForUse").src;
+//     document.getElementById("imgPublish").appendChild(imgPub);
+//     var checkImg = document.getElementsByClassName("loadedImg");
+//     if(checkImg.length > 0 ){
+//         document.querySelectorAll(".loadedImg").forEach(checkImg => checkImg.remove());
+//     }
+// })
 
 buttonAdd.addEventListener("click", function() {
     //Definimos la estructura de la tarjeta
@@ -104,7 +108,7 @@ buttonAdd.addEventListener("click", function() {
     //Agregamos la tarjeta al container
     containerAdd.innerHTML += tarjeta;
    //Agregamos la tarjeta
-   agregarTarjeta();
+  //  agregarTarjeta();
 });
 
 
