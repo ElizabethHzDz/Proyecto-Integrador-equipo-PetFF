@@ -200,33 +200,6 @@ background-color:#ffffff5c;
     margin: 14px; 
 }
 
-/*carrusel*
-#carouselExampleSlidesOnly img{
-    height: 300px;
-    width: 150px;
-}
-
-
-/*Carrusel de notas
-#card .carousel-item {
-    justify-content: center;
-}
-
-#card .carousel-item .row {
-    justify-content: center;
-}
-
-#card .carousel-item.active,
-#card .carousel-item-end,
-#card .carousel-item-start {
-    display: flex;
-}
-
-#card .carousel-inner {
-    overflow: visible;
-}
-*/
-
 
 /*Para las notas/articulos informativos*/
 #notas{

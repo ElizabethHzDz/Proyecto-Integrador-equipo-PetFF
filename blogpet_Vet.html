@@ -12,13 +12,12 @@
   <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="./assets/iconos/P.png">
   <link rel="stylesheet" href="/styles/blog_Vet.css">
-  <script src="/js/Blog_Vet.js" async defer></script>
+  <script src="/js/Blog_Vet.js"></script>
 </head>
 
 
 <body>
 
-  <!--Modificar contenido de tarjetas segun su categoria-->
 
 
 
@@ -114,7 +113,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" onclick="crearNota();" class="btn btn-primary" id="botonAgregarNotas">Publicar
+        <button type="button" onclick="crearNota();" class="btn btn-primary" id="botonAgregarNotas" data-bs-dismiss="modal" >Publicar
           nota</button> <!--Esta vinculado al js con onclick=crearnota-->
         <!--Con este boton se publicaran de forma automatica con JS-->
       </div> <!--Se cierran botones Cerrar y publicar-->
@@ -123,7 +122,7 @@
 
 
 
-  <!--Como lo Hizo Rebe-->
+  <!--Categoria unificada-->
   <div id="categorias">
     <div class="row align-self-center">
       <h5>Categorias</h5>
@@ -1210,7 +1209,7 @@
     </div>
   </div>
 
-  <div id="categoria-3" class="notas-categoria active"> <!--Acuaticos-->
+  <div id="categoria-3" class="notas-categoria"> <!--Acuaticos-->
     <div class="catnotas col align-center">
       <h3>Acuaticos </h3>
     </div>
@@ -1540,7 +1539,7 @@
     </div>
   </div>
 
-  <div id="categoria-4" class="notas-categoria active"> <!--Reptiles-->
+  <div id="categoria-4" class="notas-categoria"> <!--Reptiles-->
     <div class="catnotas col align-center">
       <h3>Reptiles</h3>
     </div>
@@ -1888,7 +1887,7 @@
     </div>
   </div>
 
-  <div id="categoria-5" class="notas-categoria active"> <!--Mamiferos-->
+  <div id="categoria-5" class="notas-categoria"> <!--Mamiferos-->
     <div class="catnotas col align-center">
       <h3>Pequeños mamíferos</h3>
     </div>

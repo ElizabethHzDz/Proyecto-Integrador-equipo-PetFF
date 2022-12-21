@@ -21,16 +21,6 @@ var note_btn = document.getElementById("botonAgregarNotas");
 //Tambien conectamos el lugar donde se va a insertar la tarjeta
 var noteContainer = document.getElementById("contenedorNotas");
 
-//Ahora creamos un evento que se dispare cuando se haga click en el boton
-note_btn.addEventListener("click", function () {
-  //Definimos la estructura de la tarjeta
-  //var Nota = `<img src="/assets/assets_blog/N2.jpg" class="card-img-top" alt="...">`;
-  //var Nota = `<h1>Hola</h1>`;
-  //Agregamos la tarjeta al container
-  document.getElementById("botonAgregarNotas").innerHTML += Nota;
-  //Agregamos la tarjeta
-});
-
 const crearNota = () => {
 
   //Crear para cada elemento con su respectivo destino
