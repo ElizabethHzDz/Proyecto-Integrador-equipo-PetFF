@@ -1,0 +1,167 @@
+body{
+    font-family: 'Inria Sans', sans-serif;
+    margin: 0;
+    background: url(/Assets/Img/modoNormal.png);
+    /* background-size: contain; */
+    background-attachment: fixed;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.logo{
+    list-style: none;
+    padding: 0;
+    background: transparent;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    justify-content: center;
+}
+
+.logo li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+.logo li{
+    display: inline-block;
+    text-align: center;
+}
+
+.contenedor{
+    width: 100%;
+    padding: 15px;
+}
+
+.sprevia{
+    display: flex;
+    justify-content: center;
+}
+
+.formulario{
+    background: #EBF2EB;
+    margin-top: 15px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* position: relative;
+    right: 100px; */
+}
+
+h1{
+    text-align: center;
+    color: #3BB287;
+    font-size: 40px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaaaaa;
+    border-radius: 12px;
+}
+
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: #999999;
+}
+
+.input{
+    background-color: #EBF2EB;
+}
+
+.button{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background: #3bb287;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: #ef8354;
+}
+
+p{
+    text-align: center;
+}
+
+.link{
+    color: #3bb287;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: #ef8354;
+}
+
+@media(min-width: 400px)
+{
+    .formulario{
+        margin: auto;
+        width: 500px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        border-radius: 12px;
+    }
+}
+
+/* @media(max-width: 414px)
+{
+    .formulario{
+        margin: auto;
+        width: 300px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        border-radius: 12px;
+    }
+} */
+
+
+#gifp{
+    margin: auto;
+    width: 500px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* @media(max-width: 430px)
+{
+    #gifp{
+        max-height: ;
+        margin: auto;
+        width: 500px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: none;
+    }
+} */
+
+#previous{
+    height: 150px;
+    width: 150px;
+    border-radius: 60%;
+}
+
+#previous:hover{
+    scale: 110%;
+}
