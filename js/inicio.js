@@ -66,7 +66,7 @@ buttonAdd.addEventListener("click", function() {
         <div class="row">
           <!-- Donde irá la imagen del usuario y nombres de mascota y dueño -->
           <div class="d-flex col-9 justify-content-left align-items-center" id="perfil">
-            <img id="perfilMascota" src="/assetsInicio/marliese-streefland-2l0CWTpcChI-unsplash 1.png"
+            <img class="img-thumbnail" id="perfilMascota" src="/assetsInicio/marliese-streefland-2l0CWTpcChI-unsplash 1.png"
               alt="Foto de perfil mascota">
             <img id="perfilHumano" src="/assetsInicio/harps-joseph-tAvpDE7fXgY-unsplash 1.png" alt="Foto de perfil humano">
             <div class="container d-flex flex-column names">
@@ -76,7 +76,7 @@ buttonAdd.addEventListener("click", function() {
           </div>
           <!-- hora de publicación -->
           <div class="col-3 p-0 horaPublicacion">
-            <p><br>hace 2 horas</p>
+            <p><br>justo ahora</p>
           </div>
         </div>
         <!-- Espacio para agregar texto de publicación -->
@@ -106,7 +106,7 @@ buttonAdd.addEventListener("click", function() {
     </div>
   </div>`;
     //Agregamos la tarjeta al container
-    containerAdd.innerHTML += tarjeta;
+    containerAdd.innerHTML = tarjeta + containerAdd.innerHTML;
    //Agregamos la tarjeta
   //  agregarTarjeta();
 });
