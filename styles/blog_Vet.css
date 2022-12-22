@@ -1,0 +1,290 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/assets/modoNormal.png);
+    padding-top: 10px;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 25px;
+
+}
+h1{
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+}
+
+p{
+    font-size: 16px;
+    color:#000000;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+/*Encabezado*/
+#encabezado{
+    background-color:#EBF2EB;
+}
+#Buscar:hover{
+    background-color: #3BB287;
+}
+
+#titulo {
+padding-top: 40px;
+padding-bottom: 30px;
+background-color:#ffffff5c;
+
+}
+
+.descripcion{
+    font-size: 16px;
+    color:#000000;
+    text-align: center;
+}
+
+#detalle-mascota .imagen img {
+    max-width: 300px;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+#categorias .categoria img { /*Imagenes de categoria unificado*/
+    max-width: 150px;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 50%; 
+    border: solid 2px #3BB287;
+}
+
+/*Publicidad Ruben*/
+/* Color de fondo y border de tarjetas de publicaciones */
+.card {
+    background-color:white;
+    border: 1px solid #3BB287;
+    border-radius: 1.5%;
+}
+
+/* Para quitar border de tarjeta de publicidad */
+#pCard {
+    background-color:transparent;
+    border: none;
+}
+
+.borderPubli {
+    border: 1px solid #3BB287;
+    background-color: white;
+}
+
+.catnotas .imagen img {  /*Imagenes dentro de la categoria, incluye img de tarjeta e img de publicidad*/
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+
+#categorias .categoria:hover img {
+    opacity: 0.7;
+    border: #3BB387;
+    border-style: solid;
+    transform: scale(1.10);
+}
+
+#categorias .categoria:hover p {
+    font-weight: 800;
+}
+
+
+
+.notas-categoria  {
+    display: none;
+}
+
+.notas-categoria.active {
+    display: inline;
+}
+
+#detalle-mascota .imagen {
+    display: flex;
+    justify-content: center;
+}
+
+.detalle-mascota .imagen img {
+    aspect-ratio: 1 / 1;
+}
+
+
+#categorias h5 { /*Categorias*/
+    color: #3BB387;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+
+}
+
+.catnotas h3 { /*Nombredecategoria*/
+    color:#000000;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    background-color: #3BB387;
+}
+
+.img-size {
+    /* 	padding: 0;
+        margin: 0; */
+    height: 450px;
+    width: 700px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+/*Banner*/
+.slide{
+    margin-top: 20px;
+}
+
+
+/*Notas*/
+.Categoria{
+    padding-top: 40px;
+}
+
+.card{ /*Tarjetas de notas*/
+    width: 250px; /*Para mantener el ancho fijo*/
+    border-radius: 25px;
+    background-color:#FFFFFF;
+    margin: 10px; 
+    border-color: #3BB287 ;
+}
+
+/*Imagenes de notas*/
+.imagen-content img{
+    height: 250px;
+    width: 100%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.card-text {
+   text-align: justify;
+}
+
+.cuerpo-text{
+    text-align: justify;
+}
+
+#BotonLeer{
+    border: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    background-color:#3BB287;
+    border-radius: 10px;
+    margin: 14px; 
+}
+
+
+/*Para las notas/articulos informativos*/
+#notas{
+  margin: 50px; 
+}
+
+.buttons {
+    width: 35px;
+    transition-duration: 500ms;
+}
+
+.buttons:hover {
+    width: 30px;
+}
+
+.like {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    padding: 0;
+}
+
+.comment {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+
+/*Espacio vacio*/
+.space {
+    margin: 150px;
+}
+
+
+/* barra de navegacion de abajo */
+
+.petColor {
+    color: #3BB287;
+}
+
+.petColor:hover {
+    color: #3BB287;
+}
+
+.bGap {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    transition-duration: 500ms;
+}
+
+.icon {
+    width: 35px;
+    transition-duration: 500ms;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.navBottom{
+    border-top: 1px solid #3BB287;
+}
+
+#estetos {
+    width: 28px;
+    transition-duration: 500ms;
+}
+
+.bGap:hover {
+    border-top: 3px solid #3BB287;
+}
+
+.icon:hover {
+    width: 30px;
+}
+
+#news {
+    width: 45px;
+    transition-duration: 500ms;
+}
+
+#news:hover{
+    width: 40px;
+}
+
+#estetos:hover {
+    width: 23px;
+}
