@@ -250,6 +250,12 @@ button.navbar-toggler:focus {
     box-shadow: none;
 }
 
+#perfil .foto-perfil img {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid var(--bs-border-color);
+}
+
 /* .modal .modal-content button.btn-close {
     align-self: flex-end;
 } */

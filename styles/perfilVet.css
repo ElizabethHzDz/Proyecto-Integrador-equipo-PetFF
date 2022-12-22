@@ -1,5 +1,5 @@
 body {
-    background-image: url('/assets/iconos/modoNormal.png');
+    background-image: url('../assets/img/modoNormal.png');
     font-family: 'Inria Sans' !important;
     font-size: xx-large;
 }
