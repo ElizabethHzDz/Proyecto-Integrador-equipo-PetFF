@@ -1,0 +1,80 @@
+body{
+    background-image: url(../../assets/modoNormal.png);
+}
+
+#cajita{
+    background-color: #EBF2EB;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.textoSec{
+    color: #F5954F;
+}
+
+#logoPFF{
+    padding: 5px;
+    margin: 3px;
+    width: 400px;
+}
+
+#boton{
+    color:#EBF2EB !important; 
+    background-color: #3BB287;
+}
+
+#boton:hover{
+    background-color: #ef8354 !important;
+    color:#EBF2EB !important;
+}
+
+.btn{
+    background-color: #3BB287 !important;
+    color: #EBF2EB !important;
+    border: none !important;
+}
+
+.btn:hover{
+    background-color: #ef8354;
+}
+
+#map{
+    display: flex;
+    justify-content: left;
+    height: 100%;
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 15%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+.form-control{
+    background-color: #EBF2EB !important;
+ }
+
+ .enlace{
+    text-decoration: none;
+    color: #EBF2EB;
+ }
+
+ .enlace:hover{
+    color: #EBF2EB;
+ }
+
+
+
+ /*  margin: auto;
+  width: 500px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-radius: 12px; */

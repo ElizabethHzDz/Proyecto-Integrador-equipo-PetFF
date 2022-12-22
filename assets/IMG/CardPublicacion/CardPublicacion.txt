@@ -1,0 +1,131 @@
+
+Te adjunto las imágenes e iconos que uso aquí abajo, tel vez es volver a direccionarlas.
+
+
+Esto lo pones en HTML:
+
+<div class="card">
+              <div class="card-body p-0">
+                  <div class="row">
+                    <div class="d-flex col-9 justify-content-left align-items-center" id="perfil">
+                      <img id="perfilMascota" src="/assets/marliese-streefland-2l0CWTpcChI-unsplash 1.png"
+                        alt="Foto de perfil mascota">
+                      <img id="perfilHumano" src="/assets/harps-joseph-tAvpDE7fXgY-unsplash 1.png" alt="Foto de perfil humano">
+                      <div class="container d-flex flex-column names">
+                        <a href="https://getbootstrap.com/" class="mascota" target="_blank">Max el Beagle</a>
+                        <p class="humano">José Sánchez</p>
+                      </div>
+                    </div>
+                    <div class="col-3 p-0 horaPublicacion">
+                      <p><br>hace 2 horas</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="container leftT">
+                      <p class="">
+                        Fuimos a dar un paseo en bicicleta
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <img src="/assets/anthony-fomin-xNOslF_987U-unsplash.jpg" alt="Imagen de Publicacion">
+                  </div>
+                  <div class="row">
+                    <div class="col-2 like">
+                      <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                    </div>
+                    <p class="mt-4">54</p>
+                    <div class="col-2 comment">
+                      <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                    </div>
+                    <p class="mt-4">9</p>
+                    <div class="col-6"></div>
+                  </div>
+              </div>
+
+
+
+Esto va en CSS (checa si ya tienes la primera clase .card y si ya la tienes hay que cambiar esta a id y en el código de arriba agregar el id="card" junto a la clase card:
+
+.card {
+    background-color:white;
+    border: 1px solid #3BB287;
+    border-radius: 1.5%;
+}
+
+#perfil {
+    height: 120px;
+    position: relative;
+}
+
+#perfilMascota {
+    position: absolute;
+    left: 30px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#perfilHumano {
+    position: absolute;
+    top: 55px;
+    left: 80px;
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+    z-index: 2;
+}
+
+.horaPublicacion {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.names {
+    margin-left: 110px;
+}
+
+.mascota {
+    text-align: start;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    color: black;
+}
+
+
+.humano {
+    text-align: start;
+    font-size: 16px;
+}
+
+.leftT {
+    text-align: start;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.buttons {
+    width: 50px;
+    transition-duration: 500ms;
+}
+
+.buttons:hover {
+    width: 45px;
+}
+
+.like {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    padding: 0;
+}
+
+.comment {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+

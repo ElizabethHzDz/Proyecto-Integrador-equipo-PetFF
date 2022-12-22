@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inria Sans', sans-serif;
+   
+   
+}
+
+ 
+
+body{
+    background-image: url(/assets/iconos/fondo\ \(1\).jpeg); 
+    background-color: transparent;
+   
+}
+
+img{
+    max-width: 100%;
+}
+
+
+
+
+/*Barra de navegacion superior*/
+#encabezado{
+    background-color:#EBF2EB;
+}
+
+#Buscar:hover{
+    background-color: #3BB287;
+}
+
+
+
+
+
+/*Carrusel Grupos*/
+/*Carrusel1*/
+#carouselExampleControls{
+  background-color: white;  
+  border: 1px solid #3BB287;
+  border-radius: 1.5%;
+}
+
+.imagenCarrusel{
+   /* width: 1200px; */
+   /* max-height: 400px; */
+}
+
+#botonGrupos{
+    background-color: #3BB287;
+    border: #3BB287;
+    margin-top: 100px;
+}
+
+
+#containerCarrusel{
+   margin-top: 20px;
+    border: #3BB287;
+    margin-bottom: 20px;
+}
+
+.imgDiv {
+    height: 400px;
+}
+
+.parrafoCarrusel{
+    text-align: justify;
+    /* font-size: larger; */
+    font-size: 18px;
+}
+
+
+
+/*Publicaciones*/
+/*publi1*/
+#cardP {
+    background-color:white;
+    border: 1px solid #3BB287;
+    border-radius: 1.5%;
+}
+
+#perfil {
+    height: 120px;
+    position: relative;
+}
+
+#perfilMascota {
+    position: absolute;
+    left: 30px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#perfilHumano {
+    position: absolute;
+    top: 55px;
+    left: 80px;
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+    z-index: 2;
+}
+
+.horaPublicacion {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.names {
+    /* margin-left: 80px; */
+}
+
+.mascota {
+    text-align: start;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    color: black;
+    padding-left: 110px;
+}
+
+#parrafoPubli{
+    padding-left: 10px;
+}
+
+.humano {
+    text-align: start;
+    font-size: 16px;
+    padding-left: 110px;
+}
+
+.leftT {
+    text-align: start;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.buttons {
+    width: 40px;
+    transition-duration: 500ms;
+}
+
+.buttons:hover {
+    width: 35px;
+}
+
+.like {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    padding: 0;
+   
+}
+
+.comment {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+    
+}
+
+#iconoHeart{
+    color: #f5954F;
+}
+
+
+#rowPubli{
+margin: 5px;
+height: 12000px;
+}
+
+/*anuncios*/
+#anuncios{
+    border: 2px #3BB287;
+}
+
+
+/* #publicidad1{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+
+} */
+
+
+/*Barra de navegacion PetFF*/
+
+.petColor {
+    color: #3BB287;
+}
+
+.petColor:hover {
+    color: #3BB287;
+}
+
+.bGap {
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    transition-duration: 500ms;
+}
+.icon {
+    width: 40px;
+    transition-duration: 500ms;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#estetos {
+    width: 30px;
+    transition-duration: 500ms;
+}
+
+.iGap:hover {
+    border-bottom: 3px solid #3BB287;
+}
+
+.bGap:hover {
+    border-top: 3px solid #3BB287;
+}
+
+.icon:hover {
+    width: 45px;
+}
+
+#estetos:hover {
+    width: 35px;
+}
+
+
+/*Espacio vacio*/
+.space {
+    margin: 150px;
+}
+
+
+

@@ -1,0 +1,2229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlogPet</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="./assets/iconos/P.png">
+  <link rel="stylesheet" href="/styles/blog_Vet.css">
+  <script src="/js/Blog_User.js" async defer></script>
+</head>
+
+
+<body>
+
+  <!--Modificar contenido de tarjetas segun su categoria-->
+
+
+
+  <!--Buscador -->
+  <div class="encabezado" id="encabezado">
+    <div class="buscador">
+      <nav class="navbar p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"> <!--------Vincular al index-------->
+            <img src="/assets/PETFF.png" alt="Logo" width="100" class="d-inline-block align-text-top"> <!-- logo-->
+          </a>
+
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar notas" aria-label="Search">
+            <a href="https://www.google.com/" target="_blank"><button id="Buscar" class="btn btn-outline-success"
+                type="submit"><img src="/assets/assets_blog/Buscar 1.png" alt="lupa" width="25"> </a>
+          </form>
+        </div>
+      </nav>
+    </div> <!--Cierra buscador-->
+  </div>
+
+
+
+  <!--Descripcion de blogPet-->
+  <div class="descripcion-blog" id="titulo">
+    <h1>BLOGPET </h1>
+    <p>En esta sección encontrarás información, noticias y consejos sobre los cuidados de tu mejor
+      amigo.</p>
+  </div>
+
+
+
+  <!--Como lo Hizo Rebe-->
+  <div id="categorias">
+    <div class="row align-self-center">
+      <h5>Categorias</h5>
+    </div>
+
+    <div class="col-12">
+      <div class="row">
+        <div class="categoria col-2 text-center" onclick="verCat('0')">
+          <img class="rounded-circle" src="/assets/assets_blog/perros.jpg">
+          <p>Perros</p>
+        </div>
+        <div class="categoria col-2 text-center" onclick="verCat('1')">
+          <img class="rounded-circle" src="/assets/assets_blog/aves.jpg">
+          <p>Aves</p>
+        </div>
+        <div class="categoria col-2 text-center" onclick="verCat('2')">
+          <img class="rounded-circle" src="/assets/assets_blog/gatos.jpg">
+          <p>Gatos</p>
+        </div>
+        <div class="categoria col-2 text-center" onclick="verCat('3')">
+          <img class="rounded-circle" src="/assets/assets_blog/acuaticos.jpg">
+          <p>Acuaticos</p>
+        </div>
+        <div class="categoria col-2 text-center" onclick="verCat('4')">
+          <img class="rounded-circle" src="/assets/assets_blog/reptiles.jpg">
+          <p>Reptiles</p>
+        </div>
+        <div class="categoria col-2 text-center" onclick="verCat('5')">
+          <img class="rounded-circle" src="/assets/assets_blog/mamiferos.jpg">
+          <p>Pequeños Mamiferos</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <div id="categoria-0" class="notas-categoria active"> <!--Perros-->
+    <div class="catnotas col align-center">
+      <h3>Perros </h3>
+    </div>
+
+    <div class="catnotas row">
+      <div class="col-9">
+        <div class="row">
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N0.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Así afecta tu estrés a tu perro.</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Julian Martinez</a></h6>
+                <p class="card-text">Un estudio enfocado en la personalidad de varios perros y sus amos, así como de sus
+                  niveles de cortisol, ha concluido que el estrés a largo plazo en... </p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Así afecta tu estrés a tu perro.</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>Así afecta tu estrés a tu perro.</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N0.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Vet</p>
+                          <p> PUblicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Rerencias:
+                            https://misanimales.com/especies-ranas-puedes-tener-como-mascota/
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N0.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Así afecta tu estrés a tu perro.</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Julian Martinez</a></h6>
+                <p class="card-text">Un estudio enfocado en la personalidad de varios perros y sus amos, así como de sus
+                  niveles de cortisol, ha concluido que el estrés a largo plazo en... </p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Así afecta tu estrés a tu perro.</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>Así afecta tu estrés a tu perro.</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N0.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Vet</p>
+                          <p> PUblicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Rerencias:
+                            https://misanimales.com/especies-ranas-puedes-tener-como-mascota/
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N0.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Así afecta tu estrés a tu perro.</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Julian Martinez</a></h6>
+                <p class="card-text">Un estudio enfocado en la personalidad de varios perros y sus amos, así como de sus
+                  niveles de cortisol, ha concluido que el estrés a largo plazo en... </p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Así afecta tu estrés a tu perro.</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>Así afecta tu estrés a tu perro.</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N0.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Vet</p>
+                          <p> PUblicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Rerencias:
+                            https://misanimales.com/especies-ranas-puedes-tener-como-mascota/
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="contenedorNotas"></div> <!--Para notas publicadas-->
+        </div>
+      </div>
+      <div class="col-3 "> <!--Publicidad como lo hizo Ruben-->
+        <div class="imagen col-lg-12">
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0 bg-white">
+                <a href="https://www.pawerful.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B1.png" alt="Publicidad 1"></a>
+              </div>
+              <p class="bg-white borderPubli">Pawerful</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0">
+                <a href="https://hospitalveterinarioregiomontano.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B2.jpg" alt="Publicidad 2"></a>
+              </div>
+              <p class="bg-white borderPubli">Hospital Regiomontano</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0">
+                <a href="https://www.heb.com.mx/mascotas" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B3.png" alt="Publicidad 3"></a>
+              </div>
+              <p class="bg-white borderPubli">H-E-B</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0 bg-white">
+                <a href="https://www.pawerful.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B1.png" alt="Publicidad 1"></a>
+              </div>
+              <p class="bg-white borderPubli">Pawerful</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="categoria-1" class="notas-categoria"> <!--Aves-->
+    <div class="catnotas col align-center">
+      <h3> Aves </h3>
+    </div>
+
+    <div class="catnotas row">
+      <div class="col-9">
+        <div class="row">
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N1.jpg" class="card-img-top" alt="aves">
+              <div class="card-body">
+                <h5 class="card-title">Tipos de pájaros domésticos</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Vet</a></h6>
+                <p class="card-text">Hay algunos pájaros especialmente indicados para tener como mascotas. Si estás pensando en adquirir uno para cuidar en tu hogar, presta atención a... </p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Tipos de pájaros domésticos</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>Tipos de pájaros domésticos</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N1.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Vet</p>
+                          <p> PUblicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Rerencias:
+                            https://misanimales.com/especies-ranas-puedes-tener-como-mascota/
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N1.jpg" class="card-img-top" alt="aves">
+              <div class="card-body">
+                <h5 class="card-title">Tipos de pájaros domésticos</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Vet</a></h6>
+                <p class="card-text">Hay algunos pájaros especialmente indicados para tener como mascotas. Si estás pensando en adquirir uno para cuidar en tu hogar, presta atención a... </p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Tipos de pájaros domésticos</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>Tipos de pájaros domésticos</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N1.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Vet</p>
+                          <p> PUblicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Rerencias:
+                            https://misanimales.com/especies-ranas-puedes-tener-como-mascota/
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N1.jpg" class="card-img-top" alt="aves">
+              <div class="card-body">
+                <h5 class="card-title">Tipos de pájaros domésticos</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Vet</a></h6>
+                <p class="card-text">Hay algunos pájaros especialmente indicados para tener como mascotas. Si estás pensando en adquirir uno para cuidar en tu hogar, presta atención a... </p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Tipos de pájaros domésticos</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>Tipos de pájaros domésticos</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N1.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Vet</p>
+                          <p> PUblicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Rerencias:
+                            https://misanimales.com/especies-ranas-puedes-tener-como-mascota/
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="contenedorNotas"></div> <!--Para notas publicadas-->
+        </div>
+      </div>
+      <div class="col-3 "> <!--Publicidad como lo hizo Ruben-->
+        <div class="imagen col-lg-12">
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0 bg-white">
+                <a href="https://www.pawerful.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B1.png" alt="Publicidad 1"></a>
+              </div>
+              <p class="bg-white borderPubli">Pawerful</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0">
+                <a href="https://hospitalveterinarioregiomontano.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B2.jpg" alt="Publicidad 2"></a>
+              </div>
+              <p class="bg-white borderPubli">Hospital Regiomontano</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0">
+                <a href="https://www.heb.com.mx/mascotas" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B3.png" alt="Publicidad 3"></a>
+              </div>
+              <p class="bg-white borderPubli">H-E-B</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0 bg-white">
+                <a href="https://www.pawerful.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B1.png" alt="Publicidad 1"></a>
+              </div>
+              <p class="bg-white borderPubli">Pawerful</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="categoria-2" class="notas-categoria"> <!--Gatos-->
+    <div class="catnotas col align-center">
+      <h3> Aves </h3>
+    </div>
+
+    <div class="catnotas row">
+      <div class="col-9">
+        <div class="row">
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N2.jpg" class="card-img-top" alt="gatos">
+              <div class="card-body">
+                <h5 class="card-title">¿Qué puedo hacer en caso de alergia a los gatos?</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Vet</a></h6>
+                <p class="card-text">La respuesta evidente es: ¡mantenerte lejos de ellos! Pero si eres un amante de los gatos, te gustará saber que hay formas de conseguir que las cosas...</p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Qué puedo hacer en caso de alergia a los gatos?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>¿Qué puedo hacer en caso de alergia a los gatos?</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N2.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Vet</p>
+                          <p> PUblicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Referencias:
+                            https://www.whiskas.es/adultos/salud/que-puedo-hacer-en-caso-de-alergia-a-los-gatos
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N2.jpg" class="card-img-top" alt="gatos">
+              <div class="card-body">
+                <h5 class="card-title">¿Qué puedo hacer en caso de alergia a los gatos?</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Vet</a></h6>
+                <p class="card-text">La respuesta evidente es: ¡mantenerte lejos de ellos! Pero si eres un amante de los gatos, te gustará saber que hay formas de conseguir que las cosas...</p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Qué puedo hacer en caso de alergia a los gatos?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>¿Qué puedo hacer en caso de alergia a los gatos?</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N2.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Vet</p>
+                          <p> PUblicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Referencias:
+                            https://www.whiskas.es/adultos/salud/que-puedo-hacer-en-caso-de-alergia-a-los-gatos
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N2.jpg" class="card-img-top" alt="gatos">
+              <div class="card-body">
+                <h5 class="card-title">¿Qué puedo hacer en caso de alergia a los gatos?</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Vet</a></h6>
+                <p class="card-text">La respuesta evidente es: ¡mantenerte lejos de ellos! Pero si eres un amante de los gatos, te gustará saber que hay formas de conseguir que las cosas...</p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Qué puedo hacer en caso de alergia a los gatos?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>¿Qué puedo hacer en caso de alergia a los gatos?</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N2.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Vet</p>
+                          <p> PUblicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Referencias:
+                            https://www.whiskas.es/adultos/salud/que-puedo-hacer-en-caso-de-alergia-a-los-gatos
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="contenedorNotas"></div> <!--Para notas publicadas-->
+        </div>
+      </div>
+      <div class="col-3 "> <!--Publicidad como lo hizo Ruben-->
+        <div class="imagen col-lg-12">
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0 bg-white">
+                <a href="https://www.pawerful.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B1.png" alt="Publicidad 1"></a>
+              </div>
+              <p class="bg-white borderPubli">Pawerful</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0">
+                <a href="https://hospitalveterinarioregiomontano.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B2.jpg" alt="Publicidad 2"></a>
+              </div>
+              <p class="bg-white borderPubli">Hospital Regiomontano</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0">
+                <a href="https://www.heb.com.mx/mascotas" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B3.png" alt="Publicidad 3"></a>
+              </div>
+              <p class="bg-white borderPubli">H-E-B</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0 bg-white">
+                <a href="https://www.pawerful.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B1.png" alt="Publicidad 1"></a>
+              </div>
+              <p class="bg-white borderPubli">Pawerful</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="categoria-3" class="notas-categoria active"> <!--Acuaticos-->
+    <div class="catnotas col align-center">
+      <h3>Acuaticos </h3>
+    </div>
+
+    <div class="catnotas row">
+      <div class="col-9">
+        <div class="row">
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N3.jpg" class="card-img-top" alt="acuaticos">
+              <div class="card-body">
+                <h5 class="card-title">Cómo limpiar una pecera o acuario</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Francisco Sanchez</a></h6>
+                <p class="card-text">La pecera es el hogar de tus peces. Mantenerlo limpio y en buenas condiciones es una de las mejores cosas que puedes hacer para que tus escamosos y... </p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cómo limpiar una pecera o acuario</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>Cómo limpiar una pecera o acuario</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N3.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Francisco Sanchez</p>
+                          <p> Publicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cómo limpiar una pecera sin sacar el agua ni los peces?
+                            Cuando el acuario no está demasiado sucio, puede limpiarse sin que haya necesidad de sacar toda el agua ni los peces.
+                            
+                            Este es el paso a paso:
+                            
+                            Saca los elementos decorativos y lávalos con agua limpia. Ayúdate de un cepillo para eliminar los restos. En todo caso, no uses detergentes comunes, pues son muy tóxicos para la vida de acuario. Aclara muy bien con agua limpia y deja que se sequen al aire antes de volver a colocarlos.
+                            Retira al menos ¼ parte del agua con el sifón, para cambiarla posteriormente por agua nueva que ayude a renovarla.
+                            Para limpiar el fondo del acuario, aspira con el sifón entre las piedrecillas del fondo, con mucho cuidado, y retira la suciedad acumulada.
+                            Coge un raspador de algas y pásalo por los cristales, primero usando la parte más rugosa de la herramienta y luego la suave. Desplázate con movimientos verticales por toda la superficie del cristal.
+                            Con una red o malla, retira las partículas de suciedad que se hayan desprendido y caído al agua. 
+                            Coloca los adornos otra vez en su lugar.
+                            Vierte un poco de agua nueva y limpia, sin cloro. Cuida que esté a la misma temperatura de la que ya está en el tanque. Recuerda que los peces son criaturas muy sensibles, así que vierte el líquido con cuidado, tratando de no estresarlos.
+                            Agrega bacterias buenas al agua. Estas ayudan a mantener saludable el ecosistema del tanque. Las puedes conseguir en cualquier tienda especializada en acuarios.
+                            ¿Cómo limpiar un acuario vacío?
+                            Cada cierto tiempo es necesario hacer una limpieza rigurosa y profunda del tanque. ¿Cómo limpiar una pecera muy sucia? Vaciando el tanque, sin duda.
+                            
+                            Hazlo así:
+                            
+                            Extrae parte del agua del tanque. Unas ¾ partes, siguiendo el proceso que explicamos más arriba. Retira los adornos también.
+                            Coloca el agua que has sacado en una cubeta que sea lo suficientemente grande para contenerla. Reserva.
+                            Coge los peces con la red (y mucho cuidado, ya sabes: se estresan) y colócalos en la cubeta en donde está el agua que has extraído. Ten en cuenta que los peces podrían saltar fuera de la cubeta, así que mantenla cubierta con una red o malla, por precaución.
+                            Termina de vaciar el tanque por completo: piedras, arena, algas. Todo lo que contenga, sácalo.
+                            Limpia todo el tanque con la ayuda de un raspador, estropajo fuerte y cepillo.
+                            Puedes usar cloro para limpiar a fondo. En este caso, deja el tanque expuesto a la luz del sol, vacío, por no menos de 4 horas. La luz solar neutraliza el cloro, haciéndolo inocuo para los peces.
+                            Vuelve a llenar el tanque con agua limpia, como indicamos en el punto 6 de la limpieza sin sacar los peces del acuario. Agrega bacterias buenas.
+                            Coloca otra vez la gravilla, los adornos y las algas. Devuelve los peces a su lugar.
+                            Limpiar un acuario puede ser algo laborioso, pero también muy gratificante. Una vez que te acostumbres al proceso, verás que es algo sencillo. Tómate el tiempo necesario para hacerlo y siéntete feliz de poder contribuir al bienestar de estas hermosas criaturas acuáticas.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Referencias:
+                            https://www.kiwoko.com/blogmundoanimal/como-limpiar-una-pecera-o-acuario/
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N3.jpg" class="card-img-top" alt="acuaticos">
+              <div class="card-body">
+                <h5 class="card-title">Cómo limpiar una pecera o acuario</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Francisco Sanchez</a></h6>
+                <p class="card-text">La pecera es el hogar de tus peces. Mantenerlo limpio y en buenas condiciones es una de las mejores cosas que puedes hacer para que tus escamosos y... </p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cómo limpiar una pecera o acuario</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>Cómo limpiar una pecera o acuario</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N3.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Francisco Sanchez</p>
+                          <p> Publicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cómo limpiar una pecera sin sacar el agua ni los peces?
+                            Cuando el acuario no está demasiado sucio, puede limpiarse sin que haya necesidad de sacar toda el agua ni los peces.
+                            
+                            Este es el paso a paso:
+                            
+                            Saca los elementos decorativos y lávalos con agua limpia. Ayúdate de un cepillo para eliminar los restos. En todo caso, no uses detergentes comunes, pues son muy tóxicos para la vida de acuario. Aclara muy bien con agua limpia y deja que se sequen al aire antes de volver a colocarlos.
+                            Retira al menos ¼ parte del agua con el sifón, para cambiarla posteriormente por agua nueva que ayude a renovarla.
+                            Para limpiar el fondo del acuario, aspira con el sifón entre las piedrecillas del fondo, con mucho cuidado, y retira la suciedad acumulada.
+                            Coge un raspador de algas y pásalo por los cristales, primero usando la parte más rugosa de la herramienta y luego la suave. Desplázate con movimientos verticales por toda la superficie del cristal.
+                            Con una red o malla, retira las partículas de suciedad que se hayan desprendido y caído al agua. 
+                            Coloca los adornos otra vez en su lugar.
+                            Vierte un poco de agua nueva y limpia, sin cloro. Cuida que esté a la misma temperatura de la que ya está en el tanque. Recuerda que los peces son criaturas muy sensibles, así que vierte el líquido con cuidado, tratando de no estresarlos.
+                            Agrega bacterias buenas al agua. Estas ayudan a mantener saludable el ecosistema del tanque. Las puedes conseguir en cualquier tienda especializada en acuarios.
+                            ¿Cómo limpiar un acuario vacío?
+                            Cada cierto tiempo es necesario hacer una limpieza rigurosa y profunda del tanque. ¿Cómo limpiar una pecera muy sucia? Vaciando el tanque, sin duda.
+                            
+                            Hazlo así:
+                            
+                            Extrae parte del agua del tanque. Unas ¾ partes, siguiendo el proceso que explicamos más arriba. Retira los adornos también.
+                            Coloca el agua que has sacado en una cubeta que sea lo suficientemente grande para contenerla. Reserva.
+                            Coge los peces con la red (y mucho cuidado, ya sabes: se estresan) y colócalos en la cubeta en donde está el agua que has extraído. Ten en cuenta que los peces podrían saltar fuera de la cubeta, así que mantenla cubierta con una red o malla, por precaución.
+                            Termina de vaciar el tanque por completo: piedras, arena, algas. Todo lo que contenga, sácalo.
+                            Limpia todo el tanque con la ayuda de un raspador, estropajo fuerte y cepillo.
+                            Puedes usar cloro para limpiar a fondo. En este caso, deja el tanque expuesto a la luz del sol, vacío, por no menos de 4 horas. La luz solar neutraliza el cloro, haciéndolo inocuo para los peces.
+                            Vuelve a llenar el tanque con agua limpia, como indicamos en el punto 6 de la limpieza sin sacar los peces del acuario. Agrega bacterias buenas.
+                            Coloca otra vez la gravilla, los adornos y las algas. Devuelve los peces a su lugar.
+                            Limpiar un acuario puede ser algo laborioso, pero también muy gratificante. Una vez que te acostumbres al proceso, verás que es algo sencillo. Tómate el tiempo necesario para hacerlo y siéntete feliz de poder contribuir al bienestar de estas hermosas criaturas acuáticas.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Referencias:
+                            https://www.kiwoko.com/blogmundoanimal/como-limpiar-una-pecera-o-acuario/
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N3.jpg" class="card-img-top" alt="acuaticos">
+              <div class="card-body">
+                <h5 class="card-title">Cómo limpiar una pecera o acuario</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Francisco Sanchez</a></h6>
+                <p class="card-text">La pecera es el hogar de tus peces. Mantenerlo limpio y en buenas condiciones es una de las mejores cosas que puedes hacer para que tus escamosos y... </p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cómo limpiar una pecera o acuario</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>Cómo limpiar una pecera o acuario</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N3.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Francisco Sanchez</p>
+                          <p> Publicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cómo limpiar una pecera sin sacar el agua ni los peces?
+                            Cuando el acuario no está demasiado sucio, puede limpiarse sin que haya necesidad de sacar toda el agua ni los peces.
+                            
+                            Este es el paso a paso:
+                            
+                            Saca los elementos decorativos y lávalos con agua limpia. Ayúdate de un cepillo para eliminar los restos. En todo caso, no uses detergentes comunes, pues son muy tóxicos para la vida de acuario. Aclara muy bien con agua limpia y deja que se sequen al aire antes de volver a colocarlos.
+                            Retira al menos ¼ parte del agua con el sifón, para cambiarla posteriormente por agua nueva que ayude a renovarla.
+                            Para limpiar el fondo del acuario, aspira con el sifón entre las piedrecillas del fondo, con mucho cuidado, y retira la suciedad acumulada.
+                            Coge un raspador de algas y pásalo por los cristales, primero usando la parte más rugosa de la herramienta y luego la suave. Desplázate con movimientos verticales por toda la superficie del cristal.
+                            Con una red o malla, retira las partículas de suciedad que se hayan desprendido y caído al agua. 
+                            Coloca los adornos otra vez en su lugar.
+                            Vierte un poco de agua nueva y limpia, sin cloro. Cuida que esté a la misma temperatura de la que ya está en el tanque. Recuerda que los peces son criaturas muy sensibles, así que vierte el líquido con cuidado, tratando de no estresarlos.
+                            Agrega bacterias buenas al agua. Estas ayudan a mantener saludable el ecosistema del tanque. Las puedes conseguir en cualquier tienda especializada en acuarios.
+                            ¿Cómo limpiar un acuario vacío?
+                            Cada cierto tiempo es necesario hacer una limpieza rigurosa y profunda del tanque. ¿Cómo limpiar una pecera muy sucia? Vaciando el tanque, sin duda.
+                            
+                            Hazlo así:
+                            
+                            Extrae parte del agua del tanque. Unas ¾ partes, siguiendo el proceso que explicamos más arriba. Retira los adornos también.
+                            Coloca el agua que has sacado en una cubeta que sea lo suficientemente grande para contenerla. Reserva.
+                            Coge los peces con la red (y mucho cuidado, ya sabes: se estresan) y colócalos en la cubeta en donde está el agua que has extraído. Ten en cuenta que los peces podrían saltar fuera de la cubeta, así que mantenla cubierta con una red o malla, por precaución.
+                            Termina de vaciar el tanque por completo: piedras, arena, algas. Todo lo que contenga, sácalo.
+                            Limpia todo el tanque con la ayuda de un raspador, estropajo fuerte y cepillo.
+                            Puedes usar cloro para limpiar a fondo. En este caso, deja el tanque expuesto a la luz del sol, vacío, por no menos de 4 horas. La luz solar neutraliza el cloro, haciéndolo inocuo para los peces.
+                            Vuelve a llenar el tanque con agua limpia, como indicamos en el punto 6 de la limpieza sin sacar los peces del acuario. Agrega bacterias buenas.
+                            Coloca otra vez la gravilla, los adornos y las algas. Devuelve los peces a su lugar.
+                            Limpiar un acuario puede ser algo laborioso, pero también muy gratificante. Una vez que te acostumbres al proceso, verás que es algo sencillo. Tómate el tiempo necesario para hacerlo y siéntete feliz de poder contribuir al bienestar de estas hermosas criaturas acuáticas.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Referencias:
+                            https://www.kiwoko.com/blogmundoanimal/como-limpiar-una-pecera-o-acuario/
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="contenedorNotas"></div> <!--Para notas publicadas-->
+        </div>
+      </div>
+      <div class="col-3 "> <!--Publicidad como lo hizo Ruben-->
+        <div class="imagen col-lg-12">
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0 bg-white">
+                <a href="https://www.pawerful.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B1.png" alt="Publicidad 1"></a>
+              </div>
+              <p class="bg-white borderPubli">Pawerful</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0">
+                <a href="https://hospitalveterinarioregiomontano.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B2.jpg" alt="Publicidad 2"></a>
+              </div>
+              <p class="bg-white borderPubli">Hospital Regiomontano</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0">
+                <a href="https://www.heb.com.mx/mascotas" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B3.png" alt="Publicidad 3"></a>
+              </div>
+              <p class="bg-white borderPubli">H-E-B</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0 bg-white">
+                <a href="https://www.pawerful.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B1.png" alt="Publicidad 1"></a>
+              </div>
+              <p class="bg-white borderPubli">Pawerful</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="categoria-4" class="notas-categoria active"> <!--Reptiles-->
+    <div class="catnotas col align-center">
+      <h3>Reptiles</h3>
+    </div>
+
+    <div class="catnotas row">
+      <div class="col-9">
+        <div class="row">
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N4.jpg" class="card-img-top" alt="Reptiles">
+              <div class="card-body">
+                <h5 class="card-title">6 especies de ranas que puedes tener como mascota</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Marisol Flores</a></h6>
+                <p class="card-text">Las ranas con las coloraciones más vistosas suelen ser especies venenosas. Por lo tanto, antes de adquirir a cualquier ejemplar procura obtener toda... </p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">6 especies de ranas que puedes tener como mascota</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>6 especies de ranas que puedes tener como mascota</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N4.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por:  @Marisol Flores</p>
+                          <p> PUblicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Referencias:
+                            https://misanimales.com/especies-ranas-puedes-tener-como-mascota/
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N4.jpg" class="card-img-top" alt="Reptiles">
+              <div class="card-body">
+                <h5 class="card-title">6 especies de ranas que puedes tener como mascota</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Marisol Flores</a></h6>
+                <p class="card-text">Las ranas con las coloraciones más vistosas suelen ser especies venenosas. Por lo tanto, antes de adquirir a cualquier ejemplar procura obtener toda... </p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">6 especies de ranas que puedes tener como mascota</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>6 especies de ranas que puedes tener como mascota</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N4.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por:  @Marisol Flores</p>
+                          <p> PUblicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Referencias:
+                            https://misanimales.com/especies-ranas-puedes-tener-como-mascota/
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N4.jpg" class="card-img-top" alt="Reptiles">
+              <div class="card-body">
+                <h5 class="card-title">6 especies de ranas que puedes tener como mascota</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Marisol Flores</a></h6>
+                <p class="card-text">Las ranas con las coloraciones más vistosas suelen ser especies venenosas. Por lo tanto, antes de adquirir a cualquier ejemplar procura obtener toda... </p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">6 especies de ranas que puedes tener como mascota</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>6 especies de ranas que puedes tener como mascota</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N4.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por:  @Marisol Flores</p>
+                          <p> PUblicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Referencias:
+                            https://misanimales.com/especies-ranas-puedes-tener-como-mascota/
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="contenedorNotas"></div> <!--Para notas publicadas-->
+        </div>
+      </div>
+      <div class="col-3 "> <!--Publicidad como lo hizo Ruben-->
+        <div class="imagen col-lg-12">
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0 bg-white">
+                <a href="https://www.pawerful.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B1.png" alt="Publicidad 1"></a>
+              </div>
+              <p class="bg-white borderPubli">Pawerful</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0">
+                <a href="https://hospitalveterinarioregiomontano.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B2.jpg" alt="Publicidad 2"></a>
+              </div>
+              <p class="bg-white borderPubli">Hospital Regiomontano</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0">
+                <a href="https://www.heb.com.mx/mascotas" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B3.png" alt="Publicidad 3"></a>
+              </div>
+              <p class="bg-white borderPubli">H-E-B</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0 bg-white">
+                <a href="https://www.pawerful.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B1.png" alt="Publicidad 1"></a>
+              </div>
+              <p class="bg-white borderPubli">Pawerful</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="categoria-5" class="notas-categoria active"> <!--Mamiferos-->
+    <div class="catnotas col align-center">
+      <h3>Pequeños mamíferos</h3>
+    </div>
+
+    <div class="catnotas row">
+      <div class="col-9">
+        <div class="row">
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N5.jpg" class="card-img-top" alt="Mamífero">
+              <div class="card-body">
+                <h5 class="card-title">Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Jimenez</a></h6>
+                <p class="card-text">La castración o esterilización es una práctica cada vez más extendida en los animales de compañía, incluyendo los conejos. Los beneficios que...</p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N5.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Jimenez</p>
+                          <p> Publicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Referencias:
+                            https://www.nationalgeographic.com.es/naturaleza/asi-afecta-tu-estres-a-tu-perro_14374
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N5.jpg" class="card-img-top" alt="Mamífero">
+              <div class="card-body">
+                <h5 class="card-title">Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Jimenez</a></h6>
+                <p class="card-text">La castración o esterilización es una práctica cada vez más extendida en los animales de compañía, incluyendo los conejos. Los beneficios que...</p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N5.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Jimenez</p>
+                          <p> Publicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Referencias:
+                            https://www.nationalgeographic.com.es/naturaleza/asi-afecta-tu-estres-a-tu-perro_14374
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="imagen col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/assets_blog/N5.jpg" class="card-img-top" alt="Mamífero">
+              <div class="card-body">
+                <h5 class="card-title">Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h5>
+                <h6>Por: <a href="/perfilVet.html" target="_blank"> @Jimenez</a></h6>
+                <p class="card-text">La castración o esterilización es una práctica cada vez más extendida en los animales de compañía, incluyendo los conejos. Los beneficios que...</p>
+
+                <!-- Leer nota modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leernota"
+                  data-bs-whatever="@mdo" id="BotonLeer">Leer más...</button> <!--Boton que abre modal-->
+
+                <!--Contenido de Modal para leer nota-->
+
+                <div class="modal fade" id="leernota" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!--Modal en pantlla grande-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="titul">
+                          <h1>Castrar a un conejo - Precio, cuándo hacerlo y beneficios</h1>
+                        </div>
+                        <div class="portada">
+                          <img src="/assets/assets_blog/N5.jpg" width="80%">
+                        </div>
+                        <div class="datos">
+                          <p>Por: @Jimenez</p>
+                          <p> Publicado: 12/12/2022</p>
+                        </div>
+                        <div class="leercuerpo">
+                          <p>¿Cuándo castrar a un conejo?
+                            La castración de los conejos debe realizarse cuando alcanzan su madurez sexual, es
+                            decir, cuando su grado de desarrollo sexual permite que la reproducción sea posible.
+                            Esto sucede cuando alcanzan aproximadamente el 80 % de su peso adulto.
+
+                            No se recomienda la castración de animales que no hayan alcanzado la madurez sexual,
+                            puesto que la cirugía podría ser más complicada debido al tamaño y la posición de los
+                            órganos reproductivos. Además, la castración temprana no supone ninguna ventaja
+                            adicional para la salud de estos animales.
+
+                            ¿Cuándo castrar o esterilizar a un conejo macho?
+                            En el caso de los machos, la madurez sexual se alcanza a los 3-5 meses, siendo
+                            ligeramente más precoces las razas de pequeño tamaño que las de gran tamaño. A partir
+                            de este momento, se podrá practicar la orquiectomía.
+
+                            Como apunte, es importante destacar que los machos continúan siendo fértiles durante 4
+                            semanas después de la castración, debido a que siguen teniendo espermatozoides viables
+                            en su aparato reproductor. Este hecho debe tenerse en cuenta para evitar gestaciones
+                            indeseadas.
+
+                            ¿Cuándo castrar o esterilizar a una coneja?
+                            Las hembras son algo más tardías que los machos. Alcanzan la madurez sexual en torno a
+                            los 4-6 meses, siendo también más precoces las razas pequeñas que las grandes. A
+                            partir de este momento, las hembras se podrán esterilizar por medio de una
+                            ovariohisterectomía o una ovariectomía.
+
+                            ¿Cuánto cuesta castrar a un conejo?
+                            Si deseas conocer el precio de esterilizar un conejo, lo mejor es que lo consultes con
+                            tu clínica de exóticos de confianza. Los precios pueden variar en función de la
+                            técnica empleada y de los requerimientos individuales de tu conejo/a.
+
+                            Algunas clínicas realizan campañas anuales de esterilización, en las que es posible
+                            esterilizar o castrar a los conejos a un precio más reducido del habitual.</p>
+                        </div>
+                        <div class="referencias">
+                          <p>Referencias:
+                            https://www.nationalgeographic.com.es/naturaleza/asi-afecta-tu-estres-a-tu-perro_14374
+                          </p>
+                        </div>
+                        <div class="comentariosmegusta">
+                          <div class="row">
+                            <div class="col-1 like">
+                              <img class="buttons" src="/assets/iconos/Like.png" alt="Like">
+                            </div>
+                            <p class="col-2 text-left mt-3">27</p>
+                            <div class="col-1 comment">
+                              <img class="buttons" src="/assets/iconos/Comment.png" alt="Comment">
+                            </div>
+                            <p class="col-2 text-left mt-3">3</p>
+                            <div class="col-6"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="cerrarnota">Cerrar</button>
+                    </div> <!--Se cierran botones Cerrar-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="contenedorNotas"></div> <!--Para notas publicadas-->
+        </div>
+      </div>
+      <div class="col-3 "> <!--Publicidad como lo hizo Ruben-->
+        <div class="imagen col-lg-12">
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0 bg-white">
+                <a href="https://www.pawerful.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B1.png" alt="Publicidad 1"></a>
+              </div>
+              <p class="bg-white borderPubli">Pawerful</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0">
+                <a href="https://hospitalveterinarioregiomontano.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B2.jpg" alt="Publicidad 2"></a>
+              </div>
+              <p class="bg-white borderPubli">Hospital Regiomontano</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0">
+                <a href="https://www.heb.com.mx/mascotas" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B3.png" alt="Publicidad 3"></a>
+              </div>
+              <p class="bg-white borderPubli">H-E-B</p>
+            </div>
+          </div>
+          <div class="row  col-12">
+            <div class="container col-12">
+              <div class="container p-0 bg-white">
+                <a href="https://www.pawerful.com/" target="_blank"><img class="bg-white borderPubli"
+                    src="/assets/assets_blog/B1.png" alt="Publicidad 1"></a>
+              </div>
+              <p class="bg-white borderPubli">Pawerful</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!--Espacio vacio-->
+  <div class="space"></div>
+
+
+
+  <!-- Barra de navegación inferior -->
+  <nav class="navbar fixed-bottom navbar-expand bg-white" id="navb">
+
+    <div class="collapse navbar-collapse navBottom" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto">
+        <li class="nav-item active bGap">
+          <a class="nav-link petColor" href="https://github.com/">Inicio<br>
+            <img class="icon" src="/assets/iconos/Home1.png" alt="Home">
+            <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item bGap">
+          <a class="nav-link petColor" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span">Vets<br>
+            <img class="icon" id="estetos" src="/assets/iconos/Estetos2.png" alt="Vets">
+          </a>
+        </li>
+
+        <li class="nav-item bGap">
+          <a class="nav-link petColor" href="/blogpet_Vet.html">Blog<br>
+            <img class="icon" id="news" src="/assets/iconos/News2.png" alt="Blog">
+          </a>
+        </li>
+        <li class="nav-item bGap">
+          <a class="nav-link petColor" href="https://www.linkedin.com/">Noticias<br>
+            <img class="icon" src="/assets/iconos/Blog2.png" alt="Comunity">
+          </a>
+        </li>
+        <li class="nav-item bGap">
+          <a class="nav-link petColor" href="https://mexico.generation.org/">Perfil<br>
+            <img class="icon" src="/assets/iconos/Perfil3.png" alt="Profile">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
