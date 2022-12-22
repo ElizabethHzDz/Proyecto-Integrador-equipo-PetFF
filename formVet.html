@@ -19,7 +19,7 @@
     <br>
     <div class="container text-center"><!--Contenedor principal.-->
         <div class="row" id="contenedorPrincipal">
-            <div class="col-6" id="cajita">
+            <div class="col-12 col-lg-6" id="cajita">
                 <img src="./assets/assets_formularioRegistro/PETFF.png" alt="" id="logoPFF">
                 <div class="container">
                     <div class="row">
@@ -43,8 +43,12 @@
                                 <input type="text" class="form-control" id="cedulaProf" placeholder="Introduce tu cédula" required>
                             </div>
                             <div class="form-group"><!--Espacio consultorio-->
-                                <label for="direccionConsultorio">Dirección consultorio</label>
+                                <label for="direccionConsultorio">Dirección consultorio/clínica</label>
                                 <input type="text" class="form-control" id="direccionC" placeholder="Indica a tus pacientes dónde pueden encontrarte" required>
+                            </div>
+                            <div class="form-group"><!--Espacio nombre-->
+                                <label for="name">Teléfono consultorio/clínica</label>
+                                <input type="text" class="form-control" id="name" placeholder="Comparte el contacto de consultorio" required>
                             </div>
                             <div class="form-group"><!--Espacio correo-->
                                 <label for="email">Correo electrónico</label>
@@ -80,7 +84,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 d-none d-lg-block">
                 <div id="map" class="d-flex justify-content-center">
                 </div>
             </div>
