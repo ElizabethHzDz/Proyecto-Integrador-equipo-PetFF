@@ -1,0 +1,287 @@
+
+body{
+    font-family: 'Inria Sans', sans-serif;
+    background-image: url(./assetsInicio/modoNormal.png);
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Tamaño máxicmo de imagenes de preview */
+.imgPreview {
+    max-height: 200px;
+}
+
+.container {
+    max-width: unset;
+}
+
+/* Color de texto en navbars */
+.petColor {
+    color: #3BB287;
+}
+
+/* Color de texto en navbard */
+.petColor:hover {
+    color: #3BB287;
+}
+
+/* Color de fondo y border de tarjetas de publicaciones */
+.card {
+    background-color:white;
+    border: 1px solid #3BB287;
+    border-radius: 1.5%;
+}
+
+/* Para quitar border de tarjeta de publicidad */
+#pCard {
+    background-color:transparent;
+    border: none;
+}
+
+.borderPubli {
+    border: 1px solid #3BB287;
+    background-color: white;
+}
+
+
+/* Para que el modal (nueva publicación se vea de forma y tamaño correctos */
+.modal-backdrop {
+    z-index: 10;
+}
+
+
+.modal-dialog{
+    height:80%
+}
+.modal-content{
+    height:78%
+}
+
+
+/* Border de barra de navegación superior */
+.navTop {
+    border-bottom: 1px solid #3BB287;
+}
+
+/* Altura de la barra de navegación inferior y border*/
+.navBottom {
+    padding: 0;
+    border-top: 1px solid #3BB287;
+    height: 95px;
+    border-top: 1px solid #3BB287;
+}
+
+#petFF {
+    margin-left: 20px;
+}
+
+/* Gap entre icodos de barra de navegacion superior */
+.iGap {
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    transition-duration: 500ms;
+}
+
+/* Gap entre icodos de barra de navegacion inferior */
+.bGap {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    transition-duration: 500ms;
+}
+
+/* Tamaño de logo y reducción con hover */
+.logo {
+    width: 150px;
+    transition-duration: 500ms;
+}
+.logo:hover {
+    width: 130px;
+}
+
+/* Tamaños y hover de iconos de barras superior e inferior */
+.icon {
+    width: 35px;
+    transition-duration: 500ms;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.icon:hover {
+    width: 30px;
+}
+
+#estetos {
+    width: 28px;
+    transition-duration: 500ms;
+}
+
+#estetos:hover {
+    width: 23px;
+}
+
+#news {
+    width: 45px;
+    transition-duration: 500ms;
+}
+
+#news:hover {
+    width: 40px;
+}
+
+.iGap:hover {
+    border-bottom: 3px solid #3BB287;
+}
+
+.bGap:hover {
+    border-top: 3px solid #3BB287;
+}
+
+
+/* Espacios invisible */
+.space {
+    margin: 100px;
+}
+.space2 {
+    margin: 20px;
+}
+
+#perfil {
+    height: 120px;
+    position: relative;
+}
+
+#perfilMascota {
+    position: absolute;
+    left: 30px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#perfilHumano {
+    position: absolute;
+    top: 55px;
+    left: 80px;
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+    z-index: 2;
+}
+
+.horaPublicacion {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.names {
+    margin-left: 110px;
+}
+
+.mascota {
+    text-align: start;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    color: black;
+}
+
+
+.humano {
+    text-align: start;
+    font-size: 16px;
+}
+
+.leftT {
+    text-align: start;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.buttons {
+    width: 35px;
+    transition-duration: 500ms;
+}
+
+.buttons:hover {
+    width: 30px;
+}
+
+
+.like {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    padding: 0;
+}
+
+.comment {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+
+.fixedPubli{
+    position: fixed;
+    top: 90;
+    right: 0;
+}
+
+.pubBtn {
+    background-color: #3BB287;
+    color: white;
+    transition-duration: 300ms;
+}
+
+.pubBtn:hover {
+    background-color: white;
+    color: #3BB287;
+    border: 2px solid #3BB287;
+}
+
+.image-area {
+    border: 1px solid #3BB287;
+    padding: 1rem;
+    position: relative;
+}
+
+.image-area::before {
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.image-area img {
+    z-index: 2;
+    position: relative;
+}
+
+.loadedImg {
+    max-height: 200px;
+}
+
+.botonesIn{
+    border-radius: 30px;
+    background-color: #f5954f; 
+    height: 40px;
+    width: 80px; 
+    margin: auto; 
+    border: none;
+}
+
+#chat {
+    height:550px;
+}

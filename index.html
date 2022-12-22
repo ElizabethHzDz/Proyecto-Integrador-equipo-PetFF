@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/inicio.css">
+    <!-- Fuentes google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./assetsInicio/P.png">
+</head>
+<body>
+
+  <!-- <h1>Hello World</h1> -->
+
+  <!-- Barra de navegación superior -->
+  <nav class="navbar fixed-top navbar-expand bg-white m-0 navTop" id="petFF">
+    <!-- Logo principal de PETFF con link a pantalla de inicio (reload) -->
+    <a class="navbar-brand m-0" href="http://127.0.0.1:5500/index.html#">
+      <img class="logo ms-sm-4" src="./assetsInicio/PETFF.png" alt="Logo PETFF">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-item iGap d-lg-none m-0 mx-sm-4">
+      <!-- Boton en barra de navegacion para abrir modal en pantallas pequeñas-->
+      <button type="button" class="btn pubBtn mt-4 ms-3 ms-sm-0" data-bs-toggle="modal"
+        data-bs-target="#exampleModalCenter">
+        Publicación
+      </button>
+      <!-- Modal para formulario de publicacion en pantallas pequeñas -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="auto" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Hacer una publicación:</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="col-12 d-lg-none d-flex justify-content-center">
+                <div class="mb-3 position-fixed col-6">
+                  <!-- Target de preview de imagen -->
+                  <div class="image-area mt-4 d-flex justify-content-center m-2" id="displayImage2">
+                  </div>
+                  <!-- Boton para elegir imagen, hace click automatico en el boton de cargar imagen del formulario pantallas grandes -->
+                  <input type="button" class="btn btn-rounded col-6 pubBtn p-1" value="Cargar Imagen"
+                    onclick="document.getElementById('imageInput').click();">
+                  <!-- Espacio para ingresar texto en publicación -->
+                  <div class="d-flex align-items-center w-100">
+                    <div class="w-100">
+                      <div class="form-outline">
+                        <textarea class="form-control borderPubli" id="textAreaExample" rows="3"
+                          placeholder="¿Qué estás pensando?"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Boton para publicar imagen y texto, hace click automatico en al boton del otro formulario para pantallas grandes -->
+                  <button class="btn btn-rounded col-10 pubBtn"
+                    onclick="document.getElementById('pubButton').click();">Publicar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Iconos de la parte derecha de navBar, notifiaciones y chat -->
+    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item iGap">
+          <a class="nav-link petColor" href="https://www.atlassian.com/es/software/jira">
+            <img class="icon" src="./assetsInicio/iconos/notificaciones.png" alt="Notificaciones">
+            <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item iGap">
+          <a class="p-0" role="button" data-bs-toggle="offcanvas" href="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <img class="icon" id="msg" src="./assetsInicio/iconos/Mensaje1.png" alt="Chat">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Publicaciones, muro, publicidad -->
+<div class="space"></div>
+  <div class="container text-center px-md-4 m-0">
+    <div class="row">
+      <!-- Hacer una publicacion -->
+      <div class="col-3 d-none d-lg-block p-0">
+        <div class="col-3 mb-3 position-fixed px-4">
+          <h5>Hacer una publicación:</h5>
+          <!-- Div en el que se hará un preview de imagen de publicación -->
+          <div class="image-area my-2 d-flex justify-content-center" id="displayImage">
+          </div>
+          <!-- Boton que accionará nuestro input de imágenes, hace click automatico en el formulario de input #imageInput -->
+          <input type="button" class="btn btn-rounded col-6 pubBtn p-1" value="Cargar Imagen"
+            onclick="document.getElementById('imageInput').click();">
+          <!-- Formulario de input de imagen, escondido por formato -->
+          <input id="imageInput" type="file" accept="image/png, image/jpg" style="display: none;">
+
+          <!-- Espacio para ingresar texto en publicación -->
+          <div class="d-flex align-items-center w-100 my-2">
+            <div class="w-100">
+              <div class="form-outline">
+                <textarea class="form-control borderPubli" id="textAreaExample" rows="3"
+                  placeholder="¿Qué estás pensando?"></textarea>
+              </div>
+            </div>
+          </div>
+          <!-- Boton para publicar contenido en tarjeta -->
+          <button class="btn btn-rounded col-10 pubBtn" id="pubButton">Publicar</button>
+        </div>
+      </div>
+      <!-- Feed, publicaciones de amigos. Espacio donde se pondran mis tarjetas -->
+      <div class="container p-0 m-0 col-12 col-lg-6 px-sm-5 px-lg-0" id="contCards">
+
+        <!-- Publicacion 1 -->
+        <div class="card my-3">
+          <div class="card-body p-0">
+            <div class="row">
+              <div class="d-flex col-9 justify-content-left align-items-center" id="perfil">
+                <img id="perfilMascota" src="./assetsInicio/alexander-london-mJaD10XeD7w-unsplash 1.png">
+                <img id="perfilHumano" src="./assetsInicio/joseph-antigua-BW9G2EF_xRM-unsplash 1.png"
+                  alt="Foto de perfil humano">
+                <div class="container d-flex flex-column names">
+                  <p class="mascota">Akira</p>
+                  <p class="humano">Karla Mendoza</p>
+                </div>
+              </div>
+              <div class="col-3 p-0 horaPublicacion">
+                <p><br>hace 2 horas</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="container leftT">
+                <p class="">
+                  Hoy no molestar #sendcoffe
+                </p>
+              </div>
+            </div>
+            <div class="row p-0 m-0">
+              <img src="./assetsInicio/modcatshop-pdALzg0yN-8-unsplash 1.png" alt="Imagen de Publicacion">
+            </div>
+            <div class="row">
+              <div class="col-1 like">
+                <img class="buttons" src="./assetsInicio/iconos/Like.png" alt="Like">
+              </div>
+              <p class="col-2 text-left mt-3">27</p>
+              <div class="col-1 comment">
+                <img class="buttons" src="./assetsInicio/iconos/Comment.png" alt="Comment">
+              </div>
+              <p class="col-2 text-left mt-3">3</p>
+              <div class="col-6"></div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Publicacion 2 -->
+        <div class="card my-3">
+          <div class="card-body p-0">
+            <div class="row">
+              <!-- Donde irá la imagen del usuario y nombres de mascota y dueño -->
+              <div class="d-flex col-9 justify-content-left align-items-center" id="perfil">
+                <img class="img-thumbnail" id="perfilMascota"
+                  src="./assetsInicio/marliese-streefland-2l0CWTpcChI-unsplash 1.png" alt="Foto de perfil mascota">
+                <img id="perfilHumano" src="./assetsInicio/harps-joseph-tAvpDE7fXgY-unsplash 1.png"
+                  alt="Foto de perfil humano">
+                <div class="container d-flex flex-column names">
+                  <a href="https://getbootstrap.com/" class="mascota" target="_blank">Max el Beagle</a>
+                  <p class="humano">José Sánchez</p>
+                </div>
+              </div>
+              <!-- hora de publicación -->
+              <div class="col-3 p-0 horaPublicacion">
+                <p><br>hace 4 horas</p>
+              </div>
+            </div>
+            <!-- Espacio para agregar texto de publicación -->
+            <div class="row">
+              <div class="container leftT">
+                <p class="">
+                  Fuimos a dar un paseo en bicicleta
+                </p>
+              </div>
+            </div>
+            <!-- Espacio para agregar imagen de publicación -->
+            <div class="row p-0 m-0" id="">
+              <img src="./assetsInicio/anthony-fomin-xNOslF_987U-unsplash.jpg" alt="Imagen de Publicacion">
+            </div>
+            <!-- Fila para botones de like y comentarios -->
+            <div class="row">
+              <div class="col-1 like">
+                <img class="buttons" src="./assetsInicio/iconos/Like.png" alt="Like">
+              </div>
+              <p class="col-2 mt-3 text-left">54</p>
+              <div class="col-1 comment">
+                <img class="buttons" src="./assetsInicio/iconos/Comment.png" alt="Comment">
+              </div>
+              <p class="col-2 mt-3 text-left">9</p>
+              <div class="col-6"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Publicidad en pantallas pequeñas y medianas -->
+        <div class="d-lg-none space2"></div>
+        <div class="d-lg-none card mt-5" id="pCard">
+          <div class="card-body p-0">
+            <div class="row  col-12 d-lg-none m-0">
+              <div class="container col-4">
+                <div class="container p-0 bg-white">
+                  <a href="https://www.hillspet.com.mx/" target="_blank"><img class="bg-white borderPubli"
+                      src="./assetsInicio/hillsCroquetas.png" alt="Publicidad 1"></a>
+                </div>
+                <p class="bg-white borderPubli">Croquetas Hill's</p>
+              </div>
+              <div class="container col-4">
+                <div class="container p-0">
+                  <a href="https://hospitalveterinarioregiomontano.com/" target="_blank"><img
+                      class="bg-white borderPubli" src="./assetsInicio/hospital.webp" alt="Publicidad 1"></a>
+                </div>
+                <p class="bg-white borderPubli">Hospital Regiomontano</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-lg-none space2"></div>
+        <!-- Publicacion 3 -->
+        <div class="card my-3">
+          <div class="card-body p-0">
+            <div class="row">
+              <div class="d-flex col-9 justify-content-left align-items-center" id="perfil">
+                <img id="perfilMascota" src="./assetsInicio/bonnie-kittle--MLCLFc01Uo-unsplash.jpg"
+                  alt="Foto de perfil mascota">
+                <img id="perfilHumano" src="./assetsInicio/alex-mccarthy-RGKdWJOUFH0-unsplash.jpg"
+                  alt="Foto de perfil humano">
+                <div class="container d-flex flex-column names">
+                  <p class="mascota">Brownie</p>
+                  <p class="humano">Alexis Rodríguez</p>
+                </div>
+              </div>
+              <div class="col-3 p-0 horaPublicacion">
+                <p><br>hace 7 horas</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="container leftT">
+                <p class="">
+                  Noviando duro
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src="./assetsInicio//bonnie-kittle-MUcxe_wDurE-unsplash.jpg" alt="Imagen de Publicacion">
+            </div>
+            <div class="row">
+              <div class="col-1 like">
+                <img class="buttons" src="./assetsInicio/iconos/Like.png" alt="Like">
+              </div>
+              <p class="col-2 text-left mt-3">32</p>
+              <div class="col-1 comment">
+                <img class="buttons" src="./assetsInicio/iconos/Comment.png" alt="Comment">
+              </div>
+              <p class="col-2 text-left mt-3">7</p>
+              <div class="col-6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Publicidad -->
+      <div class="col-3 d-none d-lg-block fixedPubli">
+        <div class="container flex-column">
+          <div class="container p-0">
+            <a href="https://www.hillspet.com.mx/" target="_blank">
+                <img class="borderPubli"
+                src="./assetsInicio/hillsCroquetas.png" alt="Publicidad 1">
+            </a>
+          </div>
+          <p class="bg-white borderPubli">Croquetas Hill's</p>
+        </div>
+        <div class="space2"></div>
+        <div class="container flex-column">
+          <div class="container p-0">
+            <a href="https://hospitalveterinarioregiomontano.com/" target="_blank">
+                <img class="borderPubli"
+                src="./assetsInicio/hospital.webp" alt="Publicidad 1">
+            </a>
+          </div>
+          <p class="bg-white borderPubli">Hospital Regiomontano</p>
+        </div>
+      </div>
+    </div>
+    <div class="space"></div>
+
+    <!-- Barra de navegación inferior -->
+    <nav class="navbar fixed-bottom navbar-expand bg-white p-0">
+
+      <div class="collapse navbar-collapse navBottom" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item active bGap">
+            <a class="nav-link petColor" href="https://github.com/">Inicio<br>
+              <img class="icon" src="./assetsInicio/iconos/Home.png" alt="Home">
+              <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item bGap">
+            <a class="nav-link petColor" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span">Vets<br>
+              <img class="icon" id="estetos" src="./assetsInicio/iconos/Estetos.png" alt="Vets">
+            </a>
+          </li>
+
+          <li class="nav-item bGap">
+            <a class="nav-link petColor" href="https://www.google.com/">Blog<br>
+              <img class="icon" id="news" src="./assetsInicio/iconos/News.png" alt="Blog">
+            </a>
+          </li>
+          <li class="nav-item bGap">
+            <a class="nav-link petColor" href="https://www.linkedin.com/">Comunidad<br>
+              <img class="icon" src="./assetsInicio/iconos/Blog.png" alt="Comunity">
+            </a>
+          </li>
+          <li class="nav-item bGap">
+            <a class="nav-link petColor" href="https://mexico.generation.org/">Perfil<br>
+              <img class="icon" src="./assetsInicio/iconos/Perfil.png" alt="Profile">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+
+    <!-- OFF canvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+          Chat
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+          <div class="card">
+            <div class="card-body p-0" id="chat">
+            </div>
+            <div class="card-footer p-2" id="messageForm">
+              <div class="container text-center p-0">
+                <div class="row m-0">
+                    <div class="form-outline w-75 p-0">
+                      <textarea class="form-control p-0 m-0" rows="3" placeholder="Escribe tu mensaje aquí" id="message"></textarea>
+                    </div>
+                    <button class="d-flex botonesIn align-items-center justify-content-center text-white" type="button">Enviar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    <!-- Scrpts de Js u necesarios para Bootstrap -->
+    <script src="./js/inicio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
