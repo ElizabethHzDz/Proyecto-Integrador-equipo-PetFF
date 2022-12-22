@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de usuario/a</title>
+    <link rel="icon" type="image/x-icon" href="./assets/iconos/P.png">
+    <link rel="stylesheet" href="./styles/styles_formularioRegistro/formularioRegistro.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <br>
+    <br>
+    <div class="container text-center"><!--Contenedor principal.-->
+        <div class="row" id="contenedorPrincipal">
+            <div class="col"></div>
+            <div class="col" id="cajita">
+                <img src="./assets/assets_formularioRegistro/PETFF.png" alt="" id="logoPFF">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="textoSec">¡Te damos la bienvenida!</h4>
+                            <h4 class="textoSec">Completa los siguientes campos para finalizar tu registro.</h4>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <form id="form">
+                           <div class="form-group"><!--Espacio nombre-->
+                                <label for="name">Nombre(s)</label>
+                                <input type="text" class="form-control" id="name" placeholder="Introduce tu(s) nombre(s)" required>
+                            </div>
+                            <div class="form-group"><!--Espacio apellidos-->
+                                <label for="lastName">Apellidos</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Introduce tus apellidos" required>
+                            </div>                     
+                            <div class="form-group"><!--Espacio correo-->
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com" required>
+                            </div>
+                            <div class="form-group col-md-12"><!--Espacio contraseña-->
+                                <label for="password">Contraseña</label>
+                                <input type="password" class="form-control" id="password" placeholder="Crea una contraseña">
+                            </div>
+                            <div class="form-group"><!--Espacio foto de perfil-->
+                                <label for="exampleFormControlFile1">Añade una foto de perfil: </label>
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                            </div>
+                            <div class="col-auto"><!--Espacio nombre de usuario-->
+                                <label class="sr-only" for="username">Nombre de usuario/a</label>
+                                <div class="input-group mb-2">
+                                  <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                    </div>
+                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Elige el nombre para tu cuenta" required>
+                                </div>
+                            </div>
+                            <div class="form-check d-flex justify-content-center p-1 m-0"><!--Espacio términos y condiciones-->
+                                <p>Al registrarte aceptas nuestras <i>Condiciones de uso</i> y <i>Políticas de privacidad</i>.</p>
+                            </div>
+                            <button type="button" class="btn" id="boton"><a class="enlace" href="./registroMascota.html">¡Registra a tu primera mascota!</a></button> 
+                            <br>
+                            <br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+</body>
+</html>

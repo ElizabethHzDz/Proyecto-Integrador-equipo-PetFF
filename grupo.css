@@ -1,0 +1,471 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inria Sans', sans-serif;
+}
+body{/*fondo pagina*/
+    background-image: url(/assets/icons/modoNormal.png);
+}
+#encabezado{
+    background-color:#EBF2EB;
+}
+#Buscar:hover{
+    background-color: #3BB287;
+}
+#buscador{
+    margin-top: 13px;
+    height: 40px;
+}
+img{
+    max-width: 100%;
+}
+.container {
+    max-width: unset;
+}
+#fondo1{
+    background: #EBF2EB;
+    padding: 15px;
+    box-shadow: rgba(0,0,0.35) 0px 5px 15px;
+    border-radius: 12px;
+}
+#contEve{
+    background: #EBF2EB;
+    padding: 25px;
+    box-shadow: rgba(0,0,0.35) 0px 5px 15px;
+    border-radius: 12px;
+    
+}
+
+
+.space {
+    margin: 100px;
+}
+/*Botones Miembro y Agregar*/
+.estiloBoton{ 
+    background-color: #3bb287;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 30PX; 
+    width: 300px;
+    height: 50px; 
+    border: 1px solid #3BB287;
+    margin-top: 80px;
+}
+.dropdown-menu{
+    background-image: url(/assets/icons/fondo.jpeg); 
+}
+.botones{
+    border-radius: 30px;
+    background-color: #EBF2EB; 
+    height: 40px;
+    width: 170 px;
+    border: 1px solid #3BB287;
+}
+/**/
+hr{
+    border: none;
+    height: 4px;
+    background-color: black;
+    color: black;
+}
+
+/*botones dentro del offcanvas*/
+.botonesIn{
+    border-radius: 30px;
+    background-color: #f5954f; 
+    height: 40px;
+    width: 80px; 
+    margin: auto; 
+    border: none;
+}
+#invitarUsuario {
+    margin: auto;
+    text-align: start;
+}
+/*Dentro del offcanvas*/
+#fotoUsuario{
+    border-radius: 50%;
+    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #f5954f;
+    padding: 5px;
+    float: right;   
+}
+
+h3{
+    color: #3BB287; 
+}
+#separacion{
+    height: 5px;
+}
+
+h2{
+    color: #3BB287;
+    text-justify: auto; 
+}
+#TT{
+    color:#3bb287;
+    font-size: 20px;
+}
+#TT1 {
+    color: white;
+    font-size: 18px;
+    margin: auto;
+}
+#TT0{
+    color: #EBF2EB;
+    text-justify: auto;
+}
+#TT2{
+    color: #3BB287;
+    font-size: 16px;
+}
+.offcanvas-body{
+    background-image: url(/assets/icons/modoNormal.png);
+    text-justify: auto;
+}
+
+#bntEnl{
+    border-radius: 30px;
+    background-color: #EBF2EB; 
+    height: 40px;
+    width: 170px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    color: #3BB287;
+    font-weight: 580;
+    font-size: 18px;
+    border: 1px solid #3BB287;
+    flex-wrap: wrap;
+}
+@media (max-width: 992px){
+    #bntEnl{
+        border-radius: 30px;
+        background-color: #EBF2EB; 
+        height: 40px;
+        width: 140px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        text-decoration: none;
+        color: #3BB287;
+        font-weight: 580;
+        font-size: 18px;
+        border: 1px solid #3BB287;
+        flex-wrap: wrap;
+    }   
+}
+
+#fotogrp{
+    width: 300px;
+    height: 300px;
+}
+
+
+#cabecera{
+ border: 1px solid #3bb287;
+ height: 300px;
+ background-color: #3bb287;
+}
+#logo{
+    width: 100px;
+    margin: 15px;
+    
+}
+
+#navbar {
+    font-size: 18px;
+    font-weight: bold;    
+    color: rgb(235, 242, 235);
+    background-color: white;
+    border-bottom: 1px solid #3BB287;
+}
+    
+
+#fotologo{
+    width: 140px;
+    background-color: white;
+    border-radius: 6px;
+    margin: 3px;
+    padding: 3px;
+   
+}
+
+#prub1{
+  padding-left: 10px;
+  padding-right: 10px; 
+   
+}
+
+#Contlike{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+#iconoGrupo{
+    border-radius: 50%;
+    margin-top: 5px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #3BB287;
+    padding: 5px;
+       
+    
+}
+
+.btn{
+    background-color: #3bb287;
+    margin: 15px;
+    padding: 10px;   
+}
+
+.image-area {
+    border: 1px solid #3BB287;
+    padding: 1rem;
+    position: relative;
+}
+.image-area::before {
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+.pubBtn {
+    background-color: #3BB287;
+    color: white;
+    transition-duration: 300ms;
+}
+
+.pubBtn:hover {
+    background-color: white;
+    color: #3BB287;
+    border: 2px solid #3BB287;
+}
+
+
+
+/* Color de fondo y border de tarjetas de publicaciones */
+.card {
+    background-color:white;
+    border: 1px solid #3BB287;
+    border-radius: 1.5%;
+}
+
+
+#perfil {
+    height: 120px;
+    position: relative;
+}
+
+#perfilMascota {
+    position: absolute;
+    left: 30px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    z-index: 1;/*son como las capas que se muestra una encima de otra*/
+}
+
+#perfilHumano {
+    position: absolute;
+    top: 55px;
+    left: 80px;
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+    z-index: 2;
+}
+#nomPerfil{
+    position:absolute;
+    top: 55px;
+    left: 85px;
+   
+}
+.horaPublicacion {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.names {
+    margin-left: 210px;
+}
+
+.mascota {
+    text-align: center;
+    margin-top: 40px;
+    padding-left: 60px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    color: black;
+}
+
+.textoreaccion{
+   text-align: end;
+}
+
+.humano {
+    text-align: center;
+    font-size: 16px;
+    padding-left: 80px;
+}
+.textP{
+    padding-left: 20px;
+}
+
+.leftT {
+    text-align: start;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.buttons {
+    width: 50px;
+   margin: 10px;
+
+}
+
+.buttons:hover {
+    width: 45px;
+}
+
+.like {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    padding: 0;
+    display: flex;
+}
+
+.input1{
+    display: flex;
+
+}
+
+#textarea1{
+   border-radius: 12px;
+   color: #3BB287;
+}
+
+.Reacciones{
+ display: flex;
+ margin: 12px;
+}
+
+
+
+#iconoGrupo{
+    padding: 0px;
+    margin: 10px;
+    border: 2px solid #3BB287;
+}
+
+.comment {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    
+}
+
+.fixedPubli{
+    position: fixed;
+    top: 90;
+    right: 0;
+}
+
+/* Espacios invisible */
+.space {
+    margin: 100px;
+}
+.space2 {
+    margin: 20px;
+}
+
+/* barra de navegacion de abajo */
+
+/* Color de texto en navbars */
+.petColor {
+    color: #3BB287;
+}
+.nav-link-petColor{
+    color: #3BB287;
+    text-decoration: none;
+}
+.nav-link-petColor:hover{
+    color: #3BB287;
+    text-decoration: none;
+}
+/* Color de texto en navbard */
+.petColor:hover {
+    color: #3BB287;
+}
+.bGap {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    transition-duration: 500ms;
+}
+
+.icon {
+    width: 35px;
+    transition-duration: 500ms;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.navBottom{
+    border-top: 1px solid #3BB287;
+}
+
+#estetos {
+    width: 28px;
+    transition-duration: 500ms;
+}
+
+.bGap:hover {
+    border-top: 3px solid #3BB287;
+}
+
+.icon:hover {
+    width: 30px;
+}
+
+#news {
+    width: 45px;
+    transition-duration: 500ms;
+}
+
+#news:hover{
+    width: 40px;
+}
+
+#estetos:hover {
+    width: 23px;
+}
+.logo {
+    width: 150px;
+    transition-duration: 500ms;
+}
+
+#navbarSupportedContent{
+    width: 100vw;
+    display: flex;
+}
+
+.logo:hover {
+    width: 130px;
+}
+.image-area img {
+    z-index: 2;
+    position: relative;
+}

@@ -1,0 +1,160 @@
+
+
+body{
+    margin: 0;
+    font-family: 'Inria Sans', sans-serif;
+    background-image: url(../assets/fonduki.jpeg);
+ 
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ebf2eb;
+}
+
+.logo img{
+    height: 50px;
+    padding: 5px;
+}
+
+nav{
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav img{
+    height: 20px;
+    padding: 1px;
+    margin-top: 2px;
+}
+
+nav input{
+    border-radius: 5px;
+    border: 1px solid #3bb287;
+    text-align: justify;
+    font-style: italic;
+    
+}
+
+button{
+    width: auto;
+    background-color: #3bb287;
+    border: 1px solid #2f8666;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+button:hover{
+    background-color: #40a781;
+    border: 1px solid #42c092;
+}
+
+.logo img:hover{
+    height: 51px;
+}
+
+nav button{
+    margin-left: 5px;
+}
+
+#espaciofiltro{
+    background-color: #3bb287;
+    font-weight: bold;
+    
+}
+
+#opciones{
+    padding: 10px;
+    color: #ebf2eb;
+}
+
+#filtrodoc{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #3bb287;
+    color: #ebf2eb;
+    font-weight: bold;
+}
+
+#filtrodoc:hover{
+    background-color: #40a781;
+    border: 1px solid #42c092;
+}
+
+#barrainferior{
+    background-color: #ebf2eb;
+    position: fixed;
+    top: 87vh;
+    left: 0px;
+    width: 100%;
+    justify-content: space-evenly;
+    border: 1px solid #3bb287;
+}
+
+#espaciocard{
+    height: 100vh;
+}
+
+
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #3bb287;
+    padding: 10px;
+}
+
+
+#inicio{
+    height: 50px;
+}
+
+#vets{
+    height: 50px;
+}
+
+#blog{
+    height: 50px;
+}
+
+#new{
+    height: 50px;
+}
+
+#perfil{
+    height: 50px;
+}
+
+
+p{
+    text-align: center;
+}
+
+p:hover{
+    text-align: center;
+    color: #2f8666;
+}
+
+#inicio:hover{
+    height: 48px;
+}
+
+#vets:hover{
+    height: 48px;
+}
+
+#blog:hover{
+    height: 48px;
+}
+
+#new:hover{
+    height: 48px;
+}
+
+#perfil:hover{
+    height: 48px;
+}
+
