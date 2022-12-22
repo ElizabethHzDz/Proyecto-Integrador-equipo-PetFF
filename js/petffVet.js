@@ -19,16 +19,7 @@ function showPerfil(identifier) {
     addOnClick();
 }
 
-const images = [...document.querySelectorAll('.image')];
 
-
-const updateImage = (i) => {
-    let path = `img/img${i + 1}.png`;
-    largeImage.src = path;
-    imageName.innerHTML = path;
-    imageIndex.innerHTML = `0${i + 1}`;
-    index = i;
-}
 
 const createCarouselItems = () => {
     const item = document.querySelectorAll(".modal .modal-body .carousel-inner");
@@ -46,10 +37,18 @@ const createCarouselItems = () => {
         for (let i = 0; i < image.children.length; i++) {
             node.appendChild(image.children[i].cloneNode(true));
         }
-      
+
 
         item[0].appendChild(node);
     });
+}
+
+const eliminarCarouselItems = () => {
+    const item = document.querySelectorAll(".container.edit .modal .modal-body .carousel-inner");
+
+    while (item[0].hasChildNodes()) {
+        item[0].removeChild(item[0].firstChild)
+    }
 }
 
 const addOnClick = () => {
@@ -66,6 +65,52 @@ const addOnClick = () => {
             });
             items[index].classList.add('active');
             myModal.show();
-        };        
+        };
     })
+}
+
+const eliminarOnClick = () => {
+    const images = [...document.querySelectorAll(".perfil-mascota.active .galeria .imagen")];
+
+    document.querySelectorAll(".perfil-mascota.active .galeria .imagen").forEach(image => {
+   
+        image.onclick = null;
+    });
+}
+
+const togglePerfil = (element) => {
+    if (document.querySelectorAll("div.container.edit").length > 0) {
+        verPerfil(element);
+    } else {
+        editarPerfil(element);
+    }
+}
+
+const editarPerfil = (element) => {
+    const container = document.querySelectorAll("div.container");
+    container[0].classList.add('edit');
+
+    hideCanvas();
+
+    element.text = 'Ver perfil';
+
+    eliminarCarouselItems();
+    eliminarOnClick();
+}
+
+const verPerfil = (element) => {
+    const container = document.querySelectorAll("div.container");
+    container[0].classList.remove('edit');
+
+    hideCanvas();
+
+    element.text = 'Editar perfil';
+
+    createCarouselItems();
+    addOnClick();
+}
+
+const hideCanvas = () => {
+    let openedCanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasNavbar'));
+    openedCanvas.hide();
 }

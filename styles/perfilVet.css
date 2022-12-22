@@ -1,184 +1,318 @@
 body {
-    background-image: url("/assets/iconos/modoNormal.png");
-    background-color: transparent;
-    font-family: 'Inria Sans', sans-serif;
-    font-size: 16px;
+    background-image: url('/assets/iconos/modoNormal.png');
+    font-family: 'Inria Sans' !important;
+    font-size: xx-large;
 }
 
-.container{
-    position: relative;
+.container {
+    width: fit-content !important;
 }
 
-.row {
-    position: relative;
-    flex: 1 0 22rem;
-    margin: 1rem;
-}
+/* a partir de esta seccion es para la galeria de imagenes*/
+/* .galeria .imagen {
+    width: 100%;
+} */
 
-/*usuarioMenu*/
-/*pintar boton hamburguesa*/
-
-#btn_close {
-    color: #3BB287;
-}
-
-#iconoPerfil{
-    width: 30px;
-    margin-right: 10px;
-}
-
-#logomenu{
-    width: 150px;
-    color: #3BB287;
-}
-
-
-/*contacto e imagen de perfil*/
-#Img_perfil{
+#detalle-mascota .imagen img {
     max-width: 300px;
-    max-height: 300px;
-    border-radius: 50%;
-    align-items: center;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    padding: 15px;
 }
 
-#img_seguidores{
-    max-width: 120px;
+#mascotas .mascota img {
+    max-width: 150px;
+    object-fit: cover;
     width: 100%;
-    height: auto;
+    /* padding: 15px; */
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.galeria .imagen img {
+    max-width: 300px;
+    object-fit: cover;
+    width: 100%;
+    /* padding: 15px; */
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.galeria .imagen img,
+#mascotas .mascota img {
+    /* position:relative; */
+    transition: transform .2s;
+    aspect-ratio: 1 / 1;
+}
+
+#mascotas .carousel-item {
     justify-content: center;
-    padding: 0rem;
 }
 
-.contacto{
-    max-width: 350px;
-    max-height: 230px;
-    height: 100%;
-    width: 100%;
-    border-radius: 12px;
-    background-color: #3bb2860a;
+#mascotas .carousel-item .row {
+    justify-content: center;
+    white-space: pre-wrap;
+    margin-top: -55px;
+    margin-bottom: -50px;
 }
 
-.listaDescripcion{
-    list-style: none;
-    font-size: 16px;
-    margin-top: 1rem;
-    padding: 2rem 0;
+#mascotas .carousel-item .row p {
+    margin-top: -30px;
 }
 
-#nomUsuario{
+#mascotas .carousel-item.active,
+#mascotas .carousel-item-end,
+#mascotas .carousel-item-start {
+    display: flex;
+}
+
+#mascotas .carousel-inner {
+    overflow: visible;
+}
+
+.container:not(.edit) .galeria .imagen:hover img {
+    /* EL HOVER ES PARA CUANDO EL MOUSE PASA POR ENCIMA*/
+    opacity: 0.7;
+    /* EL OPACITY ES LA TRANSPARENCIA DE LA IMAGEN*/
+    border: #3BB387;
+    /* EN ESTA SECCION SE TRABAJO EL BORDER DE CADA IMAGE PARA QUE FUNCIONE A LA PAR DEL EFECTO DE LA IMAGEN*/
+    border-style: solid;
+    padding: 0;
+    transform: scale(1.10);
+}
+
+
+#mascotas .mascota:hover img {
+    opacity: 0.7;
+    border: #3BB387;
+    border-style: solid;
+    transform: scale(1.10);
+}
+
+#mascotas .mascota:hover p {
+    font-weight: 800;
+}
+
+.galeria .imagen p.hint {
+    /* ES EL TEXTO SOBRE LA IMAGEN PERO SE ESTA TRABAJANDO TODAVIA*/
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     text-align: center;
+    transform: translate(-50%, -50%);
+    /* EL TRANSFORM ES PARA QUE LA IMAGEN SE HAGA GRANDESITA  Y EL TRANSITION TRANSFORM ES EL RETARDO QUE TIENE PARA QUE LA IMAGEN VUELVA A SU TAMANIO NORMAL*/
+    transition: transform .2s;
 }
 
-#datosUsuario{
-    padding-left: 15px;
+.container:not(.edit) .galeria .imagen:hover p.hint {
+    opacity: 1;
+    /* transform: scale(10); */
+    font-size: large;
+    font-weight: 800;
+    transform: translate(-50%, -50%);
 }
 
-.logo{
+.galeria .imagen,
+#mascotas .mascota {
+    position: relative;
+}
+
+
+#perfil .foto-perfil {
+    display: flex;
+    position: relative;
+}
+
+#perfil .foto-perfil img {
+    width: 300px;
+    height: 300px;
+}
+
+#perfil img.propietario {
+    /* position: absolute; */
+    /* left: 263px;
+    top: 150px; */
+    width: 150px;
+    height: 150px;
+    margin-left: -100px;
+    margin-top: 150px;
+}
+
+
+/* #mascotas .mascota img {
+    width: 150px;
+    height: 150px;
+} */
+
+
+.perfil-mascota {
+    display: none;
+}
+
+.perfil-mascota.active {
+    display: inline;
+}
+
+#detalle-mascota .imagen {
+    display: flex;
+    justify-content: center;
+}
+
+.detalle-mascota .imagen img {
+    aspect-ratio: 1 / 1;
+}
+
+.datos-generales .logo {
     width: 235px;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
-    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-#perfil_estado{
-    padding-top: 20px;
+#mascotas h3 {
+    /* font-size: x-large; */
+    color: #3BB387;
+    /* font-weight: 700; */
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+
 }
 
-.siguiendo{
-    padding-bottom: 15px;
+.modal .modal-body {
+    text-align: center;
 }
 
-
-/*especializacion y descripcion*/
-
-.contacto2{
-    max-width: 1140;
-    height: 100%;
-    width: 100%;
-    border-radius: 12px;
-    background-color: #3bb2860a;
+.carousel-item .caption {
+    padding: 15px;
 }
 
-.listaDescripcionEspe{
-    list-style: none;
-    margin-top: 1rem;
-}
-
-/*servicios y boton de mas*/
-.servicios{
+.modal-footer .logo {
     max-width: 100px;
-    max-height: 100px;
-    width: 100%;
-    justify-content: flex-start ; 
-    border-radius: 50%;
-    border: 1px solid #3BB287;
-    transition: transform .2s;
 }
 
-.servicios:hover {
-    opacity: 0.7; /* EL OPACITY ES LA TRANSPARENCIA DE LA IMAGEN*/
-    border: #3BB387; /* EN ESTA SECCION SE TRABAJO EL BORDER DE CADA IMAGE PARA QUE FUNCIONE A LA PAR DEL EFECTO DE LA IMAGEN*/
-    border-style: solid;
-    border-width: 2px;
-    padding: 0;
-    transform: scale(1.10);
+.modal .carousel-item img {
+    /* height: 450px; */
+    width: 700px;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
 }
 
+.modal .carousel-item .hint {
+    display: none;
+}
 
+.galeria .caption {
+    display: none;
+}
 
-.btnMas {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: transparent;
+i.edit {
+    padding-left: 12px;
+}
+
+div.dropdown {
+    position: inherit;
+    display: inline;
+}
+
+div.dropdown.edit-image {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    font-size: xx-large;
+}
+
+div.dropdown.imagen-principal {
+    position: absolute;
+    left: 271px;
+    top: 8px;
+    font-size: xx-large;
+}
+
+.container:not(.edit) i.bi-three-dots {
+    display: none;
+}
+
+button.navbar-toggler {
     border-color: #3BB287;
-    font-size: 30px;
 }
 
-/*galeria*/
-
-.gallery-image {
-    max-width: 300px;
-    max-height: 300px;
-    object-fit: cover;
-    width: 100%;
-    /* padding-top: 15px; */
-    margin-bottom: 15px;
-    margin-top: 15px;
-    transition: transform .2s;
-    aspect-ratio: 1 / 1 ;
+button.navbar-toggler:hover {
+    background-color: #3BB287;
 }
 
-.gallery-image:hover {
-    opacity: 0.7; /* EL OPACITY ES LA TRANSPARENCIA DE LA IMAGEN*/
-    border: #3BB387; /* EN ESTA SECCION SE TRABAJO EL BORDER DE CADA IMAGE PARA QUE FUNCIONE A LA PAR DEL EFECTO DE LA IMAGEN*/
-    border-style: solid;
+button.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* .modal .modal-content button.btn-close {
+    align-self: flex-end;
+} */
+
+
+/* 
+Modo Claro
+3BB387 - Verde
+FFFFFF - Blanco
+EBF2EB - Gris
+F5954F - Naranja
+
+ 
+Modo Obscuro
+3BB387 - Verde
+000000 - Negro
+EBF2EB - Gris
+F5954F - Naranja
+*/
+
+#iconoPerfil {
+    width: 30px;
+    margin-right: 10px;
+}
+
+#logomenu {
+    width: 150px;
+    color: #3BB287;
+}
+
+.img-size {
+    /* 	padding: 0;
+        margin: 0; */
+    height: 450px;
+    width: 700px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.modal-content {
+    width: 700px;
+    border: none;
+}
+
+.modal-body {
     padding: 0;
-    transform: scale(1.10);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/*Espacio vacio*/
-.space {
-    margin: 150px;
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23009be1' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    width: 30px;
+    height: 48px;
 }
 
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23009be1' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    width: 30px;
+    height: 48px;
+}
 
 /* barra de navegacion de abajo */
 
 .petColor {
-    color: #3BB287;
+    color: #3BB287 !important;
 }
 
 .petColor:hover {
@@ -199,7 +333,7 @@ body {
     margin-bottom: 5px;
 }
 
-.navBottom{
+.navBottom {
     border-top: 1px solid #3BB287;
 }
 
@@ -221,10 +355,34 @@ body {
     transition-duration: 500ms;
 }
 
-#news:hover{
+#news:hover {
     width: 40px;
 }
 
 #estetos:hover {
     width: 23px;
+}
+
+
+/*pintar boton hamburguesa*/
+
+#btn_close {
+    color: #3BB287;
+
+}
+
+.btnMas {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-color: #3BB287;
+    font-size: 30px;
+}
+
+.listaDescripcion{
+    list-style: none;
+    /* font-size: 20px; */
+    margin-top: 1rem;
+    padding: 2rem 0;
 }
