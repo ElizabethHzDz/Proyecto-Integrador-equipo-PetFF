@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regístrate en PetFF</title>
+    <link rel="icon" type="image/x-icon" href="./assets/iconos/P.png">
+
+    <link rel="stylesheet" href="./styles/styles_formularioRegistro/formularioRegistro.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <br>
+    <br>
+    <div class="container text-center"><!--Contenedor principal-->
+        <div class="row" id="contenedorPrincipal">
+            <div class="col"></div>
+            <div class="col" id="cajita">
+                <img src="./assets/assets_formularioRegistro/PETFF.png" alt="Logo de la red social PetFF" id="logoPFF">
+                <div class="container"><!--Contenedor para los textos-->
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="textoSec">¡Regístrate para encontrar la mejor atención veterinaria de tu zona!</h4>
+                            <h4 class="textoSec">Comparte los momentos favoritos junto a tus mascotas.</h4>
+                        </div>
+                    </div>
+                    <div class="form-row align-items-center"><!--Aquí van las opciones de los tipos de perfiles-->
+                        <div class="col-auto my-1">
+                            <h4>Selecciona tu tipo de perfil: </h4>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="boton"><a class="enlace" href="./formUser.html">Usuario/a regular</a></button>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="boton"><a class="enlace" href="./formVet.html" >Personal de salud</a></button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <script src="./js/formularioRegistro.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+</body>
+</html>
